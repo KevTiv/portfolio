@@ -1,6 +1,8 @@
 .logo {
     position: fixed;
     left: 3vw;
+    z-index: 30;
+    top: 3vh;
 }
 
 .navbar_container{
@@ -9,10 +11,11 @@
     align-items: center;
     width: 75vw;
     position: fixed;
+    top: 3vh;
     right: 3vw;
     padding: 0.75rem 0;
     border-radius: 0.85rem;
-    
+    z-index: 30;
     & h3{
         position: absolute;
         visibility: hidden;
