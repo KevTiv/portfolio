@@ -1,0 +1,36 @@
+.logo {
+    position: fixed;
+    left: 3vw;
+}
+
+.navbar_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 75vw;
+    position: fixed;
+    right: 3vw;
+    padding: 0.75rem 0;
+    border-radius: 0.85rem;
+    
+    & h3{
+        position: absolute;
+        visibility: hidden;
+        transition:  0.25s ease-in-out;
+    }
+
+    & span{ 
+        span{
+            transition: 0.15s ease-in;
+        }
+        
+        &:hover{
+            span {
+                transform: scale(1.4);
+            }
+            h3 {
+                visibility: visible;
+            }
+        }
+    }
+}
