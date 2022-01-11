@@ -9,7 +9,7 @@ const AboutMe = ({isdarkMode}: aboutProps) => {
     return (
         <>
             <div>
-                <div className={`${style.container} ${style.main} ${fontStyle.font} 
+                <div className={`${style.container} ${style.about_me} ${fontStyle.font} 
                 ${isdarkMode ? theme.dark_mode : theme.light_mode}`}>                    
                         <h1>About me</h1>
                         <h2>Hello word! My name is Kevin and I like creating beautiful things.</h2>

@@ -36,7 +36,7 @@ const Intro = ({isdarkMode}: introProps) => {
                             <span>R</span>
                             <span>T</span>
                         </h1>
-                        <p>A developper passionate about creating beautiful products and experience for the web.</p>
+                        <p>And I'm a developper passionate about creating beautiful products and experience for the web.</p>
                         <div>
                             <span>
                                 <Image src={linkedin} alt="Developper png" width={imgWidth / 10} height={imgHeight / 10}/>
