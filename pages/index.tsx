@@ -1,13 +1,26 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
+import {useState} from 'react'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
-import airplane from '../public/contatc_cta_dark.png';
+import theme from '../styles/Theme.module.scss'
+import airplane from '../public/contatc_cta_dark.png'
+import PortfolioHead from '../components/head/head'
+import Navbar from '../components/navbar/navbar'
+import Intro from '../components/hero/intro'
 
 const Home: NextPage = () => {
+  const [isdarkMode, setDarkMode] = useState<boolean>(false);
   return (
     <>
-      <div>Hello World!</div>
+      <div className={`${styles.container} ${isdarkMode? theme.container_bgdark : theme.container_bglight}`}>
+        <PortfolioHead/>
+        <section className={styles.navbar}>
+          <Navbar isdarkMode={isdarkMode} setDarkMode={setDarkMode}/>
+        </section>
+        <section>
+          <Intro isdarkMode={isdarkMode}/>
+        </section>
+      </div>
     </>
   )
 }
