@@ -1,0 +1,38 @@
+{
+    "portfolioList":[
+        {
+            "title":"IMS - Inventory management system",
+            "description":"Web application design to simplify the process of stock management for small companies. This project aims to create an application that merges the need for rigourus stock management practices and a user-friendly experience.",
+            "tech":{
+                "Frontend":["React, Typescript, Tailwind, Sass, React-Hook-Form, RecaptchaV3"], 
+                "Backend":[ "NodeJs, Typescript, PostgreSQL, PrismaJs, ExpressJs, Axios, Firebase storage, Firebase Auth"]
+            },
+            "link":{
+                "github":"https://github.com/KevTiv/inventoryManagementSystem"
+            }
+        },
+        {
+            "title":"Weather tracker",
+            "description":"Web application design to use the NASA API to report weather event to its user.The weather events tacked by the app are fire events, active volcanos, and tropical storms.The app is fully responsive accross the most popular screen sizes.",
+            "tech":{
+                "Frontend":["React, Typescript, Tailwind, Sass, Google Map"],
+                "Backend":["NASA API"]
+            },
+            "link":{
+                "github":"https://github.com/KevTiv/wildfire_tracker"
+            }
+        },
+        {
+            "title":"My portfolio",
+            "description":"Website to showcase my web development skills.",
+            "tech":{
+                "Frontend":["Typescript, React, NextJs, Sass, Gsap"],
+                "Backend":[]
+            },
+            "link":{
+                "girhub":""
+            }
+        }
+        
+    ]
+}

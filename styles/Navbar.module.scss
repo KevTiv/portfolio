@@ -1,17 +1,25 @@
 .logo {
-    position: fixed;
+    position: absolute;
     left: 3vw;
     z-index: 30;
-    top: 3vh;
+    top: 2.5vh;
+    min-width: 25vw;
+     max-height: 78px;
+    h2 {
+       position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
 }
 
 .navbar_container{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 75vw;
+    width: 70vw;
     position: fixed;
-    top: 3vh;
+    top: 4vh;
     right: 3vw;
     padding: 0.75rem 0;
     border-radius: 0.85rem;

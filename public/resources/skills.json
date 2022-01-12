@@ -1,0 +1,104 @@
+{
+    "skills":[
+        {
+            "name":"Javascript",
+            "img":"https://img.icons8.com/color/240/000000/javascript--v1.png",
+            "alt":"Js"
+        },
+        {
+            "name":"Typescript",
+            "img":"https://img.icons8.com/color/240/000000/typescript.png",
+            "alt":"Ts"
+        },
+        {
+            "name": "React",
+            "img": "https://img.icons8.com/plasticine/100/000000/react.png",
+            "alt": "React"
+        },
+        {
+            "name": "NextJS",
+            "img": "https://api.iconify.design/cib/next-js.svg?color=white",
+            "alt": "NextJS"
+        },
+        {
+            "name": "Tailwind",
+            "img": "https://api.iconify.design/logos/tailwindcss-icon.svg",
+            "alt": "Tailwind"
+        },
+        {
+            "name": "Sass",
+            "img": "https://img.icons8.com/color/240/000000/sass.png",
+            "alt": "Sass"
+        },
+        {
+            "name": "CSS3",
+            "img": "https://img.icons8.com/color/240/000000/css3.png",
+            "alt": "Css3"
+        },
+        {
+            "name": "HTML5",
+            "img": "https://api.iconify.design/typcn/html5.svg?color=white",
+            "alt": "HTML5"
+        },
+        {
+            "name": "Bootstrap",
+            "img": "https://img.icons8.com/color/240/000000/bootstrap.png",
+            "alt": "Bootstrap"
+        },
+        {
+            "name": "Animation",
+            "img": "https://api.iconify.design/clarity/animation-line.svg?color=white",
+            "alt": ""
+        },
+        {
+            "name": "Python",
+            "img": "https://img.icons8.com/color/240/000000/python--v1.png",
+            "alt": "Python"
+        },
+        {
+            "name": "NodeJs",
+            "img": "https://api.iconify.design/fa-brands/node-js.svg?color=green",
+            "alt": "NodeJS"
+        },
+        {
+            "name": "MySQL",
+            "img": "https://api.iconify.design/cib/mysql.svg?color=white",
+            "alt": "SQL"
+        },
+        {
+            "name": "PostgreSQL",
+            "img": "https://img.icons8.com/color/240/000000/postgreesql.png",
+            "alt": "PostgreSQL"
+        },
+        {
+            "name": "PrismaJS",
+            "img": "https://api.iconify.design/vscode-icons/file-type-prisma.svg?color=white",
+            "alt": "PrismaJS"
+        },
+        {
+            "name": "ExpressJS",
+            "img": "https://api.iconify.design/simple-icons/express.svg?color=white",
+            "alt": "ExpressJS"
+        },
+        {
+            "name": "Axios",
+            "img": "https://api.iconify.design/logos/axios.svg",
+            "alt": "Axios"
+        },
+        {
+            "name": "Firebase",
+            "img": "https://img.icons8.com/color/240/000000/firebase.png",
+            "alt": "Firebase"
+        },
+        {
+            "name": "Git",
+            "img": "https://img.icons8.com/color/240/000000/git.png",
+            "alt": "Git"
+        },
+        {
+            "name": "Github",
+            "img": "https://api.iconify.design/bi/github.svg?color=white",
+            "alt": "Github"
+        }
+    ]
+}

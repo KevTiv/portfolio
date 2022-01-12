@@ -8,6 +8,8 @@ import PortfolioHead from '../components/head/head'
 import Navbar from '../components/navbar/navbar'
 import Intro from '../components/hero/intro'
 import AboutMe from '../components/hero/about'
+import Skills from '../components/hero/skills'
+import Portfolio from '../components/hero/portfolio'
 
 const Home: NextPage = () => {
   const [isdarkMode, setDarkMode] = useState<boolean>(false);
@@ -20,6 +22,8 @@ const Home: NextPage = () => {
           <div className={`${style.hero}`}>
             <Intro isdarkMode={isdarkMode}/>
             <AboutMe isdarkMode={isdarkMode}/>
+            <Skills isdarkMode={isdarkMode}/>
+            <Portfolio isdarkMode={isdarkMode}/>
           </div>
         </main>
       </div>
