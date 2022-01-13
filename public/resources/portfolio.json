@@ -32,7 +32,39 @@
             "link":{
                 "girhub":""
             }
+        },
+        {
+            "title":"My portfolio",
+            "description":"Website to showcase my web development skills.",
+            "tech":{
+                "Frontend":["Typescript, React, NextJs, Sass, Gsap"],
+                "Backend":[]
+            },
+            "link":{
+                "girhub":""
+            }
+        },
+        {
+            "title":"My portfolio",
+            "description":"Website to showcase my web development skills.",
+            "tech":{
+                "Frontend":["Typescript, React, NextJs, Sass, Gsap"],
+                "Backend":[]
+            },
+            "link":{
+                "girhub":""
+            }
+        },
+        {
+            "title":"My portfolio",
+            "description":"Website to showcase my web development skills.",
+            "tech":{
+                "Frontend":["Typescript, React, NextJs, Sass, Gsap"],
+                "Backend":[]
+            },
+            "link":{
+                "girhub":""
+            }
         }
-        
     ]
 }

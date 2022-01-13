@@ -16,7 +16,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transform : translate(4rem, -8rem);
+        transform : translate(4vw, -12vh);
+        // position: absolute;
         span:nth-child(1)::before {
             content: '';
             position: absolute;
@@ -48,7 +49,7 @@
 
         span:nth-child(2) {
           position: absolute;
-          transform: translate(-4rem, 10vh);
+          transform: translate(1vw, 6vh);
         }
     }
 

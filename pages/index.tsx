@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import Image from 'next/image'
 import style from '../styles/Home.module.scss'
 import theme from '../styles/Theme.module.scss'
@@ -10,9 +10,28 @@ import Intro from '../components/hero/intro'
 import AboutMe from '../components/hero/about'
 import Skills from '../components/hero/skills'
 import Portfolio from '../components/hero/portfolio'
+import Contact from '../components/hero/contact'
 
 const Home: NextPage = () => {
   const [isdarkMode, setDarkMode] = useState<boolean>(false);
+  const [screenDimension, setDimension] = useState({'width':0, 'height':0});
+
+  useEffect(() =>{
+    const minDimension=(dim1:number, dim2:number)=>{
+      return Math.min(dim1, dim2)
+    }
+    setDimension(
+      // Set img dimension in a responsiveness manner 
+      // according to the width of the screen 
+      // Cap at 1500px
+      {
+        'width':minDimension(1500, window.innerWidth), 
+        'height': minDimension(1500, window.innerWidth )
+      }
+    );
+    console.log(screenDimension);
+  },[])
+
   return (
     <>
       <div className={`${style.container} ${isdarkMode? theme.container_bgdark : theme.container_bglight}`}>
@@ -20,10 +39,11 @@ const Home: NextPage = () => {
         <main>
           <Navbar isdarkMode={isdarkMode} setDarkMode={setDarkMode}/>
           <div className={`${style.hero}`}>
-            <Intro isdarkMode={isdarkMode}/>
-            <AboutMe isdarkMode={isdarkMode}/>
+            <Intro isdarkMode={isdarkMode} screenDimension={screenDimension}/>
+            <AboutMe isdarkMode={isdarkMode} screenDimension={screenDimension}/>
             <Skills isdarkMode={isdarkMode}/>
             <Portfolio isdarkMode={isdarkMode}/>
+            <Contact isdarkMode={isdarkMode}/>
           </div>
         </main>
       </div>

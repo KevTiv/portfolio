@@ -10,14 +10,10 @@ import skillsList from '../../public/resources/skills.json'
 
 type skillsProps={
     isdarkMode?: boolean,
-    skillsRef?:  MutableRefObject<any>
-    portfolioRef?:  MutableRefObject<any>
 }
 
-const ImgContainer = ({isdarkMode, skillsRef, portfolioRef}:skillsProps)=>{
+const ImgContainer = ({isdarkMode}:skillsProps)=>{
     // gsap.registerPlugin(ScrollTrigger);
-
-    const listOfSkill = skillsList['skills'];
 
     // const xxs_screenSize = 480;
     // const xs_screenSize = 540;
@@ -37,7 +33,7 @@ const ImgContainer = ({isdarkMode, skillsRef, portfolioRef}:skillsProps)=>{
     return(
         <>
             <div className={skillStyle.skillsView} ref={gallery}>
-                {listOfSkill.map((skill, index)=>{
+                {skillsList['skills'].map((skill, index)=>{
                     return(
                         <span  key ={index} className={`${skillStyle.skillsViewItem} ${isdarkMode ? themeStyle.skillViewBgDark : themeStyle.skillViewBgLight}`}>
                             <Image src={skill.img} alt={`${skill.alt} alt`} width={imgWidth} height={imgHeight} layout="fixed"/>

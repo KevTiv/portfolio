@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import style from '../../styles/Home.module.scss'
 import fontStyle from '../../styles/Fonts.module.scss'
@@ -12,12 +13,20 @@ type portfolioProps={
     isdarkMode?: boolean,
 }
 const Portfolio = ({isdarkMode} : portfolioProps) => {
-    
+    const router = useRouter();
+
     const githubLogo = skillsList["skills"][19].img;
     const githubName = skillsList["skills"][19].name;
 
     const imgWidth = 30;
     const imgHeight = 30;
+
+    const redirectToProject = (index : number, portfolio: any) => {
+        router.push({
+            pathname: `/portfolio/${index}`,
+            query: { data: JSON.stringify(portfolio) },
+        });
+    };
     return (
         <>
             <section id="portfolioSection">
@@ -25,42 +34,34 @@ const Portfolio = ({isdarkMode} : portfolioProps) => {
                     ${isdarkMode ? themeStyle.dark_mode : themeStyle.light_mode}`}>
                     <h1>Portfolio</h1> 
                     <p>I listed below a selection of the last projects I have worked on.</p>
-                    <div>
+                    <ul className={portfolioStyle.panel}>
                         {portfolioList["portfolioList"].map((portfolio, index)=>{
                             return(
-                                <div key={index} className={portfolioStyle.portfolioListEntry}>
+                                <li key={index} className={portfolioStyle.portfolioListEntry}>
                                     <div className={portfolioStyle.title}>
                                         <h2>
                                             {portfolio.title}
                                         </h2>
                                         <a href={portfolio.link.github} target="_blank"  className={`${isdarkMode ? themeStyle.githubLinkBgDark : themeStyle.githubLinkBgLight}`} rel="noreferrer">
-                                            <Image src={githubLogo} alt={githubName} width={imgWidth} height={imgHeight} layout="fixed"/>
+                                            {/* <Image src={githubLogo} alt={githubName} width={imgWidth} height={imgHeight} layout="fixed"/> */}
                                         </a>
                                     </div>
                                     
                                     <p className="">
                                         {portfolio.description}
                                     </p>
-                                    <div className={portfolioStyle.tech}>
-                                        <p className="">
-                                            Frontend: 
-                                        </p>
-                                        {portfolio.tech.Frontend.map((tech, index)=>{
-                                            return <span key={index}> {tech}</span>
-                                        })}
+                                    <div className={portfolioStyle.moreInfo} 
+                                        onClick={(e)=>{
+                                            e.preventDefault();
+                                            redirectToProject(index, portfolio);
+                                        }}>
+                                       <p>more details</p>  <span>&rsaquo;</span>
                                     </div>
-                                    <div className={portfolioStyle.tech}>
-                                        <p className="">
-                                            Backend: 
-                                        </p>
-                                        {portfolio.tech.Backend.map((tech, index)=>{
-                                            return <span key={index}> {tech}</span>
-                                        })}
-                                    </div>
-                                </div>
+                                    
+                                </li>
                             );
                         })}
-                    </div>
+                    </ul>
                 </div>
             </section>
         </>

@@ -9,27 +9,21 @@ import dev from '../../public/asset/programmer.svg'
 import terminal from '../../public/asset/terminal.png'
 import linkedin from '../../public/asset/linkedin.png'
 import github from '../../public/asset/github.png'
-import { useEffect, useState } from 'react'
 type introProps={
-    isdarkMode: boolean
+    isdarkMode: boolean,
+    screenDimension: {'width':number, 'height':number},
 }
-const Intro = ({isdarkMode}: introProps) => {
-    const [viewportWidth, setWidth] = useState<number>(0);
-    const [viewportHeight, setHeight] = useState<number>(0);
-    useEffect(() =>{
-
-        setWidth(window.innerWidth);
-        setHeight(window.innerHeight);
-        
-    },[])
-    
+const Intro = ({isdarkMode, screenDimension}: introProps) => {
+    console.log(screenDimension);
     return (
         <>
             <div className={`${style.container} ${introStyle.intro_content} ${fontStyle.font} 
                 ${isdarkMode ? themeStyle.dark_mode : themeStyle.light_mode}`}>
                     <div>
-                        <Image src={dev} alt="Developper png" width={(viewportWidth * 65) / 100} height={(viewportHeight * 65) / 100}/>
-                        <Image src={terminal} className={introStyle.imgTerminal} alt="Developper png" width={(viewportWidth * 12.5) / 100} height={(viewportHeight* 12.5) / 100} />
+                        <Image src={dev} alt="Developper png" width={(screenDimension.width * 45) / 100} height={(screenDimension.height * 45) / 100}/>
+                        {/* <Image src={dev} alt="Developper png" width={(viewportWidth * 50) / 100} height={(viewportHeight * 50) / 100}/> */}
+                        <Image src={terminal} className={introStyle.imgTerminal} alt="Developper png" width={(screenDimension.width * 10) / 100} height={(screenDimension.height* 10) / 100} />
+                        {/* <Image src={terminal} className={introStyle.imgTerminal} alt="Developper png" width={(viewportWidth * 9) / 100} height={(viewportHeight* 9) / 100} /> */}
                     </div>
                     <div>
                         <p>Hi, my name is </p>
