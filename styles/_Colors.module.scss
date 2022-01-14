@@ -8,7 +8,8 @@ $backgroundDark: linear-gradient(to right bottom, #0b0b0b, #0c0c0c, #0e0e0e, #0f
 
 $lightModeText: #2d2527;
 $darkModeText: #fffade;
-$hoverBg: rgba(45, 80, 45, 0.75);
+$hoverBg: rgba(134, 146, 134, 0.75);
+$hoverBorder: #fffade;
 
 $h1_underlineColor: rgb(81, 131, 81);
 
@@ -24,4 +25,4 @@ $skillViewHoverBg: rgba(50, 94, 50, 0.35);
 
 $portfolioGithubLogoHoverBg: $hoverBg;
 $portfolioGithubLogoBgLight: rgba(0, 0, 0, 0.3);
-$portfolioGithubLogoBgDark: rgba(255, 255, 255, 0.2);
+$portfolioGithubLogoBgDark: rgba(255, 255, 255, 0.3);

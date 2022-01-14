@@ -7,14 +7,14 @@ import Image from 'next/Image'
 
 import dev from '../../public/asset/programmer.svg'
 import terminal from '../../public/asset/terminal.png'
-import linkedin from '../../public/asset/linkedin.png'
-import github from '../../public/asset/github.png'
+import linkedin from '../../public/asset/logo/linkedin.svg'
+import github from '../../public/asset/logo/github.svg'
 type introProps={
     isdarkMode: boolean,
     screenDimension: {'width':number, 'height':number},
 }
 const Intro = ({isdarkMode, screenDimension}: introProps) => {
-    console.log(screenDimension);
+    
     return (
         <>
             <div className={`${style.container} ${introStyle.intro_content} ${fontStyle.font} 

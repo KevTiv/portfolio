@@ -126,17 +126,11 @@
   overflow-x: hidden;
   top: 9.75vh;
   bottom: 0;
-  left: 0;
-  right: 0;
-  // overflow: auto;
-}
 
-.about_me{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  // align-items: justify-start;
+  scrollbar-width: none;
+  // left: 0;
+  // right: 0;
+  // overflow: auto;
 }
 
 

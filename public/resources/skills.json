@@ -2,102 +2,102 @@
     "skills":[
         {
             "name":"Javascript",
-            "img":"https://img.icons8.com/color/240/000000/javascript--v1.png",
+            "img":"/asset/logo/js.svg",
             "alt":"Js"
         },
         {
             "name":"Typescript",
-            "img":"https://img.icons8.com/color/240/000000/typescript.png",
+            "img":"/asset/logo/ts.svg",
             "alt":"Ts"
         },
         {
             "name": "React",
-            "img": "https://img.icons8.com/plasticine/100/000000/react.png",
+            "img": "/asset/logo/react.svg",
             "alt": "React"
         },
         {
             "name": "NextJS",
-            "img": "https://api.iconify.design/cib/next-js.svg?color=white",
+            "img": "/asset/logo/nextjs.svg",
             "alt": "NextJS"
         },
         {
             "name": "Tailwind",
-            "img": "https://api.iconify.design/logos/tailwindcss-icon.svg",
+            "img": "/asset/logo/tailwind.svg",
             "alt": "Tailwind"
         },
         {
             "name": "Sass",
-            "img": "https://img.icons8.com/color/240/000000/sass.png",
+            "img": "/asset/logo/sass.svg",
             "alt": "Sass"
         },
         {
             "name": "CSS3",
-            "img": "https://img.icons8.com/color/240/000000/css3.png",
+            "img": "/asset/logo/css.svg",
             "alt": "Css3"
         },
         {
             "name": "HTML5",
-            "img": "https://api.iconify.design/typcn/html5.svg?color=white",
+            "img": "/asset/logo/html.svg",
             "alt": "HTML5"
         },
         {
             "name": "Bootstrap",
-            "img": "https://img.icons8.com/color/240/000000/bootstrap.png",
+            "img": "/asset/logo/bootstrap.svg",
             "alt": "Bootstrap"
         },
         {
             "name": "Animation",
-            "img": "https://api.iconify.design/clarity/animation-line.svg?color=white",
+            "img": "/asset/logo/animation.svg",
             "alt": ""
         },
         {
             "name": "Python",
-            "img": "https://img.icons8.com/color/240/000000/python--v1.png",
+            "img": "/asset/logo/python.svg",
             "alt": "Python"
         },
         {
             "name": "NodeJs",
-            "img": "https://api.iconify.design/fa-brands/node-js.svg?color=green",
+            "img": "/asset/logo/nodejs.svg",
             "alt": "NodeJS"
         },
         {
             "name": "MySQL",
-            "img": "https://api.iconify.design/cib/mysql.svg?color=white",
+            "img": "/asset/logo/mysql.svg",
             "alt": "SQL"
         },
         {
             "name": "PostgreSQL",
-            "img": "https://img.icons8.com/color/240/000000/postgreesql.png",
+            "img": "/asset/logo/postgresql.svg",
             "alt": "PostgreSQL"
         },
         {
             "name": "PrismaJS",
-            "img": "https://api.iconify.design/vscode-icons/file-type-prisma.svg?color=white",
+            "img": "/asset/logo/prismajs.svg",
             "alt": "PrismaJS"
         },
         {
             "name": "ExpressJS",
-            "img": "https://api.iconify.design/simple-icons/express.svg?color=white",
+            "img": "/asset/logo/expressjs.svg",
             "alt": "ExpressJS"
         },
         {
             "name": "Axios",
-            "img": "https://api.iconify.design/logos/axios.svg",
+            "img": "/asset/logo/axios.svg",
             "alt": "Axios"
         },
         {
             "name": "Firebase",
-            "img": "https://img.icons8.com/color/240/000000/firebase.png",
+            "img": "/asset/logo/firebase.svg",
             "alt": "Firebase"
         },
         {
             "name": "Git",
-            "img": "https://img.icons8.com/color/240/000000/git.png",
+            "img": "/asset/logo/git.svg",
             "alt": "Git"
         },
         {
             "name": "Github",
-            "img": "https://api.iconify.design/bi/github.svg?color=white",
+            "img": "/asset/logo/github.svg",
             "alt": "Github"
         }
     ]

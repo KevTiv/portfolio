@@ -12,6 +12,22 @@ import skillsList from '../../public/resources/skills.json'
 type portfolioProps={
     isdarkMode?: boolean,
 }
+export type projectProps={
+
+    title?: string,
+    description?: string,
+    challenge?: string,
+    lesson?: string,
+    tech?:{
+        Frontend?:[string],
+        Backend?:[string],
+    },
+    img?: [string],
+    link?: {
+        github: string
+    },
+
+}
 const Portfolio = ({isdarkMode} : portfolioProps) => {
     const router = useRouter();
 
@@ -24,9 +40,14 @@ const Portfolio = ({isdarkMode} : portfolioProps) => {
     const redirectToProject = (index : number, portfolio: any) => {
         router.push({
             pathname: `/portfolio/${index}`,
-            query: { data: JSON.stringify(portfolio) },
+            query: { 
+                data: JSON.stringify(portfolio),
+                isDarkMode: JSON.stringify(isdarkMode),
+                index: JSON.stringify(index),
+            },
         });
     };
+
     return (
         <>
             <section id="portfolioSection">
@@ -37,13 +58,17 @@ const Portfolio = ({isdarkMode} : portfolioProps) => {
                     <ul className={portfolioStyle.panel}>
                         {portfolioList["portfolioList"].map((portfolio, index)=>{
                             return(
-                                <li key={index} className={portfolioStyle.portfolioListEntry}>
+                                <li key={index} className={portfolioStyle.portfolioListEntry} 
+                                    onClick={(e)=>{
+                                            e.preventDefault();
+                                            redirectToProject(index, portfolio);
+                                    }}>
                                     <div className={portfolioStyle.title}>
                                         <h2>
                                             {portfolio.title}
                                         </h2>
                                         <a href={portfolio.link.github} target="_blank"  className={`${isdarkMode ? themeStyle.githubLinkBgDark : themeStyle.githubLinkBgLight}`} rel="noreferrer">
-                                            {/* <Image src={githubLogo} alt={githubName} width={imgWidth} height={imgHeight} layout="fixed"/> */}
+                                            <Image src={githubLogo} alt={githubName} width={imgWidth} height={imgHeight} layout="fixed"/>
                                         </a>
                                     </div>
                                     
@@ -55,7 +80,7 @@ const Portfolio = ({isdarkMode} : portfolioProps) => {
                                             e.preventDefault();
                                             redirectToProject(index, portfolio);
                                         }}>
-                                       <p>more details</p>  <span>&rsaquo;</span>
+                                       <p>More details</p>  <span>&rsaquo;</span>
                                     </div>
                                     
                                 </li>

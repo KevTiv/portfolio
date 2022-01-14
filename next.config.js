@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images:{
-    domains: ['img.icons8.com', 'api.iconify.design']
+    domains: ['img.icons8.com', 'api.iconify.design','localhost']
   },
 }
