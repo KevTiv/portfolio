@@ -37,13 +37,12 @@ const Portfolio = ({isdarkMode} : portfolioProps) => {
     const imgWidth = 30;
     const imgHeight = 30;
 
-    const redirectToProject = (index : number, portfolio: any) => {
+    const redirectToProject = (index : number) => {
         router.push({
             pathname: `/portfolio/${index}`,
             query: { 
-                data: JSON.stringify(portfolio),
                 isDarkMode: JSON.stringify(isdarkMode),
-                index: JSON.stringify(index),
+                id: JSON.stringify(index),
             },
         });
     };
@@ -61,7 +60,7 @@ const Portfolio = ({isdarkMode} : portfolioProps) => {
                                 <li key={index} className={portfolioStyle.portfolioListEntry} 
                                     onClick={(e)=>{
                                             e.preventDefault();
-                                            redirectToProject(index, portfolio);
+                                            redirectToProject(index);
                                     }}>
                                     <div className={portfolioStyle.title}>
                                         <h2>
@@ -76,10 +75,11 @@ const Portfolio = ({isdarkMode} : portfolioProps) => {
                                         {portfolio.description}
                                     </p>
                                     <div className={portfolioStyle.moreInfo} 
-                                        onClick={(e)=>{
-                                            e.preventDefault();
-                                            redirectToProject(index, portfolio);
-                                        }}>
+                                        // onClick={(e)=>{
+                                        //     e.preventDefault();
+                                        //     redirectToProject(index);
+                                        // }}
+                                        >
                                        <p>More details</p>  <span>&rsaquo;</span>
                                     </div>
                                     

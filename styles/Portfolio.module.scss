@@ -92,12 +92,12 @@
     //     // }
     }
 }
-.projectWrapper{
-    height: auto;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
+// .projectWrapper{
+//     height: auto;
+//     width: 100vw;
+//     display: flex;
+//     flex-direction: column;
+//     overflow-y: scroll;
     .projectContent{
         position: absolute;
         top : 14vh;
@@ -151,4 +151,4 @@
             }
         }
     }
-}
+// }

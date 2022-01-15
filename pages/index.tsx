@@ -38,13 +38,13 @@ const Home: NextPage = () => {
         <PortfolioHead/>
         <main>
           <Navbar isdarkMode={isdarkMode} setDarkMode={setDarkMode}/>
-          <div className={`${style.hero}`}>
+          {/* <div className={`${style.hero}`}> */}
             <Intro isdarkMode={isdarkMode} screenDimension={screenDimension}/>
             <AboutMe isdarkMode={isdarkMode} screenDimension={screenDimension}/>
             <Skills isdarkMode={isdarkMode}/>
             <Portfolio isdarkMode={isdarkMode}/>
             <Contact isdarkMode={isdarkMode}/>
-          </div>
+          {/* </div> */}
         </main>
       </div>
     </>
