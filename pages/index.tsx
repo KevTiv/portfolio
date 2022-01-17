@@ -1,25 +1,56 @@
 import type { NextPage } from 'next'
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
+import gsap from 'gsap'
 import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import style from '../styles/Home.module.scss'
 import theme from '../styles/Theme.module.scss'
 import airplane from '../public/contatc_cta_dark.png'
 import PortfolioHead from '../components/head/head'
 import Navbar from '../components/navbar/navbar'
 import Intro from '../components/hero/intro'
+import AboutMe from '../components/hero/about'
+import Skills from '../components/hero/skills'
+import Portfolio from '../components/hero/portfolio'
+import Contact from '../components/hero/contact'
 
 const Home: NextPage = () => {
   const [isdarkMode, setDarkMode] = useState<boolean>(false);
+  const [screenDimension, setDimension] = useState({'width':0, 'height':0});
+
+  useEffect(() =>{
+    const minDimension=(dim1:number, dim2:number)=>{
+      return Math.min(dim1, dim2)
+    }
+    setDimension(
+      // Set img dimension in a responsiveness manner 
+      // according to the width of the screen 
+      // Cap at 1500px
+      {
+        'width':minDimension(1500, window.innerWidth), 
+        'height': minDimension(1500, window.innerWidth )
+      }
+    );
+    console.log(screenDimension);
+    gsap.to("body", {
+      duration: 1,
+      css:{visibility: "visible"}
+    });
+  },[])
+
   return (
     <>
-      <div className={`${styles.container} ${isdarkMode? theme.container_bgdark : theme.container_bglight}`}>
+      <div className={`${style.container} ${isdarkMode? theme.container_bgdark : theme.container_bglight}`}>
         <PortfolioHead/>
-        <section className={styles.navbar}>
+        <main className={style.main}>
           <Navbar isdarkMode={isdarkMode} setDarkMode={setDarkMode}/>
-        </section>
-        <section>
-          <Intro isdarkMode={isdarkMode}/>
-        </section>
+          {/* <div className={`${style.hero}`}> */}
+            <Intro isdarkMode={isdarkMode} screenDimension={screenDimension}/>
+            <AboutMe isdarkMode={isdarkMode} screenDimension={screenDimension}/>
+            <Skills isdarkMode={isdarkMode}/>
+            <Portfolio isdarkMode={isdarkMode}/>
+            <Contact isdarkMode={isdarkMode}/>
+          {/* </div> */}
+        </main>
       </div>
     </>
   )

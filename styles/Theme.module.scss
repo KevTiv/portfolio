@@ -1,32 +1,41 @@
-.light_mode {
-    color: #2d2527;
-}
+@use './Colors.module' as *;
 
 .dark_mode {
-    color: #fffade;
+    color: $lightModeText;
+}
+.dark_mode {
+    color: $darkModeText;
 }
 
 .navbar_light{
-    background: rgba(0, 0, 0, 0.25);
-    color: #2d2527;
+    background-color: $navbarBgLight;
+    color: $lightModeText;
+    transition: 2s ease-in from bottom right to top left;
 }
-
 .navbar_dark {
-    background: rgba(255, 255, 255, 0.35);
-    color: #fffade;
+    background-color: $navbarBgDark;
+    color: $darkModeText;
+    transition: 2s ease-in from top right to bottom left;
 }
-.container_bglight{
-    // COLOR1 ->#b0a8b9 COLOR2 ->#f7f5f2 
-    // GRADIENT GENERATOR -> https://mycolor.space/gradient?ori=to+left+bottom&hex=%23F7F5F2&hex2=%23B0A8B9&sub=1
 
-     background-image: linear-gradient(to left bottom, #f7f5f2, #e9e1dd, #dccccd, #c9b9c2, #b0a8b9);
-    // text #2d2527
+.skillViewBgLight {
+    background-color: $skillViewBgLight;
+};
+.skillViewBgDark {
+    background-color: $skillViewBgDark;
+};
+
+.githubLinkBgLight{
+    background-color: $portfolioGithubLogoBgLight;
+};
+.githubLinkBgDark {
+    background-color: $portfolioGithubLogoBgDark;
+};
+
+.container_bglight{
+    background-image: $backgroundLight
 }
 
 .container_bgdark{
-    // COLOR1 ->#18181A COLOR2 -> #3B383D
-    // GRADIENT GENERATOR ->https: //mycolor.space/gradient?ori=to+left+bottom&hex=%23362159&hex2=%234B4453&sub=1
-
-     background-image: linear-gradient(to right bottom, #18181a, #202022, #29282b, #323034, #3b383d);
-    // text #fffade
+    background-image: $backgroundDark;
 }

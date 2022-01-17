@@ -1,0 +1,53 @@
+// ===================== H1 ====================== //
+    $h1_font_size: max(2.5rem, 4vw);
+    $h1_letter_spacing: 0.15vw;
+    $h1_line_height: 2.85vw;
+// ===================== H2 ====================== //
+    // $h2_font_size: max(1.65rem,2vw);
+    $h2_font_size: min(4rem, 2.75vw);
+    $h2_letter_spacing: 0.15vw;
+    $h2_line_height: 2.5vw;
+// ===================== P ======================= //
+    $p_font_size: max(1.45rem, 1.75vw);
+    // $p_font_size: min(1.8rem, 2vw);
+    $p_letter_spacing: 0.15vw;
+    $p_line_height: 2vw;
+
+.font{
+
+    & h1{
+        font-size: $h1_font_size;
+        letter-spacing: $h1_letter_spacing;
+        line-height: $h1_line_height;
+        position: relative;
+        z-index: 4;
+        width: fit-content;
+        // height: fit-content;
+    }
+    & h1::Before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 102%;
+        height: 100%;
+        top: 55%;
+        left: -0.75rem;
+        filter: blur(0.15rem);
+        background-color: rgb(81, 131, 81);
+        z-index: -1;
+        transition: all 0.9s cubic-bezier(.93, 0, .34, 1.42);
+    }
+    & h1:hover::before{
+        height: 44%;
+    }
+    & h2{
+        font-size: $h2_font_size;
+        letter-spacing: $h2_letter_spacing;
+        line-height: $h2_line_height;
+    }
+    & p{
+        font-size: $p_font_size;
+        letter-spacing: $p_letter_spacing;
+        line-height: $p_line_height;
+    }
+}
