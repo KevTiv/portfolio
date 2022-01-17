@@ -8,6 +8,8 @@ import portfolioStyle from '../../styles/Portfolio.module.scss'
 
 import portfolioList from '../../public/resources/portfolio.json'
 import skillsList from '../../public/resources/skills.json'
+import { useEffect, useRef } from 'react'
+import { revealPortfolioSection } from '../../animation/portfolioSectionAnimation'
 
 type portfolioProps={
     isdarkMode?: boolean,
@@ -37,6 +39,8 @@ const Portfolio = ({isdarkMode} : portfolioProps) => {
     const imgWidth = 30;
     const imgHeight = 30;
 
+    const portfolioContentRef= useRef<any>(null);
+
     const redirectToProject = (index : number) => {
         router.push({
             pathname: `/portfolio/${index}`,
@@ -46,11 +50,13 @@ const Portfolio = ({isdarkMode} : portfolioProps) => {
             },
         });
     };
-
+    useEffect(() => {
+        revealPortfolioSection(portfolioContentRef);
+    }, []);
     return (
         <>
             <section id="portfolioSection">
-                <div className={`${portfolioStyle.portfolioWrapper} ${style.container} ${fontStyle.font} 
+                <div ref={portfolioContentRef} className={`${portfolioStyle.portfolioWrapper} ${style.container} ${fontStyle.font} 
                     ${isdarkMode ? themeStyle.dark_mode : themeStyle.light_mode}`}>
                     <h1>Portfolio</h1> 
                     <p>I listed below a selection of the last projects I have worked on.</p>

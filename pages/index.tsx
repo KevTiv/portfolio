@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import {useEffect, useState} from 'react'
+import gsap from 'gsap'
 import Image from 'next/image'
 import style from '../styles/Home.module.scss'
 import theme from '../styles/Theme.module.scss'
@@ -30,13 +31,17 @@ const Home: NextPage = () => {
       }
     );
     console.log(screenDimension);
+    gsap.to("body", {
+      duration: 1,
+      css:{visibility: "visible"}
+    });
   },[])
 
   return (
     <>
       <div className={`${style.container} ${isdarkMode? theme.container_bgdark : theme.container_bglight}`}>
         <PortfolioHead/>
-        <main>
+        <main className={style.main}>
           <Navbar isdarkMode={isdarkMode} setDarkMode={setDarkMode}/>
           {/* <div className={`${style.hero}`}> */}
             <Intro isdarkMode={isdarkMode} screenDimension={screenDimension}/>

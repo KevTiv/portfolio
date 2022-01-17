@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, MutableRefObject, SetStateAction, useEffect, useRef } from 'react'
 
 import styles from '../../styles/Home.module.scss'
 import navStyles from '../../styles/Navbar.module.scss'
@@ -20,6 +20,7 @@ import resumeDarkTheme from '../../public/asset/cv_light.png'
 // import moon from '../../public/asset/moon.png'
 import moon from '../../public/asset/nav/moon.svg'
 
+import {logoAppear, navbarAppear} from '../../animation/navbarAnimation';
 
 type navProps={
     isdarkMode: boolean,
@@ -29,39 +30,46 @@ const Navbar = ({isdarkMode, setDarkMode}:navProps ) => {
     const imgWidth = 50;
     const imgHeight = 50;
 
+    const navbarRef = useRef(null);
+    const logoRef = useRef(null);
+    const navbarOptionRef = useRef(null);
+    useEffect(() => {
+        logoAppear(logoRef);
+        navbarAppear(navbarRef);
+    },[]);
     return (
         <>
             <nav>
-                <div className={`${navStyles.logo} ${isdarkMode ? theme.dark_mode : theme.light_mode} ${fontStyles.font}`}>
+                <div ref={logoRef} className={`${navStyles.logo} ${isdarkMode ? theme.dark_mode : theme.light_mode} ${fontStyles.font}`}>
                     <h2>
                         &lt;Kevin Tivert &#47;&gt;
                     </h2>
                 </div>
-                <div className={`${navStyles.navbar_container} ${isdarkMode ? theme.navbar_dark : theme.navbar_light} `}>
-                    <span>
+                <div  ref={navbarRef} className={`${navStyles.navbar_container} ${isdarkMode ? theme.navbar_dark : theme.navbar_light} `}>
+                    {/* ${fontStyles.font} */}
+                    <span >
                         {/* <Image src={isdarkMode ? aboutDarkTheme : aboutLightTheme} alt="About me" width={imgWidth} height={imgHeight} />  */}
-                        <Image src={'/asset/nav/person.svg'} alt="About me" width={imgWidth} height={imgHeight} /> 
-                        <p>About Me</p>
+                        <Image src={'/asset/nav/person.svg'} alt="About me" width={imgWidth} height={imgHeight} />
+                        {/* <p>About Me</p> */}
                     </span>
-                    <span>
+                    <span >
                         {/* <Image src={isdarkMode ? skillsDarkTheme : skillsLightTheme} alt="About me" width={imgWidth} height={imgHeight} />  */}
-                        <Image src={'/asset/nav/skill.svg'} alt="Skill" width={imgWidth} height={imgHeight} /> 
-                        <p>Skills</p>
+                        <Image src={'/asset/nav/skill.svg'} alt="Skill" width={imgWidth} height={imgHeight} />
+                        {/* <p>Skills</p> */}
                     </span>
-                    <span>
+                    <span >
                         {/* <Image src={isdarkMode ? portfolioDarkTheme : portfolioLightTheme} alt="About me" width={imgWidth} height={imgHeight} />  */}
-                        <Image src={'/asset/nav/portfolio.svg'} alt="Portfolio" width={imgWidth} height={imgHeight} /> 
-                        <p>Portfolio</p>
+                        <Image src={'/asset/nav/portfolio.svg'} alt="Portfolio" width={imgWidth} height={imgHeight} />
+                        {/* <p>Portfolio</p> */}
                     </span>
-                    <span>
+                    <span >
                         {/* <Image src={isdarkMode ? resumeDarkTheme : resumeLightTheme} alt="About me" width={imgWidth} height={imgHeight} />  */}
-                        <Image src={'/asset/nav/cv.svg'} alt="Resume" width={imgWidth} height={imgHeight} /> 
-                        <p>Resume</p>
+                        <Image src={'/asset/nav/cv.svg'} alt="Resume" width={imgWidth} height={imgHeight} />
+                        {/* <p>Resume</p> */}
                     </span>
-                    <span onClick={()=>setDarkMode(!isdarkMode)}>
+                    <span   className={isdarkMode? `${navStyles.darkMode}` : `${navStyles.lightMode}`} onClick={()=>setDarkMode(!isdarkMode)}>
                         {/* <Image src={isdarkMode ? sun : moon} alt="About me" width={imgWidth} height={imgHeight} />  */}
-                        <Image src={isdarkMode ? sun : moon} alt="About me" width={imgWidth} height={imgHeight} /> 
-                        <p>{isdarkMode? 'Light mode' : 'Dark mode'}</p>
+                        <Image src={isdarkMode ? sun : moon} alt="About me" width={imgWidth} height={imgHeight} />
                     </span>
                 </div>
             </nav>

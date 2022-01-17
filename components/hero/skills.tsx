@@ -7,12 +7,14 @@ import themeStyle from '../../styles/Theme.module.scss'
 import skillStyle from '../../styles/Skills.module.scss'
 
 import skillsList from '../../public/resources/skills.json'
+import { revealSkillGallery, revealSkillSection } from "../../animation/skillsSectionAnimation"
 
 type skillsProps={
     isdarkMode?: boolean,
+    gallery: MutableRefObject<any>
 }
 
-const ImgContainer = ({isdarkMode}:skillsProps)=>{
+const ImgContainer = ({isdarkMode, gallery}:skillsProps)=>{
     // gsap.registerPlugin(ScrollTrigger);
 
     // const xxs_screenSize = 480;
@@ -23,13 +25,14 @@ const ImgContainer = ({isdarkMode}:skillsProps)=>{
     // const xl_screenSize = 1280;
     // const xxl_screenSize = 1536;
 
-    const gallery = useRef<any>(null);
+    
 
     // const [imgWidth, setImgWidth] = useState<number>(0);
     // const [imgHeight, setImgHeight] = useState<number>(0);
 
     const imgWidth=50;
     const imgHeight=50;
+
     return(
         <>
             <div className={skillStyle.skillsView} ref={gallery}>
@@ -49,10 +52,18 @@ const ImgContainer = ({isdarkMode}:skillsProps)=>{
 }
 
 const Skills = ({isdarkMode}:skillsProps) => {
+    const skillRevealTrigger = useRef(null);
+    const skillContentRef = useRef(null);
+    const gallery = useRef<any>(null);
+
+    useEffect(() => {
+        revealSkillSection(skillRevealTrigger, skillContentRef);
+        revealSkillGallery(gallery);
+    },[])
     return (
         <>
-            <section id="skills_section">
-               <div className={`${skillStyle.skillsWrapper} ${style.container} ${fontStyle.font} 
+            <section ref={skillRevealTrigger} id="skills_section">
+               <div ref={skillContentRef} className={`${skillStyle.skillsWrapper} ${style.container} ${fontStyle.font} 
                     ${isdarkMode ? themeStyle.dark_mode : themeStyle.light_mode}`}>
                {/* <div className="skills_wrapper" ref={skillsRef}> */}
                     <h1>Skills</h1>
@@ -65,7 +76,7 @@ const Skills = ({isdarkMode}:skillsProps) => {
                             <h2>Version Control</h2>
                             <p>Git, Github</p>
                         </div>
-                        <ImgContainer isdarkMode={isdarkMode}/>
+                        <ImgContainer isdarkMode={isdarkMode} gallery={gallery}/>
                     </div>
                     {/* <ImgContainer skillsRef={skillsRef} portfolioRef={portfolioRef}/> */}
                 </div>

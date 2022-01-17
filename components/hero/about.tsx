@@ -7,20 +7,30 @@ import Image from 'next/image'
 
 import discovery from '../../public/asset/discovery_website.svg'
 import learning from '../../public/asset/learning_website.svg'
+import { useEffect, useRef } from 'react'
+import { revealAboutSection } from '../../animation/aboutSectionAnimation'
+
 type aboutProps={
     isdarkMode: boolean,
     screenDimension: {'width':number, 'height':number},
 }
 const AboutMe = ({isdarkMode, screenDimension}: aboutProps) => {
     console.log(screenDimension);
+    const triggerRef = useRef(null);
+    const aboutRef = useRef(null);
+    const aboutContentRef= useRef(null);
+
+    useEffect(() => {
+        revealAboutSection(triggerRef, aboutRef, aboutContentRef);
+    },[]);
     return (
         <>
-            <section>
-                <div className={`${style.container} ${aboutStyle.about} ${fontStyle.font} 
+            <section ref={triggerRef}>
+                <div ref={aboutRef} className={`${style.container} ${aboutStyle.about} ${fontStyle.font} 
                 ${isdarkMode ? theme.dark_mode : theme.light_mode}`}>                    
                     <h1>About me</h1>
                     <h2>Hello word! My name is Kevin and I like creating beautiful things.</h2>
-                    <div className={aboutStyle.aboutContent}>
+                    <div ref={aboutContentRef} className={aboutStyle.aboutContent}>
                         <div>
                             <Image src={discovery} alt="discovered cool website" width={(screenDimension.width * 45) / 100} height={ (screenDimension.height * 45) / 100} />                            
                             <p>
