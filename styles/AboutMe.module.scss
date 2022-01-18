@@ -1,3 +1,5 @@
+@use './mixin/mediaQueries' as *;
+
 .about {
     min-height: 100vh;
     display: flex;
@@ -27,6 +29,18 @@
         div:nth-child(3){
             p{
                 width: 100%;
+            }
+        }
+        @include sm_screen{
+            div{
+                display: flex;
+                flex-direction: column;
+                p{
+                    width: 100%;
+                }
+                img{
+                    transform: scale(0.7);
+                }
             }
         }
     }

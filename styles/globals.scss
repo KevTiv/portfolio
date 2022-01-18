@@ -1,6 +1,6 @@
 html,
 body {
-  visibilty: hidden;
+  visibility: hidden;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -17,3 +17,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+// @media screen and (max-width: 565.98px){
+//   html, body {
+//     overflow-x: hidden;
+//     overflow-y: scroll;
+//     width: 100vw;
+//     height: auto;
+//   }
+// }

@@ -26,8 +26,8 @@ const AboutMe = ({isdarkMode, screenDimension}: aboutProps) => {
     return (
         <>
             <section ref={triggerRef}>
-                <div ref={aboutRef} className={`${style.container} ${aboutStyle.about} ${fontStyle.font} 
-                ${isdarkMode ? theme.dark_mode : theme.light_mode}`}>                    
+                <div ref={aboutRef} className={`${style.container} ${fontStyle.font} 
+                ${isdarkMode ? theme.dark_mode : theme.light_mode} ${aboutStyle.about}`}>                    
                     <h1>About me</h1>
                     <h2>Hello word! My name is Kevin and I like creating beautiful things.</h2>
                     <div ref={aboutContentRef} className={aboutStyle.aboutContent}>

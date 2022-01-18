@@ -1,7 +1,8 @@
-@use './Colors.module' as *;
+@use './colors' as *;
+@use './mixin/mediaQueries' as *;
 
 .portfolioWrapper{
-    
+    min-height: 100vh;
     .panel{
         display: grid;
         grid-template-columns: repeat(6, 36vw);
@@ -10,8 +11,17 @@
         overflow-y: hidden;
         overflow-x: scroll;
         width: 80vw;
-        height: max(50rem, 40vh);
+        // height: max(50rem, 40vh);
+        height: 55vw;
         scrollbar-width: none;
+
+        @include sm_screen {
+            position: absolute;
+            height: 55vh;
+            width: 90vw;
+            grid-template-columns: repeat(6, 40vw);
+            gap: 41vw;
+        };
     }
     .portfolioListEntry{
         cursor: pointer;
@@ -26,6 +36,11 @@
         border-radius: 0.5rem;
         background-color: rgba(255, 255, 255, 0.2);
         transition: background-color 0.5s ease-in-out;
+
+        @include sm_screen{
+            width: 200%;
+            margin: 4vw 0;
+        }
     }
     .portfolioListEntry:hover{
         background-color: $hoverBg;

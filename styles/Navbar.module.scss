@@ -1,4 +1,5 @@
-@use './Colors.module' as *;
+@use './colors' as *;
+@use './mixin/mediaQueries' as *;
 .logo {
     position: absolute;
     left: 3vw;
@@ -11,6 +12,20 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        
+    }
+    @include md_screen {
+        top: 3vh;
+
+        h2 {
+            font-size: 1.7rem !important;
+        }
+    }
+    @include sm_screen {
+        top: 3.5vh;
+        h2{
+            font-size: 1rem !important;
+        }
     }
 }
 
@@ -29,6 +44,8 @@
     border-radius: 0.85rem;
     z-index: 30;
 
+    
+
     span {
         position: relative;
         width: fit-content;
@@ -40,7 +57,7 @@
         width: 350%;
         top: 150%;
         height: 100%;
-        left: -95%;
+        left: -125%;
         text-align: center;
         vertical-align: middle;
         line-height: normal;
@@ -75,6 +92,48 @@
         // background-color: ;
         &::before{
             display: inline-block;
+        }
+    }
+    @include md_screen {
+        width: 65vw;
+        height: 55px;
+        left: 32vw;
+
+        span {
+            transform: scale(0.7) !important;
+
+            &::before {
+                display: inline-block;
+                top: 85%;
+                left: -125%;
+            }
+
+            span::before {
+                display: none;
+            }
+        }
+        span:hover{
+            display: none;
+        }
+    }
+
+    @include sm_screen {
+        width: 57vw;
+        height: 35px;
+        left: 42vw;
+        span{
+            transform: scale(0.7) !important;
+            &::before{
+                display: inline-block;
+                top: 85%;
+                left: -125%;
+            }
+            span::before{
+                display: none;
+            }
+        }
+        span:hover {
+            display: none;
         }
     }
 }

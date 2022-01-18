@@ -32,7 +32,6 @@ const Navbar = ({isdarkMode, setDarkMode}:navProps ) => {
 
     const navbarRef = useRef(null);
     const logoRef = useRef(null);
-    const navbarOptionRef = useRef(null);
     useEffect(() => {
         logoAppear(logoRef);
         navbarAppear(navbarRef);
@@ -40,7 +39,7 @@ const Navbar = ({isdarkMode, setDarkMode}:navProps ) => {
     return (
         <>
             <nav>
-                <div ref={logoRef} className={`${navStyles.logo} ${isdarkMode ? theme.dark_mode : theme.light_mode} ${fontStyles.font}`}>
+                <div ref={logoRef} className={`${isdarkMode ? theme.dark_mode : theme.light_mode} ${fontStyles.font} ${navStyles.logo} `}>
                     <h2>
                         &lt;Kevin Tivert &#47;&gt;
                     </h2>

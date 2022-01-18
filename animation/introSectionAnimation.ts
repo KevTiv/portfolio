@@ -1,7 +1,9 @@
 import {gsap} from 'gsap';
 import { MutableRefObject } from 'react';
 
-export const introAppear =(ImgRef:MutableRefObject<any>, intro1Ref:MutableRefObject<any>, intro2Ref:MutableRefObject<any>, intro3Ref:MutableRefObject<any>, intro4Ref:MutableRefObject<any>)=>{
+export const introAppear =(ImgRef:MutableRefObject<any>, 
+    intro1Ref:MutableRefObject<any>, intro2Ref:MutableRefObject<any>, 
+    intro3Ref:MutableRefObject<any>, intro4Ref:MutableRefObject<any>)=>{
     let tl = gsap.timeline();
     tl
     .from(ImgRef.current.querySelector('span:nth-child(1)'),{
@@ -22,13 +24,9 @@ export const introAppear =(ImgRef:MutableRefObject<any>, intro1Ref:MutableRefObj
         duration: 1
     },"-=0.9")
     .from(intro2Ref.current,{
-        // position: 'absolute',
-        // y: 10,
-        // skewX: 30,
         opacity: 0,
         duration: 1.25,
-        ease: "power3.Out",
-        // stagger: 0.15
+        ease: "power3.Out"
     }, "-=1")
     .from(intro3Ref.current,{
         opacity: 0,

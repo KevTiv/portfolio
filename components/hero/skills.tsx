@@ -11,24 +11,10 @@ import { revealSkillGallery, revealSkillSection } from "../../animation/skillsSe
 
 type skillsProps={
     isdarkMode?: boolean,
-    gallery: MutableRefObject<any>
+    gallery?: MutableRefObject<any>
 }
 
 const ImgContainer = ({isdarkMode, gallery}:skillsProps)=>{
-    // gsap.registerPlugin(ScrollTrigger);
-
-    // const xxs_screenSize = 480;
-    // const xs_screenSize = 540;
-    // const sm_screenSize = 640;
-    // const md_screenSize = 768;
-    // const lg_screenSize = 1024;
-    // const xl_screenSize = 1280;
-    // const xxl_screenSize = 1536;
-
-    
-
-    // const [imgWidth, setImgWidth] = useState<number>(0);
-    // const [imgHeight, setImgHeight] = useState<number>(0);
 
     const imgWidth=50;
     const imgHeight=50;
@@ -63,21 +49,19 @@ const Skills = ({isdarkMode}:skillsProps) => {
     return (
         <>
             <section ref={skillRevealTrigger} id="skills_section">
-               <div ref={skillContentRef} className={`${skillStyle.skillsWrapper} ${style.container} ${fontStyle.font} 
-                    ${isdarkMode ? themeStyle.dark_mode : themeStyle.light_mode}`}>
+               <div ref={skillContentRef} className={`${style.container} ${isdarkMode ? themeStyle.dark_mode : themeStyle.light_mode} 
+                ${skillStyle.skillsWrapper} ${fontStyle.font} `}>
                {/* <div className="skills_wrapper" ref={skillsRef}> */}
                     <h1>Skills</h1>
-                    <div className={skillStyle.skillsContent}>   
-                        <div>
-                            <h2>Front End</h2>
-                            <p>Javascript(ES6+), Typescript, React, NextJs, HTML5, Tailwind, Sass, CSS, Bootstrap, Animation, GSAP.</p>
-                            <h2>Back End</h2>
-                            <p>Python, Typescript, NodeJs, SQL, MySQL, PostgreSQL, PrismaJS, ExpressJS, Axios, Firebase</p>
-                            <h2>Version Control</h2>
-                            <p>Git, Github</p>
-                        </div>
-                        <ImgContainer isdarkMode={isdarkMode} gallery={gallery}/>
+                    <div className={""}>
+                        <h2>Front End</h2>
+                        <p>Javascript(ES6+), Typescript, React, NextJs, HTML5, Tailwind, Sass, CSS, Bootstrap, Animation, GSAP.</p>
+                        <h2>Back End</h2>
+                        <p>Python, Typescript, NodeJs, SQL, MySQL, PostgreSQL, PrismaJS, ExpressJS, Axios, Firebase</p>
+                        <h2>Version Control</h2>
+                        <p>Git, Github</p>
                     </div>
+                    <ImgContainer isdarkMode={isdarkMode} gallery={gallery}/>
                     {/* <ImgContainer skillsRef={skillsRef} portfolioRef={portfolioRef}/> */}
                 </div>
            </section>

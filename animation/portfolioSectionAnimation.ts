@@ -28,7 +28,7 @@ export const revealPortfolioSection = (portfolioContentRef:MutableRefObject<any>
     }, "-=1")
     .from(portfolioContentRef.current.querySelectorAll('ul li'),{
         opacity: 0,
-        x: 900,
+        x: 500,
         duration: 3,
         stagger: 0.5,
         ease: "power3.inOut"

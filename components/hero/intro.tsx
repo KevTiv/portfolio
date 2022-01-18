@@ -9,7 +9,7 @@ import dev from '../../public/asset/programmer.svg'
 import terminal from '../../public/asset/terminal.png'
 import linkedin from '../../public/asset/logo/linkedin.svg'
 import github from '../../public/asset/logo/github.svg'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import {introAppear} from '../../animation/introSectionAnimation'
 
@@ -27,14 +27,15 @@ const Intro = ({isdarkMode, screenDimension}: introProps) => {
     useEffect(() => {
         introAppear(ImgRef, intro1Ref, intro2Ref, intro3Ref, intro4Ref);
     },[])
+    console.log(screenDimension);
     return (
         <>
-            <div className={`${style.container} ${introStyle.intro_content} ${fontStyle.font} 
-                ${isdarkMode ? themeStyle.dark_mode : themeStyle.light_mode}`}>
-                    <div ref={ImgRef}>
-                        <Image src={dev} alt="Developper png" width={(screenDimension.width * 45) / 100} height={(screenDimension.height * 45) / 100}/>
+            <div className={`${style.container} ${fontStyle.font} 
+                ${isdarkMode ? themeStyle.dark_mode : themeStyle.light_mode} ${introStyle.intro_content}`}>
+                    <div ref={ImgRef} className="intro_img">
+                        <Image src={dev} alt="Developper png" width={800} height={800}/>
                         {/* <Image src={dev} alt="Developper png" width={(viewportWidth * 50) / 100} height={(viewportHeight * 50) / 100}/> */}
-                        <Image src={terminal} className={introStyle.imgTerminal} alt="Developper png" width={(screenDimension.width * 10) / 100} height={(screenDimension.height* 10) / 100} />
+                        <Image src={terminal} className={introStyle.imgTerminal} alt="Developper png" width={256} height={256} />
                         {/* <Image src={terminal} className={introStyle.imgTerminal} alt="Developper png" width={(viewportWidth * 9) / 100} height={(viewportHeight* 9) / 100} /> */}
                     </div>
                     <div>

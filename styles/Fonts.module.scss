@@ -1,17 +1,43 @@
+@use './mixin//mediaQueries' as *;
+
 // ===================== H1 ====================== //
     $h1_font_size: max(2.5rem, 4vw);
     $h1_letter_spacing: 0.15vw;
     $h1_line_height: 2.85vw;
+
+    $h1_font_size_sm: min(2.25rem, 4vw);
+    $h1_letter_spacing_sm: 0.15vw;
+    $h1_line_height_sm: 1.85vw;
+
+    $h1_font_size_md: 3rem;
+    $h1_letter_spacing_md: 0.15vw;
+    $h1_line_height_md: 2.5vw;
 // ===================== H2 ====================== //
     // $h2_font_size: max(1.65rem,2vw);
     $h2_font_size: min(4rem, 2.75vw);
     $h2_letter_spacing: 0.15vw;
     $h2_line_height: 2.5vw;
+
+    $h2_font_size_sm: 1.25rem;
+    $h2_letter_spacing_sm: 0.15vw;
+    $h2_line_height_sm: 6vw;
+
+    $h2_font_size_md: 1.5rem;
+    $h2_letter_spacing_md: 0.15vw;
+    $h2_line_height_md: 6.6vw;
 // ===================== P ======================= //
     $p_font_size: max(1.45rem, 1.75vw);
     // $p_font_size: min(1.8rem, 2vw);
     $p_letter_spacing: 0.15vw;
-    $p_line_height: 2vw;
+    $p_line_height: 3.25vw;
+
+    $p_font_size_sm: 1.1rem;
+    $p_letter_spacing_sm: 0.15vw;
+    $p_line_height_sm: 4.25vw;
+
+    $p_font_size_md: 1.25rem;
+    $p_letter_spacing_md: 0.15vw;
+    $p_line_height_md: 5vw;
 
 .font{
 
@@ -23,6 +49,18 @@
         z-index: 4;
         width: fit-content;
         // height: fit-content;
+        @include md_screen {
+            font-size: $h1_font_size_md;
+            letter-spacing: $h1_letter_spacing_md;
+            line-height: $h1_line_height_md;
+        }
+        @include sm_screen{
+            font-size: $h1_font_size_sm;
+            letter-spacing: $h1_letter_spacing_sm;
+            line-height: $h1_line_height_sm;
+        }
+
+        
     }
     & h1::Before{
         content: '';
@@ -36,6 +74,11 @@
         background-color: rgb(81, 131, 81);
         z-index: -1;
         transition: all 0.9s cubic-bezier(.93, 0, .34, 1.42);
+
+        @include sm_screen{
+            height: 150%;
+            left: 0;
+        }
     }
     & h1:hover::before{
         height: 44%;
@@ -44,10 +87,34 @@
         font-size: $h2_font_size;
         letter-spacing: $h2_letter_spacing;
         line-height: $h2_line_height;
+        
+        @include md_screen {
+            font-size: $h2_font_size_md;
+            letter-spacing: $h2_letter_spacing_md;
+            line-height: $h2_line_height_md;
+        }
+        @include sm_screen {
+            font-size: $h2_font_size_sm;
+            letter-spacing: $h2_letter_spacing_sm;
+            line-height: $h2_line_height_sm;
+        }
+        
     }
     & p{
         font-size: $p_font_size;
         letter-spacing: $p_letter_spacing;
         line-height: $p_line_height;
+
+        @include md_screen {
+            font-size: $p_font_size_md;
+            letter-spacing: $p_letter_spacing_md;
+            line-height: $p_line_height_md;
+        }
+        @include sm_screen {
+            font-size: $p_font_size_sm;
+            letter-spacing: $p_letter_spacing_sm;
+            line-height: $p_line_height_sm;
+        }
+        
     }
 }
