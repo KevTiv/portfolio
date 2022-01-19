@@ -32,8 +32,9 @@ const Home: NextPage = () => {
     );
     console.log(screenDimension);
     gsap.to("body", {
+      visibility: "visible",
       duration: 1,
-      css:{visibility: "visible"}
+      // css:{visibility: "visible"}
     });
   },[])
 

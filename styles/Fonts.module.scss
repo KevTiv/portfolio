@@ -5,13 +5,17 @@
     $h1_letter_spacing: 0.15vw;
     $h1_line_height: 2.85vw;
 
-    $h1_font_size_sm: min(2.25rem, 4vw);
+    $h1_font_size_sm: min(3rem, 6vw);
     $h1_letter_spacing_sm: 0.15vw;
     $h1_line_height_sm: 1.85vw;
 
-    $h1_font_size_md: 3rem;
+    $h1_font_size_md: max(1.8rem, 3.8vw);
     $h1_letter_spacing_md: 0.15vw;
-    $h1_line_height_md: 2.5vw;
+    $h1_line_height_md: 2.8vw;
+
+    $h1_font_size_lg: max(2rem, 3.85vw);
+    $h1_letter_spacing_lg: 0.15vw;
+    $h1_line_height_lg: 2.8vw;
 // ===================== H2 ====================== //
     // $h2_font_size: max(1.65rem,2vw);
     $h2_font_size: min(4rem, 2.75vw);
@@ -49,6 +53,12 @@
         z-index: 4;
         width: fit-content;
         // height: fit-content;
+        @include lg_screen {
+            font-size: $h1_font_size_lg;
+            letter-spacing: $h1_letter_spacing_lg;
+            line-height: $h1_line_height_lg;
+        }
+
         @include md_screen {
             font-size: $h1_font_size_md;
             letter-spacing: $h1_letter_spacing_md;
@@ -69,7 +79,7 @@
         width: 102%;
         height: 100%;
         top: 55%;
-        left: -0.75rem;
+        left: -0.25rem;
         filter: blur(0.15rem);
         background-color: rgb(81, 131, 81);
         z-index: -1;

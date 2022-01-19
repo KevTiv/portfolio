@@ -7,7 +7,7 @@ export const revealSkillSection =(skillRevealTrigger:MutableRefObject<any>, skil
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: skillRevealTrigger.current,
-            start: "-=800"
+            start: "-=1500"
         }
     });
 
@@ -40,15 +40,15 @@ export const revealSkillGallery =(skillGallery:MutableRefObject<any>)=>{
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: skillGallery.current,
-            start: "-=800"
+            start: "-=1500"
         }
     });
 
     tl
     .from(skillGallery.current.querySelectorAll('span'),{
         opacity: 0,
-        duration: 0.5,
-        stagger: 0.2,
+        duration: 0.1,
+        stagger: 0.05,
         ease: "power3.inOut"
     })
 }

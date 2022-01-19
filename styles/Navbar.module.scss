@@ -7,12 +7,20 @@
     top: 1.5vh;
     min-width: 25vw;
     max-height: 78px;
+    
     h2 {
        position: relative;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         
+    }
+    @include lg_screen{
+        top: 3vh;
+
+        h2 {
+            font-size: 1.7rem !important;
+        }
     }
     @include md_screen {
         top: 3vh;
@@ -36,7 +44,7 @@
     justify-content: space-around;
     align-items: center;
     width: 70vw;
-    height: 90px;
+    height: 110px;
     background-color: $hoverBg;
     top: 4.5vh;
     right: 3vw;
@@ -49,7 +57,7 @@
     span {
         position: relative;
         width: fit-content;
-        // transition: transform 0.1s ease-in-out;
+        transition: all 0.8s ease-in-out;
     };
     span::before{
         display: none;
@@ -63,7 +71,7 @@
         line-height: normal;
         font-size: 1.25vw;
         font-weight: 600;
-        transition: transform 0.8s ease-in-out;
+        transition: all 2s ease-in-out;
         
     };
     span:nth-child(1)::before {
@@ -85,22 +93,22 @@
         content: 'Dark Mode';
     }
     span:hover{
-        span{
-            transform: scale(1.3) !important;
+        svg{
+            transform: scale(1.1)!important;
         }
-        
-        // background-color: ;
         &::before{
             display: inline-block;
         }
     }
-    @include md_screen {
+    @include lg_screen {
         width: 65vw;
-        height: 55px;
+        height: 75px;
         left: 32vw;
 
         span {
-            transform: scale(0.7) !important;
+            svg{
+                transform: scale(0.7) !important;
+            }
 
             &::before {
                 display: inline-block;
@@ -113,7 +121,35 @@
             }
         }
         span:hover{
-            display: none;
+            svg{
+                transform: scale(0.7) !important;
+            }
+        }
+    }
+    @include md_screen {
+        width: 65vw;
+        height: 75px;
+        left: 32vw;
+
+        span {
+            svg{
+                transform: scale(0.7) !important;
+            }
+
+            &::before {
+                display: inline-block;
+                top: 85%;
+                left: -125%;
+            }
+
+            span::before {
+                display: none;
+            }
+        }
+        span:hover{
+            svg{
+                transform: scale(0.7) !important;
+            }
         }
     }
 
@@ -122,7 +158,9 @@
         height: 35px;
         left: 42vw;
         span{
-            transform: scale(0.7) !important;
+            svg{
+                transform: scale(0.7) !important;
+            }
             &::before{
                 display: inline-block;
                 top: 85%;
@@ -133,7 +171,9 @@
             }
         }
         span:hover {
-            display: none;
+            svg {
+                transform: scale(0.7) !important;
+            }
         }
     }
 }

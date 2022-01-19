@@ -53,7 +53,7 @@ const Skills = ({isdarkMode}:skillsProps) => {
                 ${skillStyle.skillsWrapper} ${fontStyle.font} `}>
                {/* <div className="skills_wrapper" ref={skillsRef}> */}
                     <h1>Skills</h1>
-                    <div className={""}>
+                    <div>
                         <h2>Front End</h2>
                         <p>Javascript(ES6+), Typescript, React, NextJs, HTML5, Tailwind, Sass, CSS, Bootstrap, Animation, GSAP.</p>
                         <h2>Back End</h2>

@@ -10,12 +10,12 @@
 .navbar_light{
     background-color: $navbarBgLight;
     color: $lightModeText;
-    transition: 2s ease-in from bottom right to top left;
+    transition: 2s ease-in-out from bottom right to top left;
 }
 .navbar_dark {
     background-color: $navbarBgDark;
     color: $darkModeText;
-    transition: 2s ease-in from top right to bottom left;
+    transition: 2s ease-in-out from top right to bottom left;
 }
 
 .skillViewBgLight {

@@ -9,7 +9,7 @@ export const navbarAppear = (navbarRef:MutableRefObject<any>)=>{
         opacity: 0,
         display: 'none',
         y: 150,
-        duration: 1.4,
+        duration: 0.8,
         ease: "power3.inOut"
     })
     .from([navbarRef.current.querySelectorAll('span')],{

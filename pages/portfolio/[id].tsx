@@ -4,13 +4,12 @@ import themeStyle from '../../styles/Theme.module.scss'
 import portfolioStyle from '../../styles/Portfolio.module.scss'
 import Image from 'next/Image'
 
-import { useBeforeunload } from 'react-beforeunload'
-
 import skillsList from '../../public/resources/skills.json'
 import portfolioList from '../../public/resources/portfolio.json'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Navbar from '../../components/navbar/navbar'
+import PortfolioHead from '../../components/head/head'
 
 
 
@@ -67,8 +66,56 @@ const Project = ({ portfolio}:any) => {
 
     return (
         <>
-        {/* themeStyle.dark_mode */}
-            <div className={`${portfolioStyle.projectWrapper} ${style.main} ${fontStyle.font} 
+            <div className={`${style.container} ${isdarkMode? themeStyle.container_bgdark : themeStyle.container_bglight}`}>
+                <PortfolioHead/>
+                <main className={`${style.main}`}>
+                    <Navbar isdarkMode={isdarkMode} setDarkMode={setDarkMode}/>
+                    <div className={`${portfolioStyle.projectContent} ${style.hero} ${isdarkMode? themeStyle.dark_mode : themeStyle.light_mode} ${fontStyle.font}`}> 
+                        <div>   
+                            <h1>{portfolio?.title}</h1>
+                            <a href={portfolio?.link?.github} className={isdarkMode ? themeStyle.githubLinkBgDark : themeStyle.githubLinkBgLight}>
+                                <Image src={githubLogo} alt={githubName} width={imgWidth} height={imgHeight} layout="fixed"/>
+
+                            </a>
+                        </div>
+                        <div>   
+                            <Image src={projectImg} alt="Project image" width={500} height={500}/>
+                        </div>
+                        <div>   
+                            <h2>Description of the project</h2>
+                            <p>{portfolio?.description}</p>
+                        </div>
+                            
+                        <div>   
+                            <h2>Challenges faced</h2>
+                            <p>{portfolio?.challenge}</p>
+                        </div>
+                        <div>   
+                            <h2>Lesson learned</h2>
+                            <p>{portfolio?.lesson}</p>
+                        </div>
+                        <div>   
+                            <h2>Tech used</h2>
+                            <div>   
+                                <p>Frontend: </p>
+                                <p>{portfolio?.tech?.Frontend}</p>
+                            </div>
+                            <div>   
+                                <p>Backend: </p>
+                                <p>{portfolio?.tech?.Backend}</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </>
+    )
+}
+
+export default Project
+
+
+{/* <div className={`${portfolioStyle.projectWrapper} ${style.main} ${fontStyle.font} 
                 ${isdarkMode ? themeStyle.container_bgdark  : themeStyle.container_bglight}`}>
                 <div className={`${portfolioStyle.projectContent} ${style.hero} ${isdarkMode ? themeStyle.dark_mode  : themeStyle.light_mode}`}>     
                 <Navbar isdarkMode={isdarkMode} setDarkMode={setDarkMode}/>
@@ -109,11 +156,4 @@ const Project = ({ portfolio}:any) => {
                     </div>
                     
                 </div>
-            </div>  
-        </>
-    )
-}
-
-export default Project
-
-
+            </div>   */}

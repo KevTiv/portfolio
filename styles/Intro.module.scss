@@ -56,7 +56,7 @@
                 }
             }
             span:nth-child(2) {
-                transform: scale(0.7) translateY(45rem) translateX(-20rem) !important;
+                transform: scale(0.7) translateY(42rem) translateX(-32rem) !important;
             }
         }
         @include sm_screen {
@@ -64,7 +64,7 @@
                 transform:translateY(25%) translateX(15%);
             }
             span:nth-child(2) {
-                transform: scale(0.8) translateY(25rem) translateX(-12rem) !important;
+                transform: scale(0.7) translateY(27rem) translateX(-11rem) !important;
 
             }
         }
@@ -78,25 +78,43 @@
         justify-content: center;
         
         & div {
-            width: 35%;
+            width: 50%;
             display: flex;
             justify-content: space-between;
-            @include md_screen {
-                width: 80%;
-            }
         }
         & div span{
             display: flex;
+            justify-content: center;
+            align-items: center;
+            @include lg_screen {
+                transform: scale(0.9);
+            }
+            @include md_screen {
+                transform: scale(0.8);
+            }
+            @include sm_screen {
+                transform: scale(0.8);
+            }
             
         }
         & div span p {
-            font-size: 2rem;
+
+            font-size: 0.95rem;
             font-weight: 600;
             visibility: hidden;
-            margin: 0.5rem 0.25rem;
+            margin: 0.5rem 0.5rem;
 
+            @include lg_screen{
+                font-size: 1rem;
+                visibility: visible;
+            }
             @include md_screen{
                 font-size: 1rem;
+                visibility: visible;
+            }
+            @include sm_screen {
+                transform: scale(0.7) translateY(25%);
+                visibility: visible;
             }
         }
 
@@ -107,9 +125,6 @@
                 visibility: visible;
             }
         }
-        // @include md_screen {
-        //     width: 225%;
-        // }
     }
     @include md_screen {
         display: block;

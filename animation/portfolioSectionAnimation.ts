@@ -8,7 +8,7 @@ export const revealPortfolioSection = (portfolioContentRef:MutableRefObject<any>
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: portfolioContentRef.current,
-            start: "-=800"
+            start: "-=1500"
         }
     });
 
@@ -17,13 +17,13 @@ export const revealPortfolioSection = (portfolioContentRef:MutableRefObject<any>
         opacity: 0,
         y: -150,
         skewX: 10,
-        duration: 1.5,
+        duration: 0.8,
         ease: "power3.inOut"
     })
     .from(portfolioContentRef.current.querySelector('p'),{
         opacity: 0,
         x: -350,
-        duration: 1.5,
+        duration: 0.8,
         ease: "power3.inOut"
     }, "-=1")
     .from(portfolioContentRef.current.querySelectorAll('ul li'),{

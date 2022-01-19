@@ -1,10 +1,12 @@
 // COLOR1 ->#D3D3D3 COLOR2 ->#C6C6C6 COLOR3 -> #DCDCDC
 // GRADIENT GENERATOR -> https://mycolor.space/gradient3?ori=to+right+bottom&hex=%23D3D3D3&hex2=%23C6C6C6&hex3=%23DCDCDC&submit=submit
-$backgroundLight: linear-gradient(to right bottom, #d3d3d3, #d0d0d0, #cecece, #cbcbcb, #c9c9c9, #cacaca, #cacaca, #cbcbcb, #cfcfcf, #d3d3d3, #d8d8d8, #dcdcdc);
+// $backgroundLight: linear-gradient(to right bottom, #d3d3d3, #d0d0d0, #cecece, #cbcbcb, #c9c9c9, #cacaca, #cacaca, #cbcbcb, #cfcfcf, #d3d3d3, #d8d8d8, #dcdcdc);
+$backgroundLight: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 
 // COLOR1 ->#0B0B0B COLOR2 -> #111111 COLOR3 ->#0D0D11
 // GRADIENT GENERATOR ->https://mycolor.space/gradient3?ori=to+right+bottom&hex=%230B0B0B&hex2=%23111111&hex3=%230D0D11&submit=submit
-$backgroundDark: linear-gradient(to right bottom, #0b0b0b, #0c0c0c, #0e0e0e, #0f0f0f, #101010, #101010, #101011, #101011, #0f0f11, #0f0f11, #0e0e11, #0d0d11);
+// $backgroundDark: linear-gradient(to right bottom, #0b0b0b, #0c0c0c, #0e0e0e, #0f0f0f, #101010, #101010, #101011, #101011, #0f0f11, #0f0f11, #0e0e11, #0d0d11);
+$backgroundDark: linear-gradient(60deg, #29323c 0%, #0e1114 100%);
 
 $lightModeText: #2d2527;
 $darkModeText: #fffade;
