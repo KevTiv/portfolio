@@ -4,6 +4,11 @@ import Image from 'next/image'
 import styles from '../styles/Styles.module.scss'
 
 import Navbar from '../components/navbar/index'
+import Intro from '../components/hero/intro'
+import Portfolio from '../components/hero/portfolio'
+import About from '../components/hero/about'
+import Contact from '../components/hero/contact'
+import Skills from '../components/hero/skills'
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +20,11 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <main className={styles.main}>
-        
+        <Intro />
+        <About />
+        <Skills />
+        <Portfolio />
+        <Contact />
       </main>
     </div>
   )

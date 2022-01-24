@@ -1,8 +1,16 @@
-.navbar{
-    width: 100%;
-    height: 15%;
-    display: flex;
+@use './color' as *;
 
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    z-index: 20;
+    background-color: $navbar_bg_color;
+    
     div:nth-child(1){
         display: flex;
         flex: 1;
