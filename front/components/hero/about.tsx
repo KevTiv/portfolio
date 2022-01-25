@@ -1,10 +1,13 @@
 import styles from '../../styles/Styles.module.scss'
+import aboutStyles from '../../styles/About.module.scss'
+import { useRef } from 'react';
 
 const About = () => {
+    const aboutSectionRef = useRef<HTMLDivElement>(null);
   return (
     <>
-        <section id="about">
-            <div className={styles.components}>
+        <section id="about" className={aboutStyles.about_content}>
+            <div className={`${styles.components} ${styles.main}`} ref={aboutSectionRef}>
                 <h2>
                     About
                 </h2>

@@ -1,0 +1,13 @@
+@use './color'as *;
+
+.skill_content {
+    background-color: $container_bg_color;
+
+    h2 {
+        color: $h2_text_color;
+    }
+
+    p {
+        color: $p_text_color;
+    }
+}

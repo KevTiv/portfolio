@@ -1,3 +1,4 @@
+@use './color' as *;
 html,
 body {
   padding: 0;
@@ -6,6 +7,9 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
+  scrollbar-width: none;
+  visibility: hidden;
+  background-color: $container_bg_color;
 }
 
 a {

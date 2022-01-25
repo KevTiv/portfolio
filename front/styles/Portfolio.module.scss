@@ -1,0 +1,47 @@
+@use './color'as *;
+
+.portfolioContent {
+    background-color: $container_bg_color;
+
+    h2,h3 {
+        color: $h2_text_color;
+    }
+
+    p {
+        color: $p_text_color;
+    }
+}
+.projectPanel{
+    display: grid;
+    // grid-template-columns: 100px 1fr;
+    grid-template-columns: repeat(6, 45vw);
+    gap: 0 1px;
+    width: 80%;
+    height: 60vh;
+    padding: 1.5vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-radius: 0.25rem;
+    background-color: $portfolio_project_panel;
+
+    scrollbar-width: none;
+}
+.projectEntry{
+    width: 100%;
+    height: 100%;
+    padding: 1vw 2vw;
+    // transform: scale(0.95);
+    background-color: $portfolio_project_entry_bg;
+    border: 1px solid $portfolio_project_entry_brdr;
+    border-radius: 0.25rem;
+
+    h3,p{
+        color: $portfolio_project_entry_text;
+    }
+    
+    &:hover{
+        transform: scale(1.025);
+        box-shadow: 0.25rem 0.25rem 0.25rem 1rem portfolio_project_entry_box_shadow;
+
+    }
+}

@@ -2,15 +2,28 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Styles.module.scss'
-
+import gsap from 'gsap'
 import Navbar from '../components/navbar/index'
 import Intro from '../components/hero/intro'
 import Portfolio from '../components/hero/portfolio'
 import About from '../components/hero/about'
 import Contact from '../components/hero/contact'
 import Skills from '../components/hero/skills'
+import { useEffect } from 'react'
 
 const Home: NextPage = () => {
+
+  useEffect(() => {
+    //Use of gsap to smooth reload blink screen.
+    const revealScreen =()=>{
+      gsap.to(document.querySelector('body'),{
+        visibility: 'visible',
+        duration: 0.2
+      })
+    }
+
+    revealScreen();
+  },[])
   return (
     <div className={styles.container}>
       <Head>

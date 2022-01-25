@@ -1,0 +1,16 @@
+@use './color'as *;
+
+.contact_content {
+    background-color: $container_bg_color;
+
+    h2 {
+        color: $h2_text_color;
+    }
+
+    p {
+        color: $p_text_color;
+    }
+    a {
+        color: $p_text_color;
+    }
+}
