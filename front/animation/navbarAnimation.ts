@@ -9,7 +9,7 @@ export const showNav =(navRef:RefObject<HTMLDivElement>)=>{
 }
 export const hideNav =(navRef:RefObject<HTMLDivElement>)=>{
     gsap.to(navRef.current!.querySelector('nav'),{
-        top: '-120px',
+        top: '-10%',
         duration: 0.3,
     })
 }

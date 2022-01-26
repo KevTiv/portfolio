@@ -11,12 +11,26 @@
 
 .main {
   min-height: 100vh;
-  padding: 0 5vw;
+  padding: 0 8vw;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.text_content{
+
+  // display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: justify-start;
+}
+
+.title_container{
+  width: fit-content;
+  overflow: hidden;
+  border-radius: 100%;
 }
 
 .footer {

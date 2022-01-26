@@ -4,13 +4,13 @@ import contactStyles from '../../styles/Contact.module.scss'
 const Contact = () => {
   return (
       <>
-        <section id="contact" className={contactStyles.contact_content}>
-            <div className={`${styles.components} ${styles.main}`}>
-                <h2>Contact</h2>
-                <p>Let's talk!</p>
-                <a>Email</a>
+        <div id="contact" className={`${styles.components} ${contactStyles.contact_content} ${styles.main}`}>
+            <div className={styles.title_container}>
+              <h2 className="titleAnimation">Contact</h2>
             </div>
-        </section>
+            <p>Let's talk!</p>
+            <a>Email</a>
+        </div>
       </>
   )
 };

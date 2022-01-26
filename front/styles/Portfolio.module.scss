@@ -15,14 +15,15 @@
     display: grid;
     // grid-template-columns: 100px 1fr;
     grid-template-columns: repeat(6, 45vw);
-    gap: 0 1px;
-    width: 80%;
+    gap: 0 20px;
+    width: 100%;
     height: 60vh;
+    
     padding: 1.5vw;
     overflow-x: scroll;
     overflow-y: hidden;
     border-radius: 0.25rem;
-    background-color: $portfolio_project_panel;
+    // background-color: $portfolio_project_panel;
 
     scrollbar-width: none;
 }
