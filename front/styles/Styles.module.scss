@@ -1,3 +1,5 @@
+@use './color' as *;
+
 .container {
   padding: 0 2rem;
 }
@@ -10,8 +12,8 @@
 }
 
 .main {
-  min-height: 100vh;
-  padding: 0 8vw;
+  min-height: 80vh;
+  padding: 0 2vw;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -19,18 +21,24 @@
   align-items: center;
 }
 
-.text_content{
-
-  // display: flex;
-  // flex-direction: column;
+.content {
+  width: 100%;
+  padding: 0 2vw;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: justify-start;
 }
 
 .title_container{
-  width: fit-content;
+  background-color: $h2_sphere_bg_color;
+  
   overflow: hidden;
+  block-size: fit-content;
+  width: 15%;
+  aspect-ratio: 1;
   border-radius: 100%;
+  transform: translateX(2vw);
 }
 
 .footer {

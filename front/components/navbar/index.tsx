@@ -1,7 +1,7 @@
 import styles from '../../styles/Styles.module.scss'
 import navStyles from '../../styles/Navbar.module.scss'
 import { useEffect, useRef } from 'react'
-import { showNav, hideNav } from '../../animation/navbarAnimation';
+import { showNav, hideNav, scrollToSection } from '../../animation/navbarAnimation';
 
 const Navbar = () => {
   const navRef = useRef<HTMLDivElement>(null);
@@ -32,18 +32,10 @@ const Navbar = () => {
                 </div>
                 <div>
                     <ul>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#skills">Skills</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio">Portolio</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
+                        <li onClick={()=>scrollToSection('#about')}>About</li>
+                        <li onClick={()=>scrollToSection('#skills')}>Skills</li>
+                        <li onClick={()=>scrollToSection('#portfolio')}>Portolio</li>
+                        <li onClick={()=>scrollToSection('#contact')}>Contact</li>
                         <li>Resume</li>
                     </ul>
                 </div>

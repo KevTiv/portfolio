@@ -12,23 +12,28 @@ export const scrollThroughIntro=(introSectionRef:RefObject<HTMLDivElement>)=>{
             trigger: introSectionRef.current,
 
             start: 'top top',
-            end: '+=300',
-            endTrigger: '+=450',
+            end: '+=400',
+            endTrigger: '+=600',
             scrub: 2.5,
+            pin: true,
             // markers: true
         }
     })
     tl.to(introSectionRef.current,{
         height:0,
+        // clipPath: 'polygon(0 0, 100% 0, 100% 0, 100% 0, 0 0, 0 0)',
         display: 'none',
         duration: 4,
     })
     .to(introSectionRef.current!.querySelector('div div:nth-child(2)'),{
         skewX: '18deg',
-        top: '-100%',
+        y: '-100%',
+        x: '-20%',
+        // top: '-100%',
+        // left: '-20%',
         opacity: 0,
         display: 'none',
-        duration: 1,
+        duration: 3,
     },'-=3.75')
 }
 

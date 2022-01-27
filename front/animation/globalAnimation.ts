@@ -1,4 +1,7 @@
 import gsap from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+
+import { RefObject } from 'react'
 
 export const screenReveal=()=>{
     gsap.to(document.querySelector('body'),{
@@ -8,14 +11,54 @@ export const screenReveal=()=>{
 }
 
 export const h2TitleAnimation = ()=>{
-    gsap.fromTo(document.querySelectorAll('.titleAnimation'),{
-        translateX: '102%',
+    gsap.fromTo([document.querySelectorAll('.titleAnimation')],{
+        x: '100%',
+        y: '45%',
+        skewX:'20deg',
+        skewY: '-3deg',
+        // translateX: '102%',
         // position: 'absolute'
     },{
         // position: 'absolute',
-        translateX: '-102%',
-        duration: 3.85,
+        x: '-100%',
+        y: '50%',
+        skewX:'-30deg',
+        skewY: '3deg',
+        // translateX: '-102%',
+        duration: 5,
         repeat: -1,
         ease: 'linear'
     })
+}
+
+export const contentSectionAppear = (ref:RefObject<HTMLDivElement>)=>{
+    gsap.registerPlugin(ScrollTrigger);
+    let triggerTarget = ref;
+
+    const tl=gsap.timeline({
+        scrollTrigger:{
+            trigger: triggerTarget.current,
+            start: '-=800',
+            end: '+=300',
+            // markers: true,
+        }
+    })
+
+    tl
+    .from(triggerTarget.current!.querySelector('div'),{
+        opacity: 0,
+        duration: 0.3,
+    })
+    .from(triggerTarget.current!.querySelectorAll('div.title_container'),{
+        opacity: 0,
+        y: -80,
+        duration: 1,
+        ease: 'expo.inOut'
+    },'-=0.5')
+    .from(triggerTarget.current!.querySelectorAll('p'),{
+        opacity: 0,
+        y: 120,
+        duration: 1.75,
+        ease: 'expo.inOut'
+    },'-=0.8');
 }

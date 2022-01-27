@@ -15,8 +15,8 @@ const Intro = () => {
             <div className={introStyles.intro} ref={introSectionRef}>
                 <div>
                     <div className={introStyles.img_container}>
-                        <Image src={'/img/hero_img_2.webp'} placeholder="blur" blurDataURL='/img/load_placeholder.webp' alt='Saint-Chamond, France' width='512' height='512' layout='responsive' priority/>
-                        <Image src={'/img/hero_img_1.webp'} placeholder="blur" blurDataURL='/img/load_placeholder.webp' alt='Lake Kivu, Rwanda' width='512' height='512' layout='responsive' priority/>
+                        {/* <Image src={'/img/hero_img_2.webp'} placeholder="blur" blurDataURL='/img/load_placeholder.webp' alt='Saint-Chamond, France' width='512' height='512' layout='responsive' priority/> */}
+                        <Image src={'/img/hero_img_1.webp'} alt='Lake Kivu, Rwanda' width='512' height='512' layout='responsive' priority/>
                     </div>
                     {/* <div className={introStyles.img_container}>
                         <Image src={'/img/hero_img_2.webp'} alt='Saint-Chamond, France' width='2400' height='2400' layout='responsive'/>
