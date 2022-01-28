@@ -1,7 +1,7 @@
 import styles from '../../styles/Styles.module.scss'
 import aboutStyles from '../../styles/About.module.scss'
 import { useEffect, useRef } from 'react';
-import { contentSectionAppear } from '../../animation/globalAnimation';
+import { contentSectionAppear, h2TitleAnimation } from '../../animation/globalAnimation';
 
 const About = () => {
     const aboutSectionRef = useRef<HTMLDivElement>(null);

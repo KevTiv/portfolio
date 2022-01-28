@@ -9,14 +9,16 @@ import Portfolio from '../components/hero/portfolio'
 import About from '../components/hero/about'
 import Contact from '../components/hero/contact'
 import Skills from '../components/hero/skills'
-import { useEffect } from 'react'
+import { RefObject, useEffect, useRef } from 'react'
 import { h2TitleAnimation, screenReveal } from '../animation/globalAnimation'
 
-const Home: NextPage = () => {
 
+
+const Home: NextPage = () => {
   useEffect(() => {
     //Use of gsap to smooth reload blink screen.
     screenReveal();
+    
     h2TitleAnimation();
   },[])
   return (
@@ -29,19 +31,19 @@ const Home: NextPage = () => {
       <Navbar />
       <main className={styles.main}>
         <section>
-          <Intro />
+          <Intro/>
         </section>
         <section>
-          <About />
+          <About/>
         </section>
         <section>
           <Skills />
         </section>
         <section>
-          <Portfolio />
+          <Portfolio/>
         </section>
         <section>
-          <Contact />
+          <Contact/>
         </section>
       </main>
     </div>

@@ -1,13 +1,13 @@
 import styles from '../../styles/Styles.module.scss'
 import contactStyles from '../../styles/Contact.module.scss'
 import { useEffect, useRef } from 'react';
-import { contentSectionAppear } from '../../animation/globalAnimation';
+import { contentSectionAppear, h2TitleAnimation } from '../../animation/globalAnimation';
 
 const Contact = () => {
   const contactSectionRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-        contentSectionAppear(contactSectionRef);
-    },[]);
+      contentSectionAppear(contactSectionRef);
+  },[]);
 
   return (
       <>

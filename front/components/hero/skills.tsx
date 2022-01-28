@@ -1,7 +1,7 @@
 import styles from '../../styles/Styles.module.scss'
 import skillStyles from '../../styles/Skills.module.scss'
 import { useEffect, useRef } from 'react';
-import { contentSectionAppear } from '../../animation/globalAnimation';
+import { contentSectionAppear, h2TitleAnimation } from '../../animation/globalAnimation';
 
 const Skills = () => {
 

@@ -6,7 +6,7 @@
 
 .components{
   width: 100vw;
-  height: auto;
+  height: fit-content;
   display: flex;
   flex-direction: column;
 }
@@ -35,10 +35,10 @@
   
   overflow: hidden;
   block-size: fit-content;
-  width: 15%;
-  aspect-ratio: 1;
-  border-radius: 100%;
+  width: 12%;
+  aspect-ratio: 1/0.5;
   transform: translateX(2vw);
+  box-shadow: 0.25rem 0.5rem 1.5rem $h2_sphere_bg_color;
 }
 
 .footer {

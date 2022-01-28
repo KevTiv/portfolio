@@ -13,7 +13,7 @@ export const screenReveal=()=>{
 export const h2TitleAnimation = ()=>{
     gsap.fromTo([document.querySelectorAll('.titleAnimation')],{
         x: '100%',
-        y: '45%',
+        y: '-55%',
         skewX:'20deg',
         skewY: '-3deg',
         // translateX: '102%',
@@ -21,7 +21,7 @@ export const h2TitleAnimation = ()=>{
     },{
         // position: 'absolute',
         x: '-100%',
-        y: '50%',
+        y: '-55%',
         skewX:'-30deg',
         skewY: '3deg',
         // translateX: '-102%',
@@ -47,18 +47,18 @@ export const contentSectionAppear = (ref:RefObject<HTMLDivElement>)=>{
     tl
     .from(triggerTarget.current!.querySelector('div'),{
         opacity: 0,
-        duration: 0.3,
+        x: 50,
+        y: -70,
+        scale: 0.2,
+        duration: 0.9,
     })
-    .from(triggerTarget.current!.querySelectorAll('div.title_container'),{
-        opacity: 0,
-        y: -80,
-        duration: 1,
-        ease: 'expo.inOut'
-    },'-=0.5')
     .from(triggerTarget.current!.querySelectorAll('p'),{
         opacity: 0,
-        y: 120,
-        duration: 1.75,
+        scale: 0.2,
+        y: -80,
+        transformOrigin: 'left',
+        stagger: 0.2,
+        duration: 1.5,
         ease: 'expo.inOut'
     },'-=0.8');
 }

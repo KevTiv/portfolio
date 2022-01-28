@@ -21,7 +21,6 @@ export const scrollThroughIntro=(introSectionRef:RefObject<HTMLDivElement>)=>{
     })
     tl.to(introSectionRef.current,{
         height:0,
-        // clipPath: 'polygon(0 0, 100% 0, 100% 0, 100% 0, 0 0, 0 0)',
         display: 'none',
         duration: 4,
     })
@@ -29,6 +28,7 @@ export const scrollThroughIntro=(introSectionRef:RefObject<HTMLDivElement>)=>{
         skewX: '18deg',
         y: '-100%',
         x: '-20%',
+        scale: 0.5,
         // top: '-100%',
         // left: '-20%',
         opacity: 0,
