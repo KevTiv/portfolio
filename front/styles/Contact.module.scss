@@ -13,4 +13,16 @@
     a {
         color: $p_text_color;
     }
+
+    div:nth-child(2){
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+        a{
+            // border: 1px solid black;
+            margin: 0 1.25vw;
+            padding: 1vw;
+            cursor: pointer;
+        }
+    }
 }

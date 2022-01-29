@@ -13,17 +13,19 @@ export const screenReveal=()=>{
 export const h2TitleAnimation = ()=>{
     gsap.fromTo([document.querySelectorAll('.titleAnimation')],{
         x: '100%',
-        y: '-55%',
-        skewX:'20deg',
+        y: '-5%',
+        skewX:'0deg',
         skewY: '-3deg',
+        scale: 1,
         // translateX: '102%',
         // position: 'absolute'
     },{
         // position: 'absolute',
         x: '-100%',
-        y: '-55%',
-        skewX:'-30deg',
+        y: '10%',
+        skewX:'-40deg',
         skewY: '3deg',
+        scale: 0.6,
         // translateX: '-102%',
         duration: 5,
         repeat: -1,

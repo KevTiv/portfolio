@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <main className={styles.main}>
-        <section>
+        <section  id="intro">
           <Intro/>
         </section>
         <section>

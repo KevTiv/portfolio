@@ -1,7 +1,7 @@
 import styles from '../../styles/Styles.module.scss'
 import navStyles from '../../styles/Navbar.module.scss'
 import { useEffect, useRef } from 'react'
-import { showNav, hideNav, scrollToSection } from '../../animation/navbarAnimation';
+import { showNav, hideNav, scrollToSection, menuOptionHoverOn, menuOptionHoverOff } from '../../animation/navbarAnimation';
 
 const Navbar = () => {
   const navRef = useRef<HTMLDivElement>(null);
@@ -25,17 +25,17 @@ const Navbar = () => {
     <>
         <div className={styles.components} ref={navRef}>
             <nav className={navStyles.navbar}>
-                <div>
-                    <span>
+                <div onClick={()=>scrollToSection('#intro')}>
+                    <span onMouseOver={(e)=>menuOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)}>
                         &#60;&#47;&#62;
                     </span>
                 </div>
                 <div>
                     <ul>
-                        <li onClick={()=>scrollToSection('#about')}>About</li>
-                        <li onClick={()=>scrollToSection('#skills')}>Skills</li>
-                        <li onClick={()=>scrollToSection('#portfolio')}>Portolio</li>
-                        <li onClick={()=>scrollToSection('#contact')}>Contact</li>
+                        <li onMouseOver={(e)=>menuOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)} onClick={()=>scrollToSection('#about')}>About</li>
+                        <li onMouseOver={(e)=>menuOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)} onClick={()=>scrollToSection('#skills')}>Skills</li>
+                        <li onMouseOver={(e)=>menuOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)} onClick={()=>scrollToSection('#portfolio')}>Portolio</li>
+                        <li onMouseOver={(e)=>menuOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)} onClick={()=>scrollToSection('#contact')}>Contact</li>
                     </ul>
                 </div>
             </nav>

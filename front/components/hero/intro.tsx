@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import imgBannerSrc from '../../public/img/hero_img_1.webp'
-import { scrollThroughIntro } from '../../animation/introAnimation'
+import { hoverOffJobTitle, hoverOffName, hoverOnJobTitle, hoverOnName, scrollThroughIntro } from '../../animation/introAnimation'
 
 import styles from '../../styles/Styles.module.scss'
 import introStyles from '../../styles/Intro.module.scss'
@@ -29,10 +29,16 @@ const Intro = () => {
                         <Image src={'/img/hero_img_3.webp'} alt='Kevin Tivert, web dev' width='421' height='593' />
                     </div> */}
                     <div className={introStyles.presentation}>
-                        <div>
+                        <div onMouseEnter={()=>hoverOnName(introSectionRef)} onMouseLeave={()=>hoverOffName(introSectionRef)}>
+                            <span className='h2BgAnimation'></span>
                             <h2 className={`${introStyles.hello_world} ${introStyles.hello_hover}`}>Hello World! I'm </h2><h2 className={introStyles.hello_world}> Kevin C. Tivert</h2>
                         </div>
-                        <h3 className={introStyles.job_title}>Web developper</h3>
+                        {/* <div>  */}
+                        <div onMouseEnter={(e)=>hoverOnJobTitle(introSectionRef)} onMouseLeave={()=>hoverOffJobTitle(introSectionRef)}> 
+                            <span className="h3BgAnimation"></span>  
+                            <h3 className={introStyles.job_title}>Web dev</h3> <h3 className={`${introStyles.job_title} ${introStyles.job_hover}`}>elopper</h3>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
