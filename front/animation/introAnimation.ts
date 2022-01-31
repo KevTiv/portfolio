@@ -74,8 +74,6 @@ export const scrollThroughIntro=(introSectionRef:RefObject<HTMLDivElement>)=>{
         y: '-100%',
         x: '-20%',
         scale: 0.5,
-        // top: '-100%',
-        // left: '-20%',
         opacity: 0,
         display: 'none',
         duration: 3,

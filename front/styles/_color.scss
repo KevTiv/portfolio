@@ -1,5 +1,6 @@
 $main_color: #9ca1a5;
 $secondary_color: #212529;
+$highlight_color: #eb5d29;
 
 // $main_color: #212529;
 // $secondary_color: #e9ecef;
@@ -19,7 +20,7 @@ $hello_h2_before_bg: $secondary_color;
 
 $h2_sphere_bg_color: $secondary_color;
 
-$h2_text_color: $main_color;
+$h2_text_color: $secondary_color;
 $p_text_color: $secondary_color;
 
 $portfolio_project_panel: $secondary_color;

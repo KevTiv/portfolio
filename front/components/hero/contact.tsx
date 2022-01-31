@@ -1,27 +1,25 @@
 import styles from '../../styles/Styles.module.scss'
 import contactStyles from '../../styles/Contact.module.scss'
-import { useEffect, useRef } from 'react';
-import { contentSectionAppear } from '../../animation/globalAnimation';
+import { useEffect, useRef, MouseEvent } from 'react';
+import { contentSectionAppear, titleAnimation, titleAnimationOff } from '../../animation/globalAnimation';
 import { contactOptionHoverOn } from '../../animation/contatcAnimation';
 import { menuOptionHoverOff } from '../../animation/navbarAnimation';
 
 const Contact = () => {
   const contactSectionRef = useRef<HTMLDivElement>(null);
-  const Email=()=>{
-    return(
-      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2.25rem" height="2.25rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-2.2 2L16 14.78L6.2 8zM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24z" fill="currentColor"/></svg>
-    )
-  } 
-  const Github=()=>{
-    return(
-      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2.25rem" height="2.25rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" fill="currentColor"/></g></svg>
-    )
+
+  const ballRef = useRef<HTMLDivElement>(null);
+  const titleHoverOn = (e:MouseEvent)=>{
+      titleAnimation(e.clientX, ballRef);
+      
   }
-  const Linkedin=()=>{
-    return(
-      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2.25rem" height="2.25rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634c3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8c-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388zm-5.5 10.403h3.208V9.25H4.208v10.54zM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0z" fill="currentColor"/></g></svg>
-    )
+  const titleHoverOff = (e:MouseEvent)=>{
+      titleAnimationOff(e.clientX, ballRef);
   }
+
+  const Email=<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3.45vw" height="3.45vw" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M15.448 7.021c2.443 0 4.745 1.083 6.432 2.776v.005c0-.813.547-1.428 1.303-1.428h.192c1.193 0 1.432 1.125 1.432 1.48l.005 12.635c-.083.828.855 1.256 1.376.724c2.025-2.083 4.452-10.719-1.261-15.719c-5.328-4.667-12.479-3.896-16.281-1.276c-4.041 2.792-6.624 8.959-4.115 14.755c2.74 6.319 10.573 8.204 15.235 6.324c2.36-.953 3.448 2.233.995 3.276c-3.697 1.577-14 1.416-18.812-6.917C-1.302 18.027-1.13 8.125 7.496 2.995C14.089-.932 22.788.156 28.032 5.631c5.48 5.729 5.163 16.448-.187 20.615c-2.423 1.895-6.021.052-5.995-2.709l-.027-.9c-1.687 1.671-3.932 2.651-6.375 2.651c-4.833 0-9.088-4.256-9.088-9.084c0-4.88 4.255-9.181 9.088-9.181zm6.079 8.834c-.183-3.537-2.808-5.667-5.98-5.667h-.12c-3.656 0-5.687 2.88-5.687 6.145c0 3.661 2.453 5.973 5.672 5.973c3.593 0 5.952-2.629 6.124-5.739z" fill="#212529"/></svg>
+  const Linkedin=<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="4vw" height="4vw" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="#212529"><path d="M17 13.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457c-.592 0-.945.398-1.1.784c-.056.138-.071.33-.071.522v3.601h-2.144s.029-5.842 0-6.447H12.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066c1.41 0 2.468.922 2.468 2.902zM8.213 7.271C7.48 7.271 7 7.753 7 8.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115c-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V10.38H7.127v6.447z"/><path d="M12 20a8 8 0 1 0 0-16a8 8 0 0 0 0 16zm0 2C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10z"/></g></svg>
+    
   useEffect(() => {
       contentSectionAppear(contactSectionRef);
   },[]);
@@ -30,14 +28,18 @@ const Contact = () => {
       <>
         <div id="contact" className={`${styles.components} ${contactStyles.contact_content} ${styles.main}`} ref={contactSectionRef}>
           <div className={styles.content}>
-            <div className={styles.title_container}>
+            <div className={styles.title_container} onMouseEnter={(e)=>titleHoverOn(e)} onMouseLeave={(e)=>titleHoverOff(e)}>
+              <div className={styles.ball_slide} ref={ballRef}>
+                  <span className={styles.ball}></span>
+              </div>
+              <h2 className="titleAnimation">Contact</h2>
+              <h2 className="titleAnimation">Contact</h2>
               <h2 className="titleAnimation">Contact</h2>
             </div>
             <div>
               <p>Let's talk!</p>
-              <a onMouseEnter={(e)=>contactOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)}><Email/></a> 
-              <a onMouseEnter={(e)=>contactOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)}><Linkedin/></a> 
-              <a onMouseEnter={(e)=>contactOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)}><Github/></a>
+              <a >{Email}</a> 
+              <a >{Linkedin}</a> 
             </div>
           </div>
         </div>
@@ -46,3 +48,7 @@ const Contact = () => {
 };
 
 export default Contact;
+
+// onMouseEnter={(e)=>contactOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)}
+// onMouseEnter={(e)=>contactOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)}
+// onMouseEnter={(e)=>contactOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)}

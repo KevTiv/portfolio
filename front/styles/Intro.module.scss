@@ -73,11 +73,11 @@
             z-index: -1;
             transition: all 0.7s ease-in-out;
         }
-        .hello_hover{
+        .hello_hover_first_part{
             transition: all 1.4s ease-in-out;
         }
         &:hover{
-            .hello_hover {
+            .hello_hover_first_part {
                 color: $hello_h2_before_bg;
             }
         }

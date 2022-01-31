@@ -1,10 +1,21 @@
 import styles from '../../styles/Styles.module.scss'
 import aboutStyles from '../../styles/About.module.scss'
-import { useEffect, useRef } from 'react';
-import { contentSectionAppear, h2TitleAnimation } from '../../animation/globalAnimation';
+import { useEffect, useRef, MouseEvent } from 'react';
+import { contentSectionAppear, titleAnimation, titleAnimationOff} from '../../animation/globalAnimation';
+
 
 const About = () => {
     const aboutSectionRef = useRef<HTMLDivElement>(null);
+    const ballRef = useRef<HTMLDivElement>(null);
+
+    
+    const titleHoverOn = (e:MouseEvent)=>{
+        titleAnimation(e.clientX, ballRef);
+        
+    }
+    const titleHoverOff = (e:MouseEvent)=>{
+        titleAnimationOff(e.clientX, ballRef);
+    }
 
     useEffect(() => {
         contentSectionAppear(aboutSectionRef);
@@ -14,16 +25,25 @@ const About = () => {
     <>
         <div id="about" className={`${styles.components} ${aboutStyles.about_content} ${styles.main} ${styles.text_content}`} ref={aboutSectionRef}>
             <div className={styles.content}>
-                <div className={styles.title_container}>
-                    <h2 className="titleAnimation">
-                        About
-                    </h2>
+                <div className={styles.title_container} onMouseEnter={(e)=>titleHoverOn(e)} onMouseLeave={(e)=>titleHoverOff(e)}>
+                    <div className={styles.ball_slide} ref={ballRef}>
+                        <span className={styles.ball}></span>
+                    </div>
+                    <h2 className="titleAnimation"> About</h2>
+                    <h2 className="titleAnimation">About</h2>
+                    <h2 className="titleAnimation">About</h2>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Ab, facere voluptatibus. Perspiciatis, voluptas. Praesentium exercitationem 
-                    voluptate, ratione aspernatur aperiam cumque necessitatibus ea sapiente maiores harum 
-                    ad modi quidem labore quo.
+                    Hi! I'm a software engineer that loves to create staff for the internet.
+                    It all started with a Hello World program in my command line and grew in a passion for creating unique experience. 
+                </p>
+                <p>
+                    Since graduating in early 2021 with a B.Sc. in Computer Science, I have focus on learning the ropes of being a fullstack web developper.
+                    I especially like front end development because it is beautiful mixture of arts and engineering. The creative freedom it offers talks a lot to my creative side.
+                </p>
+                <p>
+                    I'm currently working on improving my design skills, by taking inspiration from awwwards submissions, and developpers such as Aristide Benoist, Benjamin Code, Wrong Akram, and Kevin Powell just cite a few.
+                    I'm also learning Ruby on Rails with the Odin Project course.
                 </p>
             </div>
         </div>

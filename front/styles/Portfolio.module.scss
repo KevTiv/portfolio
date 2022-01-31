@@ -29,7 +29,8 @@
     // transform: scale(0.95);
     // background-color: $portfolio_project_entry_bg;
     border-bottom: 1px solid $portfolio_project_entry_border;
-
+    transform-origin: center left;
+    transition: all 0.7s ease-in-out;
     h3,p{
         color: $portfolio_project_entry_text;
     }
@@ -44,17 +45,43 @@
 }
 .project_title{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-
+    transition: all 1s ease-in-out;
+    h3{
+        // background-color: yellow;
+        opacity: 0.6 !important;
+    }
     button{
         display: flex;
+        position: absolute;
+        right: 5%;
         justify-content: center;
         align-items: center;
-        padding: 0 0.5rem ;
+        
         background-color: transparent;
-        border-radius: 0.25rem;
+        border-radius: 100%;
         border: none;
         cursor: pointer;
+        
+        padding: 0.35rem 0.35rem;
+        border-radius: 100%;
+        transition: background-color 0.8s ease-in-out;
+        transform-origin: center center;
+        svg{
+            opacity: 0.8;
+            transform: rotate(-45deg);
+        }
+    }
+    &:hover{
+        h3{
+            opacity: 1 !important;
+        }
+        button{
+            // background-color: $portfolio_project_entry_text;
+            svg{
+                opacity: 1;
+            }
+        }
     }
 }

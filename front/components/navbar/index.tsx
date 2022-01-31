@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className={styles.components} ref={navRef}>
             <nav className={navStyles.navbar}>
                 <div onClick={()=>scrollToSection('#intro')}>
-                    <span onMouseOver={(e)=>menuOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)}>
+                    <span className={styles.permanent_focus} onMouseOver={(e)=>menuOptionHoverOn(e)} onMouseLeave={(e)=>menuOptionHoverOff(e)}>
                         &#60;&#47;&#62;
                     </span>
                 </div>

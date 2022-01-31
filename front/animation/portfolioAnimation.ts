@@ -3,17 +3,29 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import { RefObject } from 'react'
 
 export const revealProjectContent = (projectEntryRef: RefObject<HTMLDivElement>, expandProject:boolean)=>{
+    const tl = gsap.timeline();
+
     if(expandProject){
-        gsap.to(projectEntryRef.current!.querySelector('p'),{
+        tl
+        .to(projectEntryRef.current!.querySelector('p'),{
             display: 'block',
             padding: '2rem 1.5rem',
             duration: 0.1
+        })
+        .to(projectEntryRef.current!.querySelector('svg'),{
+            rotate: '-135deg',
+            duration: 0.8
         })  
     }else{
-        gsap.to(projectEntryRef.current!.querySelector('p'),{
+        tl
+        .to(projectEntryRef.current!.querySelector('p'),{
             display: 'none',
             duration: 0.1
-        })  
+        }) 
+        .to(projectEntryRef.current!.querySelector('svg'),{
+            rotate: '-45deg',
+            duration: 0.8
+        })   
     }
 }
 

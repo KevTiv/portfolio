@@ -1,24 +1,10 @@
 
-// @font-face {
-//     font-family: 'Camar';
-//     src: url('../public/font/Camar.otf') format('opentype');
-// }
-// @font-face{
-//     font-family: 'Montserrat-Bold';
-//     src: url('../public//font//Montserrat-Bold.ttf') format('opentype');
-// }
-// @font-face {
-//     font-family: 'Montserrat-Regular';
-//     src: url('../public//font//Montserrat-Regular.ttf') format('opentype');
-// }
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Roboto:wght@300;400&display=swap');
 
 h2{
     font-family: 'Libre Baskerville',
     serif;
-    // font-family: 'Camar', 
-    // sans-serif;
     font-style: bold;
     font-weight: 700;
     font-size: 3.5vw;
@@ -31,8 +17,6 @@ h2{
 h3{
     font-family: 'Libre Baskerville',
     serif;
-    // font-family: 'Camar', 
-    // sans-serif;
     font-style: italic;
     font-weight: 400;
 
@@ -47,22 +31,10 @@ p{
     font-size: 2vw;
 }
 
-span{
-    font-family: 'Roboto',
-    sans-serif;
-    font-style: Regular;
-    font-weight: 400;
-
-    font-size: 2vw;
-}
-
 li, a{
     font-family: 'Roboto',
     sans-serif;
     font-style: Regular;
-    font-weight: 400;
-
-    // font-family: 'Montserrat-Bold',
-    // sans-serif;
+    font-weight: 300;
     font-size: 1.75vw;
 }

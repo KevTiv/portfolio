@@ -5,6 +5,7 @@ import { hoverOffJobTitle, hoverOffName, hoverOnJobTitle, hoverOnName, scrollThr
 
 import styles from '../../styles/Styles.module.scss'
 import introStyles from '../../styles/Intro.module.scss'
+import { scrollToSection } from '../../animation/navbarAnimation'
 
 
 const Intro = () => {
@@ -31,12 +32,12 @@ const Intro = () => {
                     <div className={introStyles.presentation}>
                         <div onMouseEnter={()=>hoverOnName(introSectionRef)} onMouseLeave={()=>hoverOffName(introSectionRef)}>
                             <span className='h2BgAnimation'></span>
-                            <h2 className={`${introStyles.hello_world} ${introStyles.hello_hover}`}>Hello World! I'm </h2><h2 className={introStyles.hello_world}> Kevin C. Tivert</h2>
+                            <h2 className={`${introStyles.hello_world} ${introStyles.hello_hover_first_part}`}>Hello World! I'm </h2><h2 className={`${introStyles.hello_world} ${styles.focus}`} onClick={()=>scrollToSection('#about')}> Kevin C. Tivert</h2>
                         </div>
                         {/* <div>  */}
                         <div onMouseEnter={(e)=>hoverOnJobTitle(introSectionRef)} onMouseLeave={()=>hoverOffJobTitle(introSectionRef)}> 
                             <span className="h3BgAnimation"></span>  
-                            <h3 className={introStyles.job_title}>Web dev</h3> <h3 className={`${introStyles.job_title} ${introStyles.job_hover}`}>elopper</h3>
+                            <h3 className={`${introStyles.job_title} ${styles.focus}`} onClick={()=>scrollToSection('#skills')}>Web dev</h3> <h3 className={`${introStyles.job_title} ${introStyles.job_hover}`}>elopper</h3>
                         </div>
                         
                     </div>
