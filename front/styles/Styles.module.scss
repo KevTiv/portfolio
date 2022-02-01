@@ -61,6 +61,21 @@
   justify-content: center;
   align-items: justify-start;
 }
+.inner_cursor {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  display: inline-block;
+  top: -50px;
+  left: -50px;
+  z-index: 2;
+  transform: translateX(100%) translateY(300%);
+  border-radius: 100%;
+  // filter: blur(2rem);
+   pointer-events: none;
+  border: 3px solid $highlight_color;
+}
+
 .ball_slide{
   position:fixed;
   width: 96%;

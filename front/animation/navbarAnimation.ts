@@ -4,7 +4,7 @@ import { RefObject, MouseEvent } from 'react'
 
 export const menuOptionHoverOn=(e:MouseEvent) =>{
     gsap.to(e.target,{
-        color: '#eb5d29',
+        color: '#c8e0f4',
         scale: 1.15,
         skewX: 18,
         y: -8,

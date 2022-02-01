@@ -1,7 +1,7 @@
 import styles from '../../styles/Styles.module.scss'
 import portfolioStyles from '../../styles/Portfolio.module.scss'
 import { useRef, useEffect, MouseEvent, useState, RefObject } from 'react'
-import { contentSectionAppear, titleAnimation, titleAnimationOff } from '../../animation/globalAnimation'
+import { contentSectionAppear, titleAnimation } from '../../animation/globalAnimation'
 import { projectEntryAppear, revealProjectContent } from '../../animation/portfolioAnimation'
 
 const Portfolio = () => {
@@ -14,9 +14,6 @@ const Portfolio = () => {
         titleAnimation(e.clientX, ballRef);
         
     }
-    const titleHoverOff = (e:MouseEvent)=>{
-        titleAnimationOff(e.clientX, ballRef);
-    }
     useEffect(() => {
         contentSectionAppear(portfolioSectionRef);
     },[]);
@@ -25,7 +22,7 @@ const Portfolio = () => {
       <>
         <div id="portfolio" className={`${styles.components} ${portfolioStyles.portfolioContent} ${styles.main}`} ref={portfolioSectionRef}>
             <div className={styles.content}>
-                <div className={styles.title_container} onMouseEnter={(e)=>titleHoverOn(e)} onMouseLeave={(e)=>titleHoverOff(e)}>
+                <div className={styles.title_container} onMouseEnter={(e)=>titleHoverOn(e)}>
                     <div className={styles.ball_slide} ref={ballRef}>
                         <span className={styles.ball}></span>
                     </div>
@@ -59,7 +56,7 @@ type projectProps={
 const Project = ({portfolioSectionRef}:projectProps)=>{
     const [expandProject, setExpand] = useState<boolean>(true);
     const projectEntryRef = useRef<HTMLDivElement>(null);
-    const Arrow = <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3.5vw" height="3.5vw" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#eb5d29"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></g></svg>;
+    const Arrow = <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3.5vw" height="3.5vw" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#c8e0f4"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></g></svg>;
 
     useEffect(() => {
         projectEntryAppear(portfolioSectionRef, projectEntryRef);

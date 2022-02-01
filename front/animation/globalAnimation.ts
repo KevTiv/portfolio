@@ -6,23 +6,14 @@ import { RefObject } from 'react'
 
 export const titleAnimation = (cursorPosXinTitleContainer: number, ref: RefObject<HTMLDivElement>) =>{
     console.log(cursorPosXinTitleContainer);
+    console.log(ref.current);
     gsap.to(ref.current!.querySelector('span'),{
-        x: ()=>{
-            if((cursorPosXinTitleContainer + ref.current!.offsetLeft + ref.current!.querySelector('span')!.clientWidth) > ref.current!.scrollWidth){
-                return ref.current!.scrollWidth - ref.current!.querySelector('span')!.clientWidth - (0.15 * ref.current!.offsetLeft);
-            }else{ 
-                return cursorPosXinTitleContainer - (2.5 * ref.current!.offsetLeft);
-            }
-        },
+        x: cursorPosXinTitleContainer - (3 * ref.current!.offsetLeft),
+        // x: ()=>{
+        //     return cursorPosXinTitleContainer - (2.5 * ref.current!.offsetLeft);
+        // },
         duration: 2,
         ease: 'expo.inOut'
-    })
-}
-export const titleAnimationOff = (x: number, ref: RefObject<HTMLDivElement>)=>{
-    gsap.to(ref.current!.querySelector('span'),{
-        x: '2px',
-        duration: 6,
-        ease: 'expo.out'
     })
 }
 export const screenReveal=()=>{
@@ -70,7 +61,7 @@ export const contentSectionAppear = (ref:RefObject<HTMLDivElement>)=>{
     const tl=gsap.timeline({
         scrollTrigger:{
             trigger: triggerTarget.current,
-            start: '-=1000',
+            start:'-=600',
             // end: '+=200',
             // markers: true,
         }
@@ -79,49 +70,68 @@ export const contentSectionAppear = (ref:RefObject<HTMLDivElement>)=>{
     tl
     .from(triggerTarget.current!.querySelector('div'),{
         opacity: 0,
-        x: 50,
-        y: -70,
-        scale: 0.2,
+        y: 10,
         duration: 0.9,
     })
     .from(triggerTarget.current!.querySelectorAll('h2'),{
         opacity: 0,
-        scale: 0.2,
-        y: -80,
+        height: 0,
+        y: -5,
         stagger: 0.2,
         duration: 1,
         ease: 'expo.inOut'
-    },'-=0.8')
+    },'-=0.3')
     .from(triggerTarget.current!.querySelectorAll('h3'),{
         opacity: 0,
-        scale: 0.2,
-        y: -80,
+        height: 0,
+        y: -5,
         stagger: 0.2,
         duration: 1,
         ease: 'expo.inOut'
-    },'-=0.8')
+    },'-=0.6')
     .from(triggerTarget.current!.querySelectorAll('p'),{
         opacity: 0,
         scale: 0.2,
-        y: -80,
+        y: -5,
         stagger: 0.2,
         duration: 1,
         ease: 'expo.inOut'
-    },'-=0.8')
+    },'-=0.2')
     .from(triggerTarget.current!.querySelectorAll('li'),{
         opacity: 0,
-        scale: 0.2,
-        y: 40,
+        height: 0,
+        // y: 2,
+        stagger: 0.1,
+        duration: 0.4,
+        ease: 'expo.inOut'
+    },'-=0.4')
+    .from(triggerTarget.current!.querySelectorAll('svg'),{
+        opacity: 0,
+        // scale: 0.2,
+        // y: -5,
         stagger: 0.2,
         duration: 0.6,
         ease: 'expo.inOut'
     },'-=0.8')
-    .from(triggerTarget.current!.querySelectorAll('svg'),{
-        opacity: 0,
+    .from(triggerTarget.current!.querySelector('.ball'),{
         scale: 0.2,
-        y: -20,
-        stagger: 0.2,
-        duration: 0.6,
+        opacity: 0,
+        duration: 1,
         ease: 'expo.inOut'
-    },'-=3.5');
+    },'-=0.8');
+}
+
+export const cursorAnimation = (posX: number, posY:number)=>{
+    const cursorTarget = document.querySelector('#innerCursor');
+    console.log(cursorTarget);
+    let tl = gsap.timeline();
+    tl
+    .to(cursorTarget,{
+        // x: posX - cursorTarget!.offsetHeight ,
+        x: posX ,
+        // y: posY - (window.innerHeight / 2),
+        y: posY ,
+        duration: 0.5,
+        ease: "power2.out"
+    })
 }
