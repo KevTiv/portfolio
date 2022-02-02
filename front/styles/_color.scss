@@ -1,6 +1,12 @@
-$main_color: #9ca1a5;
-$secondary_color: #212529;
-$highlight_color: #c8e0f4;
+$main_color: #fffcf2;
+$secondary_color: #252422;
+$highlight_color: #f47e3e;
+$inner_cursor_color: #f47e3e;
+$outer_cursor_color: #252422;
+
+// $main_color: #9ca1a5;
+// $secondary_color: #212529;
+// $highlight_color: #c8e0f4;
 // $highlight_color: #eb5d29;
 
 // $main_color: #212529;
@@ -12,7 +18,7 @@ $highlight_color: #c8e0f4;
 $container_bg_color: $main_color;
 
 $navbar_bg_color: $secondary_color;
-$navbar_text_color: $main_color;
+$navbar_text_color: $highlight_color;
 
 $intro_title_color: $main_color;
 

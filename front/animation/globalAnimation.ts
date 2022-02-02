@@ -4,18 +4,6 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
 import { RefObject } from 'react'
 
-export const titleAnimation = (cursorPosXinTitleContainer: number, ref: RefObject<HTMLDivElement>) =>{
-    console.log(cursorPosXinTitleContainer);
-    console.log(ref.current);
-    gsap.to(ref.current!.querySelector('span'),{
-        x: cursorPosXinTitleContainer - (3 * ref.current!.offsetLeft),
-        // x: ()=>{
-        //     return cursorPosXinTitleContainer - (2.5 * ref.current!.offsetLeft);
-        // },
-        duration: 2,
-        ease: 'expo.inOut'
-    })
-}
 export const screenReveal=()=>{
     const tl = gsap.timeline();
     tl
@@ -70,68 +58,120 @@ export const contentSectionAppear = (ref:RefObject<HTMLDivElement>)=>{
     tl
     .from(triggerTarget.current!.querySelector('div'),{
         opacity: 0,
-        y: 10,
-        duration: 0.9,
+        duration: 0.1,
     })
     .from(triggerTarget.current!.querySelectorAll('h2'),{
         opacity: 0,
-        height: 0,
+        // height: 0,
         y: -5,
         stagger: 0.2,
-        duration: 1,
+        duration: 0.5,
         ease: 'expo.inOut'
     },'-=0.3')
     .from(triggerTarget.current!.querySelectorAll('h3'),{
         opacity: 0,
-        height: 0,
+        // height: 0,
         y: -5,
         stagger: 0.2,
-        duration: 1,
+        duration: 0.5,
         ease: 'expo.inOut'
     },'-=0.6')
     .from(triggerTarget.current!.querySelectorAll('p'),{
         opacity: 0,
-        scale: 0.2,
-        y: -5,
+        // height: 0,
+        y: 5,
         stagger: 0.2,
-        duration: 1,
+        duration: 0.4,
         ease: 'expo.inOut'
     },'-=0.2')
     .from(triggerTarget.current!.querySelectorAll('li'),{
         opacity: 0,
-        height: 0,
-        // y: 2,
         stagger: 0.1,
-        duration: 0.4,
+        duration: 0.1,
         ease: 'expo.inOut'
     },'-=0.4')
     .from(triggerTarget.current!.querySelectorAll('svg'),{
         opacity: 0,
-        // scale: 0.2,
-        // y: -5,
         stagger: 0.2,
         duration: 0.6,
-        ease: 'expo.inOut'
-    },'-=0.8')
-    .from(triggerTarget.current!.querySelector('.ball'),{
-        scale: 0.2,
-        opacity: 0,
-        duration: 1,
         ease: 'expo.inOut'
     },'-=0.8');
 }
 
 export const cursorAnimation = (posX: number, posY:number)=>{
-    const cursorTarget = document.querySelector('#innerCursor');
-    console.log(cursorTarget);
+    const innerCursorTarget = document.querySelector('#innerCursor');
+    const outerCursorTarget = document.querySelector('#outerCursor');
+
+    console.log(innerCursorTarget);
     let tl = gsap.timeline();
     tl
-    .to(cursorTarget,{
-        // x: posX - cursorTarget!.offsetHeight ,
-        x: posX ,
-        // y: posY - (window.innerHeight / 2),
-        y: posY ,
+    .to(innerCursorTarget,{
+        x: posX,
+        left: '-0.875rem',
+        // x: posX + (window.innerWidth * 0.03) * 0.8,
+        y: posY,
+        top: '-0.875rem',
+        // y: posY + (window.innerHeight * 0.03) * 0.8,
         duration: 0.5,
         ease: "power2.out"
     })
+    .to(outerCursorTarget,{
+        x: posX,
+        left: '-2rem',
+        // x: posX + (window.innerWidth * 0.035) * 0.5,
+        y: posY,
+        top: '-2rem',
+        // y: posY + (window.innerHeight * 0.035) * 0.5,
+        duration: 0.3,
+        ease: "power2.out"
+    },'-=0.3');
+}
+export const isClickable = ()=>{
+    const tl = gsap.timeline();
+    tl
+    .to(document.querySelector('#innerCursor'),{
+        backgroundColor: 'transparent',
+        border: 'none',
+        duration: 0.1
+    })
+    .to(document.querySelector('#outerCursor'),{
+        border: '0.1rem solid #f47e3e',
+        scale: 1.75,
+        duration: 0.8,
+        ease: "power3.out"
+    })
+    .to(document.querySelector('#innerCursor span'),{
+        scale: 2,
+        opacity: 1,
+        duration: 0.1,
+        ease: "power3.out"
+    },'-=0.6')
+    .to(document.querySelector('#innerCursor span'),{
+        scale: 2,
+        opacity: 1,
+        duration: 0.1,
+        ease: "power3.out"
+    },'-=0.6');
+}
+
+export const isNotClickable = ()=>{
+    const tl = gsap.timeline();
+
+    tl
+    .to(document.querySelector('#outerCursor'),{
+        border: '0.3rem solid #252422',
+        scale: 1,
+        duration: 0.3,
+        ease: "power3.out"
+    })
+    .to(document.querySelector('#innerCursor'),{
+        backgroundColor: '#f47e3e',
+        border: '0.25rem solid #f47e3e',
+        duration: 0.1
+    })
+    .to(document.querySelector('#innerCursor span'),{
+        scale: 1,
+        opacity: 0,
+        duration: 0.1
+    });
 }

@@ -16,8 +16,7 @@ const Transition = () => {
             <div></div>
             <div>
                 <h2>
-                    Welcome
-                    <span>!</span>
+                    Bonjour
                 </h2>
             </div>
         </div>

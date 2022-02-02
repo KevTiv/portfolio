@@ -62,41 +62,37 @@
   align-items: justify-start;
 }
 .inner_cursor {
-  width: 3rem;
-  height: 3rem;
+  width: 1.75rem;
+  aspect-ratio: 1;
   position: fixed;
   display: inline-block;
   top: -50px;
   left: -50px;
-  z-index: 2;
-  transform: translateX(100%) translateY(300%);
+  z-index: 500;
   border-radius: 100%;
-  // filter: blur(2rem);
-   pointer-events: none;
-  border: 3px solid $highlight_color;
+  pointer-events: none;
+  background-color: $inner_cursor_color;
+  border: 0.25rem solid $inner_cursor_color;
+  span{
+    display: flex;
+    opacity: 0;
+    font-weight: 500;
+    transform: translateX(-1vw);
+    color: $main_color;
+    -webkit-text-stroke: 0.04rem $inner_cursor_color;
+  }
 }
-
-.ball_slide{
-  position:fixed;
-  width: 96%;
-  aspect-ratio: 1/0.06;
-  max-height: 7.5rem;
-  z-index: -10;
-  overflow: hidden;
-}
-
-.ball {
-  display: flex;
-  position: absolute;
-  top: 3% !important;
-  left: 3px !important;
-  background-color: $highlight_color;
-  height: 90%;
-  // width: 12%;
-  border-radius: 100%;
+.outer_cursor {
+  width: 4rem;
   aspect-ratio: 1;
-  border: 0.25rem solid $h2_sphere_bg_color;
-  // box-shadow: 0.025rem 0.025rem 0.5rem $h2_sphere_bg_color;
+  position: fixed;
+  display: inline-block;
+  top: -50px;
+  left: -50px;
+  z-index: 500;
+  border-radius: 100%;
+  pointer-events: none;
+  border: 0.3rem solid $outer_cursor_color;
 }
 
 .focus{
@@ -104,7 +100,6 @@
   transform-origin: center center;
   
   &:hover{
-    cursor: pointer;
     color: $highlight_color;
   }
 }
@@ -113,23 +108,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 0.25rem solid $h2_sphere_bg_color;
-  border-bottom: 0.25rem solid $h2_sphere_bg_color;
+  border-top: 0.4rem solid $h2_sphere_bg_color;
+  border-bottom: 0.4rem solid $h2_sphere_bg_color;
   overflow: hidden;
   block-size: fit-content;
   width: 100%;
   height: 100%;
-  // aspect-ratio: 1/0.05;
-  // background-color: yellow;
+  padding: 0.05rem 0;
   h2{
     margin: 0 1rem;
     padding: 0.25rem 0;
     font-weight: 800 !important;
-    cursor: default;
-    // letter-spacing: 0.2rem;
-    // -webkit-text-stroke: 0.045rem $main_color;
-    // text-stroke: 0.05rem $main_color;
-    // color: $main_color !important;
     
   }
 }

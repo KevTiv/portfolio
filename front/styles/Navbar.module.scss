@@ -19,7 +19,8 @@
 
         span{
             color: $navbar_text_color;
-            cursor: pointer;
+            transform: scale(1.5);
+            //cursor: pointer;
         }
     }
     div:nth-child(2) {
@@ -39,7 +40,7 @@
                 justify-content: center;
                 align-items: center;
                 color: $navbar_text_color;
-                cursor: pointer;
+                //cursor: pointer;
                 
             }
         }

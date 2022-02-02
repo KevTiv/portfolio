@@ -73,11 +73,9 @@
     h3,p{
         color: $portfolio_project_entry_text;
     }
-    
     p{
         display: none;
     }
-
     &:hover{
         background-color: $portfolio_project_entry_hover;
     }
@@ -94,15 +92,16 @@
     button{
         display: flex;
         position: absolute;
-        right: 5%;
+        right: 5.5%;
         justify-content: center;
         align-items: center;
         
         background-color: transparent;
         border-radius: 100%;
         border: none;
-        cursor: pointer;
-        
+        //cursor: pointer;
+        cursor: none;
+
         padding: 0.35rem 0.35rem;
         border-radius: 100%;
         transition: background-color 0.8s ease-in-out;

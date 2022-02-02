@@ -1,17 +1,13 @@
 import styles from '../../styles/Styles.module.scss'
 import aboutStyles from '../../styles/About.module.scss'
 import { useEffect, useRef, MouseEvent } from 'react';
-import { contentSectionAppear, titleAnimation} from '../../animation/globalAnimation';
+import { contentSectionAppear } from '../../animation/globalAnimation';
 
 
 const About = () => {
     const aboutSectionRef = useRef<HTMLDivElement>(null);
-    const ballRef = useRef<HTMLDivElement>(null);
+    
 
-    const titleHoverOn = (e:MouseEvent)=>{
-        titleAnimation(e.clientX, ballRef);
-        
-    }
     useEffect(() => {
         contentSectionAppear(aboutSectionRef);
     },[]);
@@ -20,10 +16,8 @@ const About = () => {
     <>
         <div id="about" className={`${styles.components} ${aboutStyles.about_content} ${styles.main} ${styles.text_content}`} ref={aboutSectionRef}>
             <div className={styles.content}>
-                <div className={styles.title_container} onMouseEnter={(e)=>titleHoverOn(e)}>
-                    <div className={styles.ball_slide} ref={ballRef}>
-                        <span className={styles.ball}></span>
-                    </div>
+                <div className={styles.title_container}>
+                    
                     <h2 className="titleAnimation"> About</h2>
                     <h2 className="titleAnimation">About</h2>
                     <h2 className="titleAnimation">About</h2>
