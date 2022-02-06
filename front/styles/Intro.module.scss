@@ -40,11 +40,11 @@
     left: 18%;
     z-index: 10;
     opacity: 1;
-
+    cursor: default;
+    
     div {
         width: 105%;
         height: fit-content;
-        
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -59,6 +59,7 @@
             background-color: $hello_h2_before_bg;
             z-index: -1;
             transition: all 0.7s ease-in-out;
+            
         }
         .hello_hover_first_part{
             transition: all 1.4s ease-in-out;
@@ -84,9 +85,11 @@
         .job_title {
             position: relative; 
             transition: all 0.9s ease-in-out;
+            cursor: default;
         }
         .job_hover {
             transition: all 1.2s ease-in-out;
+            
         }
         &:hover {
             .job_hover {

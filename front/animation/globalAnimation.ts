@@ -159,7 +159,7 @@ export const isNotClickable = ()=>{
 
     tl
     .to(document.querySelector('#outerCursor'),{
-        border: '0.3rem solid #252422',
+        border: '0.2rem solid #252422',
         scale: 1,
         duration: 0.3,
         ease: "power3.out"

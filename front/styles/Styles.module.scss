@@ -62,7 +62,7 @@
   align-items: justify-start;
 }
 .inner_cursor {
-  width: 1.75rem;
+  width: 1.65rem;
   aspect-ratio: 1;
   position: fixed;
   display: inline-block;
@@ -86,13 +86,14 @@
   width: 4rem;
   aspect-ratio: 1;
   position: fixed;
-  display: inline-block;
+  // display: inline-block;
+  display: none;
   top: -50px;
   left: -50px;
   z-index: 500;
   border-radius: 100%;
   pointer-events: none;
-  border: 0.3rem solid $outer_cursor_color;
+  border: 0.1rem solid $outer_cursor_color;
 }
 
 .focus{
