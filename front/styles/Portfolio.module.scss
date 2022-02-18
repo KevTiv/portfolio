@@ -1,12 +1,13 @@
 @use './color'as *;
-
+@use './mixins/mediaQuery.scss' as *;
 .portfolioContent {
     background-color: $container_bg_color;
 
-    h2,h3 {
+    h1,h2 {
         color: $h2_text_color;
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
     }
-    h2{
+    h1{
         position: relative;
         width: fit-content;
 
@@ -48,6 +49,7 @@
     }
     p {
         color: $p_text_color;
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
     }
 }
 .projectPanel{
@@ -65,19 +67,14 @@
     width: 100%;
     height: 100%;
     padding: 0.25rem 0.15rem;
-    // transform: scale(0.95);
-    // background-color: $portfolio_project_entry_bg;
     border-bottom: 1px solid $portfolio_project_entry_border;
     transform-origin: center left;
     transition: all 0.7s ease-in-out;
-    h3,p{
+    h2,p{
         color: $portfolio_project_entry_text;
     }
     p{
         display: none;
-    }
-    &:hover{
-        background-color: $portfolio_project_entry_hover;
     }
 }
 .project_title{
@@ -85,9 +82,12 @@
     justify-content: center;
     align-items: center;
     transition: all 1s ease-in-out;
-    h3{
-        // background-color: yellow;
-        opacity: 0.6 !important;
+    h2{
+        opacity: 1 !important;
+    
+        @include sm_screen {
+            font-size: 1.25rem;
+        }
     }
     button{
         display: flex;
@@ -99,28 +99,16 @@
         background-color: transparent;
         border-radius: 100%;
         border: none;
-        //cursor: pointer;
-        // cursor: none;
 
         padding: 0.35rem 0.35rem;
         border-radius: 100%;
         transition: background-color 0.8s ease-in-out;
         transform-origin: center center;
         svg{
-            opacity: 0.8;
+            opacity: 1;
             transform: rotate(-45deg);
         }
-    }
-    &:hover{
-        h3{
-            opacity: 1 !important;
-        }
-        button{
-            // background-color: $portfolio_project_entry_text;
-            svg{
-                opacity: 1;
-            }
-        }
+
     }
 }
 

@@ -1,6 +1,7 @@
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
+
 import { RefObject } from 'react'
 
 export const hoverOnName = (introSectionRef:RefObject<HTMLDivElement>) =>{
@@ -59,15 +60,18 @@ export const scrollThroughIntro=(introSectionRef:RefObject<HTMLDivElement>)=>{
             start: 'top top',
             end: '+=400',
             endTrigger: '+=600',
-            scrub: 2.5,
-            pin: true,
+            scrub: 1.5,
+            // pin: true,
             // markers: true
         }
     })
-    tl.to(introSectionRef.current,{
-        height:0,
-        display: 'none',
+    tl
+    .to(introSectionRef.current,{
+        // height:0,
+        // visibility: 'hidden',
+        opacity: 0.8,
         duration: 4,
+        ease: 'power3.out'
     })
     .to(introSectionRef.current!.querySelector('div div:nth-child(2)'),{
         skewX: '18deg',

@@ -15,9 +15,9 @@ const Transition = () => {
             <div></div>
             <div></div>
             <div>
-                <h2>
+                <h1>
                     Bonjour
-                </h2>
+                </h1>
             </div>
         </div>
     </>

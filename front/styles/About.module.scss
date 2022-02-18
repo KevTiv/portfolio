@@ -3,10 +3,11 @@
 .about_content{
     background-color: $container_bg_color;
 
-    h2{
+    h1{
         color: $h2_text_color;
         position: relative;
         width: fit-content;
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
         &::before{
             content: "About";
             position: absolute;
@@ -42,6 +43,7 @@
     }
     p{
         color: $p_text_color;
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
     }
 }
 @keyframes titleAnimationBeforeElem {

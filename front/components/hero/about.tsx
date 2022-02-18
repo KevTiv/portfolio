@@ -18,9 +18,9 @@ const About = () => {
             <div className={styles.content}>
                 <div className={styles.title_container}>
                     
-                    <h2 className="titleAnimation"> About</h2>
-                    <h2 className="titleAnimation">About</h2>
-                    <h2 className="titleAnimation">About</h2>
+                    <h1 className="titleAnimation"> About</h1>
+                    <h1 className="titleAnimation">About</h1>
+                    <h1 className="titleAnimation">About</h1>
                 </div>
                 <p>
                     Hi! I'm a software engineer that loves to create staff for the internet.

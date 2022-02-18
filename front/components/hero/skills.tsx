@@ -30,15 +30,15 @@ const Skills = () => {
           <div className={styles.content}>
             <div className={styles.title_container}>
               
-              <h2 className="titleAnimation">Skills</h2>
-              <h2 className="titleAnimation">Skills</h2>
-              <h2 className="titleAnimation">Skills</h2>
+              <h1 className="titleAnimation">Skills</h1>
+              <h1 className="titleAnimation">Skills</h1>
+              <h1 className="titleAnimation">Skills</h1>
             </div>
             <p>
                 Technologies I'm the most familiar with currently.
             </p>
             <div className={skillStyles.tech_title}>
-              <h3>Front End</h3>
+              <h2>Front End</h2>
               <div>
                 {Js}{Ts}{ReactJs}{Next}{Html}{Css}{Sass}{Tailwind}
               </div>
@@ -55,7 +55,7 @@ const Skills = () => {
               <li>Tailwind</li>
             </ul>
             <div className={skillStyles.tech_title}>
-              <h3>Back End</h3>
+              <h2>Back End</h2>
               <div>
                 {Js}{Ts}{Postgres}{Prisma}{Firebase}{Python}
               </div>

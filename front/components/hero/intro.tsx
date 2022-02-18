@@ -11,7 +11,12 @@ import { isClickable, isNotClickable } from '../../animation/globalAnimation'
 
 const Intro = () => {
     const introSectionRef = useRef<HTMLDivElement>(null);
+    const [isMediaMobile, setMediaMobile] = useState<boolean>(false);
+
     useEffect(() =>{
+        window.addEventListener('resize',()=>{
+            setMediaMobile(window.innerWidth <= 640 ? true : false);
+        });
         scrollThroughIntro(introSectionRef);
 
     },[]);
@@ -21,29 +26,27 @@ const Intro = () => {
             <div className={`${introStyles.intro} ${styles.components}`} ref={introSectionRef}>
                 <div>
                     <div className={introStyles.img_container}>
-                        {/* <Image src={'/img/hero_img_2.webp'} placeholder="blur" blurDataURL='/img/load_placeholder.webp' alt='Saint-Chamond, France' width='512' height='512' layout='responsive' priority/> */}
-                        <Image src={'/img/hero_img_1.webp'} alt='Lake Kivu, Rwanda' width='512' height='512' layout='responsive' priority/>
+                        {isMediaMobile ? 
+                            <Image src={'/img/hero_img_2.webp'} alt='Lake Kivu, Rwanda' width='512' height='1300' layout='fill' priority/> 
+                            : <Image src={'/img/hero_img_1.webp'} alt='Lake Kivu, Rwanda' width='512' height='512' layout='responsive' priority/>
+                        }
                     </div>
-                    {/* <div className={introStyles.img_container}>
-                        <Image src={'/img/hero_img_2.webp'} alt='Saint-Chamond, France' width='2400' height='2400' layout='responsive'/>
-                    </div> */}
-                    {/* <div className={introStyles.img_dev}>
-                        <Image src={'/img/hero_img_3.webp'} alt='Kevin Tivert, web dev' width='421' height='593' />
-                    </div> */}
+                    
                     <div className={introStyles.presentation}>
                         <div onMouseEnter={(()=>hoverOnName(introSectionRef))} onMouseLeave={()=>hoverOffName(introSectionRef)}>
                             <span className='h2BgAnimation'></span>
-                            <h2 className={`${introStyles.hello_world} ${introStyles.hello_hover_first_part} click`}>Hello World! I'm </h2><h2 className={`${introStyles.hello_world} ${styles.focus}`} onClick={()=>scrollToSection('#about')}
+                            <h1 className={`${introStyles.hello_world} ${introStyles.hello_hover_first_part}`}>Hello World! I'm </h1><h1 className={`${introStyles.hello_world} ${styles.focus} ${styles.click}`} onClick={()=>scrollToSection('#about')}
                             onMouseEnter={()=>{isClickable()}}   
                             onMouseLeave={()=>{isNotClickable()}}
-                            > Kevin C. Tivert</h2>
+                            > Kevin C. Tivert</h1>
                         </div>
                         <div onMouseEnter={()=>hoverOnJobTitle(introSectionRef)} onMouseLeave={()=>hoverOffJobTitle(introSectionRef)}> 
                             <span className="h3BgAnimation"></span>  
-                            <h3 className={`${introStyles.job_title} ${styles.focus} click`} onClick={()=>scrollToSection('#skills')}
+                            <h2 className={`${introStyles.job_title} ${styles.focus} ${styles.click}`} 
+                                onClick={()=>scrollToSection('#portfolio')}
                                 onMouseEnter={()=>isClickable()}  
                                 onMouseLeave={()=>isNotClickable()}
-                            >Web dev</h3> <h3 className={`${introStyles.job_title} ${introStyles.job_hover}`}>elopper</h3>
+                            >Web dev</h2> <h2 className={`${introStyles.job_title} ${introStyles.job_hover}`}>elopper</h2>
                         </div>
                         
                     </div>

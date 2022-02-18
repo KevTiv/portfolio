@@ -1,8 +1,9 @@
 
+@use './mixins/mediaQuery.scss' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Roboto:wght@300;400&display=swap');
 
-h2{
+h1{
     font-family: 'Libre Baskerville',
     serif;
     font-style: bold;
@@ -14,7 +15,7 @@ h2{
     overflow: hidden;
 }
 
-h3{
+h2{
     font-family: 'Libre Baskerville',
     serif;
     font-style: italic;
@@ -29,15 +30,27 @@ p{
     font-style: light;
     font-weight: 300;
     font-size: 2vw;
+
+    @include sm_screen{
+        font-size: 0.85rem;
+    }
 }
 
 li, a{
     font-family: 'Roboto',
     sans-serif;
     font-style: Regular;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.75vw;
 }
+
+li{
+    @include sm_screen{
+        font-size: 8vw;
+        font-weight: 500;
+    }
+}
+
 span{
     font-weight: 800;
     font-size: 1.25vw;

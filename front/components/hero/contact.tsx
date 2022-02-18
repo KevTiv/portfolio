@@ -6,11 +6,8 @@ import { contentSectionAppear, isClickable, isNotClickable } from '../../animati
 const Contact = () => {
   const contactSectionRef = useRef<HTMLDivElement>(null);
 
-  
-  
-
-  const Email=<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3.45vw" height="3.45vw" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M15.448 7.021c2.443 0 4.745 1.083 6.432 2.776v.005c0-.813.547-1.428 1.303-1.428h.192c1.193 0 1.432 1.125 1.432 1.48l.005 12.635c-.083.828.855 1.256 1.376.724c2.025-2.083 4.452-10.719-1.261-15.719c-5.328-4.667-12.479-3.896-16.281-1.276c-4.041 2.792-6.624 8.959-4.115 14.755c2.74 6.319 10.573 8.204 15.235 6.324c2.36-.953 3.448 2.233.995 3.276c-3.697 1.577-14 1.416-18.812-6.917C-1.302 18.027-1.13 8.125 7.496 2.995C14.089-.932 22.788.156 28.032 5.631c5.48 5.729 5.163 16.448-.187 20.615c-2.423 1.895-6.021.052-5.995-2.709l-.027-.9c-1.687 1.671-3.932 2.651-6.375 2.651c-4.833 0-9.088-4.256-9.088-9.084c0-4.88 4.255-9.181 9.088-9.181zm6.079 8.834c-.183-3.537-2.808-5.667-5.98-5.667h-.12c-3.656 0-5.687 2.88-5.687 6.145c0 3.661 2.453 5.973 5.672 5.973c3.593 0 5.952-2.629 6.124-5.739z" fill="#212529"/></svg>
-  const Linkedin=<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="4vw" height="4vw" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="#212529"><path d="M17 13.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457c-.592 0-.945.398-1.1.784c-.056.138-.071.33-.071.522v3.601h-2.144s.029-5.842 0-6.447H12.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066c1.41 0 2.468.922 2.468 2.902zM8.213 7.271C7.48 7.271 7 7.753 7 8.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115c-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V10.38H7.127v6.447z"/><path d="M12 20a8 8 0 1 0 0-16a8 8 0 0 0 0 16zm0 2C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10z"/></g></svg>
+  const Email= <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3.5vw" height="3.5vw" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M26.07 3.996a2.974 2.974 0 0 0-.933.223h-.004c-.285.113-1.64.683-3.7 1.547l-7.382 3.109c-5.297 2.23-10.504 4.426-10.504 4.426l.062-.024s-.359.118-.734.375a2.03 2.03 0 0 0-.586.567c-.184.27-.332.683-.277 1.11c.09.722.558 1.155.894 1.394c.34.242.664.355.664.355h.008l4.883 1.645c.219.703 1.488 4.875 1.793 5.836c.18.574.355.933.574 1.207c.106.14.23.257.379.351a1.119 1.119 0 0 0 .246.106l-.05-.012c.015.004.027.016.038.02c.04.011.067.015.118.023c.773.234 1.394-.246 1.394-.246l.035-.028l2.883-2.625l4.832 3.707l.11.047c1.007.442 2.027.196 2.566-.238c.543-.437.754-.996.754-.996l.035-.09l3.734-19.129c.106-.472.133-.914.016-1.343a1.807 1.807 0 0 0-.781-1.047a1.872 1.872 0 0 0-1.067-.27zm-.101 2.05c-.004.063.008.056-.02.177v.011l-3.699 18.93c-.016.027-.043.086-.117.145c-.078.062-.14.101-.465-.028l-5.91-4.531l-3.57 3.254l.75-4.79l9.656-9c.398-.37.265-.448.265-.448c.028-.454-.601-.133-.601-.133l-12.176 7.543l-.004-.02l-5.836-1.965v-.004l-.015-.003a.27.27 0 0 0 .03-.012l.032-.016l.031-.011s5.211-2.196 10.508-4.426c2.652-1.117 5.324-2.242 7.379-3.11c2.055-.863 3.574-1.496 3.66-1.53c.082-.032.043-.032.102-.032z" fill="#252422"/></svg>
+  const Linkedin= <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3.5vw" height="3.5vw" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4zM7.65 13.979H5.706V7.723H7.65v6.256zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973zm8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699v3.699z" fill="#252422"/></svg>
     
   useEffect(() => {
       contentSectionAppear(contactSectionRef);
@@ -21,14 +18,14 @@ const Contact = () => {
         <div id="contact" className={`${styles.components} ${contactStyles.contact_content} ${styles.main}`} ref={contactSectionRef}>
           <div className={styles.content}>
             <div className={styles.title_container}>
-              <h2 className="titleAnimation">Contact</h2>
-              <h2 className="titleAnimation">Contact</h2>
-              <h2 className="titleAnimation">Contact</h2>
+              <h1 className="titleAnimation">Contact</h1>
+              <h1 className="titleAnimation">Contact</h1>
+              <h1 className="titleAnimation">Contact</h1>
             </div>
             <div>
               <p>Let's talk!</p>
-              <a onMouseEnter={isClickable} onMouseLeave={isNotClickable}>{Email}</a> 
-              <a onMouseEnter={isClickable} onMouseLeave={isNotClickable}>{Linkedin}</a> 
+              <a className={styles.click} onMouseEnter={isClickable} onMouseLeave={isNotClickable}>{Email}</a> 
+              <a className={styles.click} onMouseEnter={isClickable} onMouseLeave={isNotClickable}>{Linkedin}</a> 
             </div>
           </div>
         </div>

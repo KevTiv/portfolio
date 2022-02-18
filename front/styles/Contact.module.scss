@@ -3,7 +3,7 @@
 .contact_content {
     background-color: $container_bg_color;
 
-    h2 {
+    h1 {
         color: $h2_text_color;
         position: relative;
         width: fit-content;
@@ -50,6 +50,10 @@
     }
     a {
         color: $p_text_color;
+
+        svg {
+           clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+        }
     }
 
     div:nth-child(2){
@@ -61,7 +65,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 1.75rem;
+            margin: 0 1.5rem;
             padding: 0.25rem;
             //cursor: pointer;
             border-radius: 100%;
@@ -69,8 +73,7 @@
             transform-origin: center center;
 
             &:hover{
-                background-color: $highlight_color;
-                box-shadow: 0.25rem 0.25rem 0.5rem $secondary_color;
+                box-shadow: 0.15rem 0.15rem 0.5rem $secondary_color;
             }
         }
     }

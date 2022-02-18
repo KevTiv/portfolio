@@ -21,6 +21,7 @@ const Home: NextPage = () => {
   
   useEffect(() => {
     //Use of gsap to smooth reload blink screen.
+
     scrollToSection('#intro');
     screenReveal();
 
@@ -48,18 +49,12 @@ const Home: NextPage = () => {
       <Transition/>
       <Navbar />
       <main className={styles.main}>
-        <div id='innerCursor' className={styles.inner_cursor}>
-          <span>Click</span>
-        </div>
-        <div id='outerCursor' className={styles.outer_cursor}></div>
+        <div id='innerCursor' className={styles.inner_cursor}></div>
         <section  id="intro">
           <Intro/>
         </section>
         <section>
           <About/>
-        </section>
-        <section>
-          <Skills />
         </section>
         <section>
           <Portfolio/>
