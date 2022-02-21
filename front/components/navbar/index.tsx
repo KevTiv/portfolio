@@ -11,6 +11,8 @@ const Navbar = () => {
   useEffect(()=>{
     let previousScrollPosition: number = window.pageYOffset;
     
+    setMediaMobile(window.innerWidth <= 640 ? true : false);
+
     window.addEventListener('resize',()=>{
         setMediaMobile(window.innerWidth <= 640 ? true : false);
     });

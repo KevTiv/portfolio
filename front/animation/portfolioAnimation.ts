@@ -71,11 +71,11 @@ export const showProjectImg = (imgOuterSpan:Element, imgInnerSpan:Element, img:E
         'position': 'absolute',
         display: 'inline-block',
         top: 0,
-        right: '5%',
+        right: 0,
         width: '25%',
         opacity: 1,
-        rotate: '-8deg',
-        duration: 0.4,
+        rotate: '-6deg',
+        duration: 0.5,
         ease: 'power3.inOut'
     })
     .to([imgInnerSpan, img],{
@@ -89,9 +89,9 @@ export const hideProjectImg = (imgOuterSpan:Element)=>{
     gsap.to(imgOuterSpan,{
         display: 'none',
         opacity: 0,
-        duration: 0.4,
-        top: '-5%',
-        right: 0,
+        duration: 0.5,
+        top: '-10%',
+        right: '-15%',
         ease: 'power3.inOut'
     })
 };

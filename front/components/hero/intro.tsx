@@ -14,6 +14,8 @@ const Intro = () => {
     const [isMediaMobile, setMediaMobile] = useState<boolean>(false);
 
     useEffect(() =>{
+        setMediaMobile(window.innerWidth <= 640 ? true : false);
+        
         window.addEventListener('resize',()=>{
             setMediaMobile(window.innerWidth <= 640 ? true : false);
         });

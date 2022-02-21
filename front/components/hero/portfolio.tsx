@@ -24,6 +24,8 @@ const Portfolio = () => {
     useEffect(() => {
         contentSectionAppear(portfolioSectionRef);
 
+        setMediaMobile(window.innerWidth <= 640 ? true : false);
+        
         window.addEventListener('resize',()=>{
             setMediaMobile(window.innerWidth <= 640 ? true : false);
         });

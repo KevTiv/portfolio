@@ -8,7 +8,8 @@ h1{
     serif;
     font-style: bold;
     font-weight: 700;
-    font-size: 3.5vw;
+    // font-size: 3.5vw;
+    font-size: 2.5rem;
     letter-spacing: 0.05rem;
     word-spacing: 0.02rem;
     width: fit-content;
@@ -21,7 +22,7 @@ h2{
     font-style: italic;
     font-weight: 400;
 
-    font-size: 2.75vw;
+    font-size: 2rem;
 }
 
 p{
@@ -29,7 +30,7 @@ p{
     sans-serif;
     font-style: light;
     font-weight: 300;
-    font-size: 2vw;
+    font-size: 1.35rem;
     @include sm_screen{
         font-size: 0.85rem;
     }
@@ -40,7 +41,11 @@ li, a{
     sans-serif;
     font-style: Regular;
     font-weight: 400;
-    font-size: 1.75vw;
+    font-size: 1rem;
+
+    @include sm_screen {
+        font-size: 0.85rem;
+    }
 }
 
 li{
@@ -52,5 +57,9 @@ li{
 
 span{
     font-weight: 800;
-    font-size: 1.25vw;
+    font-size: 1rem;
+
+    @include sm_screen {
+        font-size: 0.85rem;
+    }
 }
