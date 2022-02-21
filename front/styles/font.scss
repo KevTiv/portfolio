@@ -30,7 +30,6 @@ p{
     font-style: light;
     font-weight: 300;
     font-size: 2vw;
-
     @include sm_screen{
         font-size: 0.85rem;
     }

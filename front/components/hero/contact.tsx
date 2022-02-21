@@ -24,8 +24,8 @@ const Contact = () => {
             </div>
             <div>
               <p>Let's talk!</p>
-              <a className={styles.click} onMouseEnter={isClickable} onMouseLeave={isNotClickable}>{Email}</a> 
-              <a className={styles.click} onMouseEnter={isClickable} onMouseLeave={isNotClickable}>{Linkedin}</a> 
+              <a className={styles.click} onMouseEnter={isClickable} onMouseLeave={isNotClickable} href="mailto:tivertc.kevin@outlook.com" target="_blank" rel="noopener noreferrer">{Email}</a> 
+              <a className={styles.click} onMouseEnter={isClickable} onMouseLeave={isNotClickable} href="https://www.linkedin.com/in/kevin-tivert/" target="_blank" rel="noopener noreferrer">{Linkedin}</a> 
             </div>
           </div>
         </div>

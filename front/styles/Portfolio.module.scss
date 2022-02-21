@@ -59,8 +59,8 @@
     height: auto;
     
     padding: 1.5vw;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    // overflow-x: scroll;
+    // overflow-y: hidden;
     border-radius: 0.25rem;
 }
 .projectEntry{
@@ -82,11 +82,12 @@
     justify-content: center;
     align-items: center;
     transition: all 1s ease-in-out;
+    position: relative;
     h2{
         opacity: 1 !important;
-    
+        
         @include sm_screen {
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
     }
     button{
@@ -104,14 +105,23 @@
         border-radius: 100%;
         transition: background-color 0.8s ease-in-out;
         transform-origin: center center;
+        z-index: 5;
         svg{
             opacity: 1;
             transform: rotate(-45deg);
         }
-
+        
     }
 }
-
+.project_links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    P{
+        margin: 0 0.5rem;
+        color: $highlight_color;
+    }
+}
 @keyframes titleAnimationBeforeElem {
     0% {
         opacity: 0;

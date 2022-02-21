@@ -25,6 +25,11 @@ const Navbar = () => {
         }
         previousScrollPosition = currentScrollPosition;
     }
+    return()=>{
+        window.removeEventListener('resize',()=>{
+            setMediaMobile(window.innerWidth <= 640 ? true : false);
+        });
+    }
   },[])
   return (
     <>

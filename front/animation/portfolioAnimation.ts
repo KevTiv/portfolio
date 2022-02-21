@@ -61,4 +61,37 @@ export const projectEntryAppear = (trigger:RefObject<HTMLDivElement>, projectEnt
         scale: 0.2,
         duration: 0.8,
     }, '-=0.4');
-}
+};
+
+export const showProjectImg = (imgOuterSpan:Element, imgInnerSpan:Element, img:Element)=>{
+    const tl = gsap.timeline();
+
+    tl
+    .to(imgOuterSpan,{
+        'position': 'absolute',
+        display: 'inline-block',
+        top: 0,
+        right: '5%',
+        width: '25%',
+        opacity: 1,
+        rotate: '-8deg',
+        duration: 0.4,
+        ease: 'power3.inOut'
+    })
+    .to([imgInnerSpan, img],{
+        // 'position': 'absolute',
+        width: '100%',
+        height: '100%',
+        duration: 0.1
+    }, '-=0.3')
+};
+export const hideProjectImg = (imgOuterSpan:Element)=>{
+    gsap.to(imgOuterSpan,{
+        display: 'none',
+        opacity: 0,
+        duration: 0.4,
+        top: '-5%',
+        right: 0,
+        ease: 'power3.inOut'
+    })
+};
