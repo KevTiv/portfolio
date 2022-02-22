@@ -23,7 +23,7 @@ const Contact = () => {
               <h1 className="titleAnimation">Contact</h1>
             </div>
             <div>
-              <p>I'm currently looking for new opportunities. Let's talk!</p>
+              <p>I'm looking for new opportunities. Let's talk!</p>
               <a className={styles.click} onMouseEnter={isClickable} onMouseLeave={isNotClickable} href="mailto:tivertc.kevin@outlook.com" target="_blank" rel="noopener noreferrer">{Email}</a> 
               <a className={styles.click} onMouseEnter={isClickable} onMouseLeave={isNotClickable} href="https://www.linkedin.com/in/kevin-tivert/" target="_blank" rel="noopener noreferrer">{Linkedin}</a> 
             </div>
