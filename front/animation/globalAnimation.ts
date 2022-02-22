@@ -49,8 +49,8 @@ export const contentSectionAppear = (ref:RefObject<HTMLDivElement>)=>{
     const tl=gsap.timeline({
         scrollTrigger:{
             trigger: triggerTarget.current,
-            start:'-=85%',
-            // end: '+=200',
+            start:'-=105%',
+            // end: '-=80%',
         }
     })
 
@@ -72,7 +72,8 @@ export const contentSectionAppear = (ref:RefObject<HTMLDivElement>)=>{
         ease: 'power2.inOut'
     },'-=0.8')
     .from(triggerTarget.current!.querySelectorAll('p'),{
-        'clip-path': 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
+        // 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
+        opacity: 0,
         duration: 2,
         ease: 'power2.inOut'
     },'-=1.4')
