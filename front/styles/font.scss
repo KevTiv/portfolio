@@ -14,6 +14,10 @@ h1{
     word-spacing: 0.02rem;
     width: fit-content;
     overflow: hidden;
+
+    @include md_screen{
+        font-size: 2rem;
+    }
 }
 
 h2{
