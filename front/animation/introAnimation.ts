@@ -41,7 +41,7 @@ export const hoverOnJobTitle = (introSectionRef:RefObject<HTMLDivElement>) =>{
 }
 export const hoverOffJobTitle = (introSectionRef:RefObject<HTMLDivElement>) =>{
     gsap.to(introSectionRef.current!.querySelector('span.h3BgAnimation'),{
-        width: '23%',
+        width: '23.25%',
         height: '22%',
         borderRadius: '0%',
         left: '0%',
