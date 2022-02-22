@@ -1,12 +1,12 @@
 {
-  "homepage": "https://kevtiv.github.io/portfolio",
   "name": "kevin_tivert_portfolio",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && next export && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "gsap": "^3.9.1",
