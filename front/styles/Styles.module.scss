@@ -30,8 +30,8 @@
       font-size: 11rem;
 
       @include sm_screen {
-        font-size: 5rem;
-        transform: rotate(90deg);
+        font-size: 3rem;
+        // transform: rotate(90deg);
       }
     }
     span{
