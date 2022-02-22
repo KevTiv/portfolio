@@ -1,6 +1,6 @@
 import styles from '../../styles/Styles.module.scss'
 import skillStyles from '../../styles/Skills.module.scss'
-import { useEffect, useRef, MouseEvent } from 'react';
+import { useEffect, useRef } from 'react';
 import { contentSectionAppear } from '../../animation/globalAnimation';
 
 const Skills = () => {

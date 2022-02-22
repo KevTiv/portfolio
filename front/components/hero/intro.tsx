@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
-import imgBannerSrc from '../../public/img/hero_img_1.webp'
 import { hoverOffJobTitle, hoverOffName, hoverOnJobTitle, hoverOnName, scrollThroughIntro } from '../../animation/introAnimation'
 
 import styles from '../../styles/Styles.module.scss'
