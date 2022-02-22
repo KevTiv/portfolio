@@ -7,7 +7,7 @@ import { RefObject } from 'react'
 export const hoverOnName = (introSectionRef:RefObject<HTMLDivElement>) =>{
     gsap.to(introSectionRef.current!.querySelector('span.h2BgAnimation'),{
         width: '50%',
-        height: '155%',
+        height: '180%',
         borderRadius: '100%',
         right: '-5%',
         boxShadow: '0.25rem 0.5rem 1.5rem #212529',
@@ -30,7 +30,7 @@ export const hoverOffName = (introSectionRef:RefObject<HTMLDivElement>) =>{
 export const hoverOnJobTitle = (introSectionRef:RefObject<HTMLDivElement>) =>{
     
     gsap.to(introSectionRef.current!.querySelector('span.h3BgAnimation'),{
-        width: '17.75%',
+        width: '11.75%',
         height: '54%',
         borderRadius: '100%',
         left: '0%',
@@ -41,7 +41,7 @@ export const hoverOnJobTitle = (introSectionRef:RefObject<HTMLDivElement>) =>{
 }
 export const hoverOffJobTitle = (introSectionRef:RefObject<HTMLDivElement>) =>{
     gsap.to(introSectionRef.current!.querySelector('span.h3BgAnimation'),{
-        width: '35.5%',
+        width: '23%',
         height: '22%',
         borderRadius: '0%',
         left: '0%',
