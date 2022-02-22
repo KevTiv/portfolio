@@ -23,16 +23,16 @@ const About = () => {
                     <h1 className="titleAnimation">About</h1>
                 </div>
                 <p>
-                    Hi! I'm a software engineer that loves to create staff for the internet.
-                    It all started with a Hello World program in my command line and grew in a passion for creating unique experience. 
+                    Hi! I'm a junior web developer that loves to create cool staff for the internet.
+                    It all started with a Hello World program in a command line and grew in a passion for creating unique experience. 
                 </p>
                 <p>
-                    Since graduating in early 2021 with a B.Sc. in Computer Science, I have focus on learning the ropes of being a fullstack web developper.
-                    I especially like front end development because it is beautiful mixture of arts and engineering. The creative freedom it offers talks a lot to my creative side.
+                    Since graduating in 2021 with a B.Sc. in Computer Science, I have focus on learning the ropes of being a fullstack web developper.
+                    I especially like front end development because it is a nice mix of arts and engineering. The creative freedom and technical challenges it offers talks is really fascinating.
                 </p>
                 <p>
-                    I'm currently working on improving my design skills, by taking inspiration from awwwards submissions, and developpers such as Aristide Benoist, Benjamin Code, Wrong Akram, and Kevin Powell just cite a few.
-                    I'm also learning Ruby on Rails with the Odin Project course.
+                    I'm currently working on improving my design skills, by taking inspiration from awwwards site of the day/ month/ year, and developpers such as Aristide Benoist, Benjamin Code, Wrong Akram, and Kevin Powell just cite a few.
+                    And improving my back end development skills and knowledge throught building fullstack projects and completing courses such as the Odin Project.
                 </p>
             </div>
         </div>

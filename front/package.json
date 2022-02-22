@@ -1,5 +1,6 @@
 {
-  "name": "front",
+  "homepage": "https://kevtiv.github.io/portfolio",
+  "name": "kevin_tivert_portfolio",
   "private": true,
   "scripts": {
     "dev": "next dev",

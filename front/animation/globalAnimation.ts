@@ -61,25 +61,21 @@ export const contentSectionAppear = (ref:RefObject<HTMLDivElement>)=>{
     })
     .from(triggerTarget.current!.querySelectorAll('h1'),{
         'clip-path': 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
-        y: -5,
         stagger: 0.2,
         duration: 1,
         ease: 'power3.inOut'
     },'-=0.3')
     .from(triggerTarget.current!.querySelectorAll('div:nth-child(1) h2'),{
         'clip-path': 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
-        y: -5,
-        stagger: 0.2,
-        duration: 0.85,
+        stagger: 0.1,
+        duration: 0.5,
         ease: 'power2.inOut'
     },'-=0.8')
     .from(triggerTarget.current!.querySelectorAll('p'),{
         'clip-path': 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
-        y: 5,
-        stagger: 0.2,
-        duration: 1,
-        ease: 'power3.inOut'
-    },'-=1.2')
+        duration: 2,
+        ease: 'power2.inOut'
+    },'-=1.4')
     .from(triggerTarget.current!.querySelectorAll('a svg'),{
         'clip-path': 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
         stagger: 0.2,
@@ -104,15 +100,14 @@ export const isClickable = (cursorBefore?:any)=>{
         backgroundColor: 'transparent',
         border: '0.1rem solid #e55812',
         width: '2.5rem',
-        cursor: 'crosshair',
         duration: 0.1
     })
 }
 
 export const isNotClickable = ()=>{
     gsap.to(document.querySelector('#innerCursor'),{
-        backgroundColor: '#073b3a',
-        border: '0.25rem solid #073b3a',
+        backgroundColor: '#403d39',
+        border: '0.25rem solid #403d39',
         width: '1.65rem',
         cursor: 'default',
         duration: 0.1

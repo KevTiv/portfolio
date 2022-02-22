@@ -73,13 +73,13 @@ export const showProjectImg = (imgOuterSpan:Element, imgInnerSpan:Element, img:E
         top: 0,
         right: 0,
         width: '25%',
+        'aspect-ratio': '16:9',
         opacity: 1,
         rotate: '-6deg',
         duration: 0.5,
         ease: 'power3.inOut'
     })
     .to([imgInnerSpan, img],{
-        // 'position': 'absolute',
         width: '100%',
         height: '100%',
         duration: 0.1
@@ -90,7 +90,6 @@ export const hideProjectImg = (imgOuterSpan:Element)=>{
         display: 'none',
         opacity: 0,
         duration: 0.5,
-        top: '-10%',
         right: '-15%',
         ease: 'power3.inOut'
     })

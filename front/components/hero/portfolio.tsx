@@ -25,7 +25,7 @@ const Portfolio = () => {
         contentSectionAppear(portfolioSectionRef);
 
         setMediaMobile(window.innerWidth <= 640 ? true : false);
-        
+
         window.addEventListener('resize',()=>{
             setMediaMobile(window.innerWidth <= 640 ? true : false);
         });
@@ -58,7 +58,7 @@ const Portfolio = () => {
                     <WeatherTracker portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <IMS portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <WineGrader portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
-                    <SchedulerApp portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
+                    {/* <SchedulerApp portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/> */}
                 </div>
             </div>
         </div>

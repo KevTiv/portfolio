@@ -85,7 +85,7 @@
     position: relative;
     h2{
         opacity: 1 !important;
-        
+        z-index: 5;
         @include sm_screen {
             font-size: 0.8rem;
         }
@@ -110,7 +110,11 @@
             opacity: 1;
             transform: rotate(-45deg);
         }
-        
+    }
+    &:hover {
+        h2{
+            color: $portfolio_project_title_highlight;
+        }
     }
 }
 .project_links{

@@ -2,6 +2,7 @@ import gsap from 'gsap'
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin'
 import { RefObject, MouseEvent } from 'react'
 
+
 export const menuOptionHoverOn=(e:MouseEvent) =>{
     gsap.to(e.target,{
         color: '#fffcf2',
@@ -14,7 +15,7 @@ export const menuOptionHoverOn=(e:MouseEvent) =>{
 
 export const menuOptionHoverOff=(e:MouseEvent) =>{
     gsap.to(e.target,{
-        color: '#3c6e71',
+        color: '#eb5e28',
         scale: 1.2,
         skewX: 0,
         y: 0,
@@ -68,7 +69,7 @@ export const animateBurgerMenu = (isOpen:boolean, burgerRef:RefObject<HTMLDivEle
     }
 }
 export const openMobileMenu = (mobNavRef:RefObject<HTMLDivElement>)=>{
-    gsap.to(mobNavRef.current!,{
+    gsap.to(mobNavRef.current,{
         height: '100vh',
         duration: 0.8,
         ease: 'power3.out'
@@ -84,7 +85,7 @@ export const closeMobileMenu = (mobNavRef:RefObject<HTMLDivElement>)=>{
         display: 'none',
         duration: 0.1,
     });
-    gsap.to(mobNavRef.current!,{
+    gsap.to(mobNavRef.current,{
         height: 0,
         duration: 0.8,
         ease: 'power3.out'
