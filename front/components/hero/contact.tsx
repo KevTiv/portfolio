@@ -25,9 +25,10 @@ const Contact = () => {
             <div>
               <p>
                 I'm looking for new opportunities. Let's talk!
-                <a className={styles.click} onMouseEnter={isClickable} onMouseLeave={isNotClickable} href="mailto:tivertc.kevin@outlook.com" target="_blank" rel="noopener noreferrer">{Email}</a> 
-                <a className={styles.click} onMouseEnter={isClickable} onMouseLeave={isNotClickable} href="https://www.linkedin.com/in/kevin-tivert/" target="_blank" rel="noopener noreferrer">{Linkedin}</a> 
               </p>
+              <a className={styles.click} onMouseEnter={isClickable} onMouseLeave={isNotClickable} href="mailto:tivertc.kevin@outlook.com" target="_blank" rel="noopener noreferrer">{Email}</a> 
+              <a className={styles.click} onMouseEnter={isClickable} onMouseLeave={isNotClickable} href="https://www.linkedin.com/in/kevin-tivert/" target="_blank" rel="noopener noreferrer">{Linkedin}</a> 
+              
             </div>
           </div>
         </div>
