@@ -49,7 +49,7 @@ export const contentSectionAppear = (ref:RefObject<HTMLDivElement>)=>{
     const tl=gsap.timeline({
         scrollTrigger:{
             trigger: triggerTarget.current,
-            start:'-=75%',
+            start:'-=85%',
             // end: '+=200',
         }
     })
