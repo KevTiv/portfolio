@@ -1,0 +1,172 @@
+@use './color'as *;
+@use './mixins/mediaQuery.scss' as *;
+.portfolioContent {
+    background-color: $container_bg_color;
+
+    h1,h2 {
+        color: $h2_text_color;
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+    h1{
+        position: relative;
+        width: fit-content;
+
+        &::before {
+            content: "Portfolio";
+            position: absolute;
+            display: inline-block;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            left: -3px;
+            // top: -2px;
+            color: $secondary_color;
+            clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+        }
+
+        &::after {
+            content: "Portfolio";
+            position: absolute;
+            display: inline-block;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            left: 3px;
+            // top: -2px;
+            color: $secondary_color;
+            clip-path: polygon(0 100%, 100% 100%, 100% 40%, 0 40%);
+        }
+
+        &:hover {
+            &::before {
+                animation: 0.75s ease-in-out infinite titleAnimationBeforeElem;
+            }
+
+            &::after {
+                animation: 0.75s ease-in-out infinite titleAnimationAfterElem;
+            }
+        }
+    }
+    p {
+        color: $p_text_color;
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+}
+.projectPanel{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    
+    padding: 1.5vw;
+    // overflow-x: scroll;
+    // overflow-y: hidden;
+    border-radius: 0.25rem;
+}
+.projectEntry{
+    width: 100%;
+    height: 100%;
+    padding: 0.25rem 0.15rem;
+    border-bottom: 1px solid $portfolio_project_entry_border;
+    transform-origin: center left;
+    transition: all 0.7s ease-in-out;
+    h2,p{
+        color: $portfolio_project_entry_text;
+    }
+    p{
+        display: none;
+    }
+}
+.project_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in-out;
+    position: relative;
+    h2{
+        opacity: 1 !important;
+        z-index: 5;
+        @include sm_screen {
+            font-size: 0.8rem;
+        }
+    }
+    button{
+        display: flex;
+        position: absolute;
+        right: 5.5%;
+        justify-content: center;
+        align-items: center;
+        
+        background-color: transparent;
+        border-radius: 100%;
+        border: none;
+
+        padding: 0.35rem 0.35rem;
+        border-radius: 100%;
+        transition: background-color 0.8s ease-in-out;
+        transform-origin: center center;
+        z-index: 5;
+        svg{
+            opacity: 1;
+            transform: rotate(-45deg);
+        }
+    }
+    &:hover {
+        h2{
+            color: $portfolio_project_title_highlight;
+        }
+    }
+}
+.project_links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    P{
+        margin: 0 0.5rem;
+        color: $highlight_color;
+    }
+}
+@keyframes titleAnimationBeforeElem {
+    0% {
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes titleAnimationAfterElem {
+
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.75;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

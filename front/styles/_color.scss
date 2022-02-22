@@ -1,0 +1,34 @@
+$main_color: #fffcf2;
+$secondary_color: #252422;
+// $highlight_color: #3c6e71;
+$highlight_color: #eb5e28;
+// $inner_cursor_color: #073b3a;
+$inner_cursor_color: #403d39;
+
+
+$container_bg_color: $main_color;
+
+$navbar_bg_color: $secondary_color;
+$navbar_text_color: $highlight_color;
+
+$intro_title_color: $main_color;
+
+$hello_h2_before_bg: $secondary_color;
+
+
+$h2_sphere_bg_color: $secondary_color;
+
+$h2_text_color: $secondary_color;
+$p_text_color: $secondary_color;
+
+$portfolio_project_title_highlight: $highlight_color;
+$portfolio_project_panel: $secondary_color;
+$portfolio_project_entry_bg: rgba(0, 0, 0, 0.05);
+// $portfolio_project_entry_bg: rgba(253, 209, 13, 1);
+
+$portfolio_project_entry_hover: rgba(0, 0, 0, 0.1);
+$portfolio_project_entry_border: rgba(0, 0, 0, 0.1);
+
+$portfolio_project_entry_text: $secondary_color;
+$portfolio_project_entry_brdr: $secondary_color;
+// $portfolio_project_entry_brdr: #001219;

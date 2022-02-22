@@ -1,0 +1,113 @@
+@use './color' as *;
+@use './mixins/mediaQuery.scss' as *;
+
+.intro{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $container_bg_color;
+    h1, h2{
+        color: $intro_title_color;
+    }
+
+    
+}
+.img_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+
+    span{
+        width: 100%;
+        height: 100%;
+    }
+
+    span:nth-child(1){
+        top: 0;
+        left: 0;
+    }
+}
+.presentation{
+    position: absolute;
+    top: 31.25%;
+    left: 18%;
+    z-index: 10;
+    opacity: 1;
+    cursor: default;
+    
+    div {
+        width: 105%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transition: animation 1s ease-in-out;
+        span{
+            display: inline-block;
+            position: absolute;
+            content: '';
+            width: 105%;
+            height: 22%;
+            border-radius: 0%;
+            background-color: $hello_h2_before_bg;
+            z-index: -1;
+            transition: all 0.7s ease-in-out;
+            
+        }
+        .hello_hover_first_part{
+            transition: all 1.4s ease-in-out;
+        }
+        &:hover{
+            .hello_hover_first_part {
+                color: $hello_h2_before_bg;
+            }
+        }
+    }
+
+    div:nth-child(2){
+        width: fit-content;
+        span {
+            display: inline-block;
+            position: absolute;
+            content: '';
+            width: 33%;
+            height: 21%;
+            background-color: $hello_h2_before_bg;
+            z-index: -1;
+        }
+
+        .job_title {
+            position: relative; 
+            transition: all 0.9s ease-in-out;
+        }
+        .job_hover {
+            transition: all 1.2s ease-in-out;
+            
+        }
+        &:hover {
+            .job_hover {
+                color: $hello_h2_before_bg;
+            }
+        }
+    }
+
+    @include sm_screen{
+        left: 8%;
+
+        h1{
+            font-size: 1rem;
+        }
+        h2{
+            font-size: 0.8rem;
+        }
+    }
+}
