@@ -34,20 +34,27 @@ const Intro = () => {
                     </div>
                     
                     <div className={introStyles.presentation}>
-                        <div onMouseEnter={(()=>hoverOnName(introSectionRef))} onMouseLeave={()=>hoverOffName(introSectionRef)}>
-                            <span className='h2BgAnimation'></span>
-                            <h1 className={`${introStyles.hello_world} ${introStyles.hello_hover_first_part}`}>Hello World! I'm </h1><h1 className={`${introStyles.hello_world} ${styles.focus} ${styles.click}`} onClick={()=>scrollToSection('#about')}
-                            onMouseEnter={()=>{isClickable()}}   
-                            onMouseLeave={()=>{isNotClickable()}}
-                            > Kevin C. Tivert</h1>
+                        <div>
+                            <h1 className={`${introStyles.hello_world} ${introStyles.hello_hover_first_part}`}>
+                                Hello World! I'm{' '}
+                            <br/>    
+                            <span className={`${introStyles.hello_world} ${introStyles.hello_hover_second_part} ${styles.click}`} 
+                                onClick={()=>scrollToSection('#about')}
+                                onMouseEnter={()=>{isClickable()}}   
+                                onMouseLeave={()=>{isNotClickable()}}
+                            > 
+                                Kevin C. Tivert
+                            </span>
+                            </h1>
                         </div>
-                        <div onMouseEnter={()=>hoverOnJobTitle(introSectionRef)} onMouseLeave={()=>hoverOffJobTitle(introSectionRef)}> 
-                            <span className="h3BgAnimation"></span>  
-                            <h2 className={`${introStyles.job_title} ${styles.focus} ${styles.click}`} 
+                        <div> 
+                            <h2 className={`${introStyles.job_title} ${styles.click}`} 
                                 onClick={()=>scrollToSection('#portfolio')}
                                 onMouseEnter={()=>isClickable()}  
                                 onMouseLeave={()=>isNotClickable()}
-                            >Web dev</h2> <h2 className={`${introStyles.job_title} ${introStyles.job_hover}`}>elopper</h2>
+                            >
+                                Web developper
+                            </h2>
                         </div>
                         
                     </div>

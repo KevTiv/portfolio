@@ -1,11 +1,11 @@
 
 @use './mixins/mediaQuery.scss' as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;600;700&display=swap');
 
-h1{
-    font-family: 'Libre Baskerville',
-    serif;
+h1, span{
+    font-family: 'Bebas Neue',
+    cursive;
     font-style: bold;
     font-weight: 700;
     // font-size: 3.5vw;
@@ -15,61 +15,94 @@ h1{
     width: fit-content;
     overflow: hidden;
 
-    @include md_screen{
-        font-size: 2em;
-    }
     @include sm_screen{
         font-size: 2em;
+    }
+    @include md_screen {
+        font-size: 2em;
+    }
+    @include lg_screen{
+        font-size: 3em;
+    }
+    @include xl_screen{
+        font-size: 5em;
     }
 }
 
 h2{
-    font-family: 'Libre Baskerville',
-    serif;
-    font-style: italic;
-    font-weight: 400;
+    font-family: 'Montserrat',
+    sans-serif;
+    font-style: bold;
+    font-weight: 700;
 
     font-size: 2em;
 
+    @include sm_screen{
+        font-size: 1.65em;
+    }
     @include md_screen {
-        font-size: 2.5em;
+        font-size: 1.5em;
+    }
+    @include lg_screen {
+        font-size: 1.85em;
+    }
+    @include xl_screen{
+        font-size: 3.5em;
+    }
+}
+
+h3{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-style: semi-bold;
+    font-weight: 600;
+
+    font-size: 2em;
+
+    @include sm_screen {
+        font-size: 1em;
+    }
+    @include md_screen {
+        font-size: 1.5em;
+    }
+    @include lg_screen {
+        font-size: 1.85em;
+    }
+    @include xl_screen{
+        font-size: 3.5em;
     }
 }
 
 p{
-    font-family: 'Roboto',
+    font-family: 'Montserrat',
     sans-serif;
+    font-style: light;
     font-weight: 300;
     font-size: 1.35em;
+
     @include sm_screen{
         font-size: 0.85em;
+    }
+    @include lg_screen {
+        font-size: 1.5em;
+    }
+    @include xl_screen {
+        font-size: 2.5em;
     }
 }
 
 li, a{
-    font-family: 'Roboto',
+    font-family: 'Montserrat',
     sans-serif;
-    font-style: Regular;
-    font-weight: 400;
+    font-style: light;
+    font-weight: 300;
     font-size: 1em;
 
     @include sm_screen {
         font-size: 0.85em;
     }
+     @include xl_screen {
+         font-size: 1.25em;
+     }
 }
 
-li{
-    @include sm_screen{
-        font-size: 8vw;
-        font-weight: 500;
-    }
-}
-
-span{
-    font-weight: 800;
-    font-size: 1em;
-
-    @include sm_screen {
-        font-size: 0.85em;
-    }
-}

@@ -13,3 +13,8 @@
         @content;
     }
 }
+@mixin xl_screen{
+    @media screen and (min-width:1800px) {
+        @content;
+    }
+}

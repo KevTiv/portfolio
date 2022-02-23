@@ -9,7 +9,7 @@ import { projectProps } from '../hero/portfolio'
 const WeatherTracker = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
     const [expandProject, setExpand] = useState<boolean>(true);
     const projectEntryRef = useRef<HTMLDivElement>(null);
-    const Arrow = <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3vw" height="3vw" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#e55812"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></g></svg>;
+    const Arrow = <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.85em" height="1.85em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#e55812"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></g></svg>;
 
     const [imgOuterSpan, setOuterSpan] = useState<Element | null>();
     const [imgInnerSpan, setInnerSpan] = useState<Element | null>();
@@ -64,22 +64,22 @@ const WeatherTracker = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                             </b>
                         </p>
                     </div>
-                    <p><b>Description</b></p>
+                    <h3><b>Description</b></h3>
                     <p>
                         Web app built to take advantage of the public nasa API that tracks weather 
                         events such as wildfire, marine storms and active volcanoes across the globe.
                     </p>
-                    <p><b>Goal</b></p>
+                    <h3><b>Goal</b></h3>
                     <p>
                         Create an application that could update an end user with locations of severe 
                         weather events such as wildfire, maritime storms and active volcanoes.
                     </p>
-                    <p><b>Challenges</b></p>
+                    <h3><b>Challenges</b></h3>
                     <p>
                         Converts the response result form the nasa API into useful data markers that will
                         be used to populate our map API.
                     </p>
-                    <p><b>Solution Implemented</b></p>
+                    <h3><b>Solution Implemented</b></h3>
                     <p>
                         I used the location informations and weather events informations from each 
                         weather events returned by the nasa API to create markers using the leaflet map 
@@ -89,7 +89,7 @@ const WeatherTracker = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                         also appears when a user click on a individual marker to reveal more info on the weather 
                         event occurring at that marker location.
                     </p>
-                    <p><b>Future Improvement</b></p>
+                    <h3><b>Future Improvement</b></h3>
                     <p>
                         Differentiate the different weather marker for a better visual experience.
                     </p>

@@ -9,7 +9,7 @@
     flex-direction: column;
     background-color: $container_bg_color;
     h1, h2{
-        color: $intro_title_color;
+        color: $secondary_color;
     }
 
     
@@ -38,77 +38,51 @@
 }
 .presentation{
     position: absolute;
-    top: 31.25%;
-    left: 18%;
+    top: 0;
+    left: 0;
+    // top: 31.25%;
+    // left: 10%;
+    transform: translate(5%,50%);
     z-index: 10;
     opacity: 1;
     cursor: default;
     
+    @include sm_screen{
+        transform: translate(5%, 70%);
+    }
+    @include lg_screen{
+        transform: translate(15%, 80%);
+    }
+    @include xl_screen{
+        transform: translate(15%, 100%);
+    }
     div {
-        width: 105%;
+        width: fit-content;
         height: fit-content;
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        transition: animation 1s ease-in-out;
+
         span{
-            display: inline-block;
-            position: absolute;
-            content: '';
-            width: 105%;
-            height: 22%;
-            border-radius: 0%;
-            background-color: $hello_h2_before_bg;
-            z-index: -1;
-            transition: all 0.7s ease-in-out;
-            
+            color: $highlight_color;
         }
-        .hello_hover_first_part{
-            transition: all 1.4s ease-in-out;
-        }
-        &:hover{
-            .hello_hover_first_part {
-                color: $hello_h2_before_bg;
+        h2{
+            font-size: 3.5em;
+
+            @include md_screen {
+                font-size: 2.75em;
+            }
+            @include sm_screen {
+                font-size: 2em;
             }
         }
     }
 
     div:nth-child(2){
         width: fit-content;
-        span {
-            display: inline-block;
-            position: absolute;
-            content: '';
-            left: 0;
-            width: 23.5%;
-            height: 21%;
-            background-color: $hello_h2_before_bg;
-            z-index: -1;
-        }
-
-        .job_title {
-            position: relative; 
-            transition: all 0.9s ease-in-out;
-        }
-        .job_hover {
-            transition: all 1.2s ease-in-out;
-            
-        }
-        &:hover {
-            .job_hover {
-                color: $hello_h2_before_bg;
-            }
-        }
-    }
-
-    @include sm_screen{
-        left: 8%;
-
-        h1{
-            font-size: 1rem;
-        }
-        h2{
-            font-size: 0.8rem;
-        }
+        position: relative;
+        display: flex;
+        flex-direction: row;
     }
 }

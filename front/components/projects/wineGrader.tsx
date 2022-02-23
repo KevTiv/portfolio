@@ -9,7 +9,7 @@ import { projectProps } from '../hero/portfolio'
 const WineGrader = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
     const [expandProject, setExpand] = useState<boolean>(true);
     const projectEntryRef = useRef<HTMLDivElement>(null);
-    const Arrow = <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3vw" height="3vw" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#e55812"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></g></svg>;
+    const Arrow = <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.85em" height="1.85em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#e55812"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></g></svg>;
 
 
     const [imgOuterSpan, setOuterSpan] = useState<Element | null>();
@@ -66,29 +66,29 @@ const WineGrader = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                             </b>
                         </p>
                     </div>
-                    <p><b>Description</b></p>
+                    <h3><b>Description</b></h3>
                     <p>
                         Web app project built to offers the possibility to grade wine quality according to the chemical 
                         composition of a wine sample. A user can adjust those chemical factors from a slider panel in the web application. 
                         The app grader model is built using machine learning techniques on a dataset that is comprise of 1600 different wines.
                     </p>
-                    <p><b>Goal</b></p>
+                    <h3><b>Goal</b></h3>
                     <p>
                         Build a web application That offers the end user with the possibility to grade the wine quality 
                         depending on the chemical content of the user’s wine.
                     </p>
-                    <p><b>Challenges</b></p>
+                    <h3><b>Challenges</b></h3>
                     <p>
                         Build an accurate grading model that will offer the user with highly accurate predictions.
                     </p>
-                    <p><b>Solution Implemented</b></p>
+                    <h3><b>Solution Implemented</b></h3>
                     <p>
                        The grading model is built in python (Jupyter Notebook). The model is trained using AutoML using 
                        the TPOT Library on the vinho verde dataset available on Kaggle.com under the MIT library. The 
                        front end is built with the streamlit library because it simplified the process of building a front end 
                        for the app and this python library is focused on offering components design and built around easy data visualization.
                     </p>
-                    <p><b>Future Improvement</b></p>
+                    <h3><b>Future Improvement</b></h3>
                     <p>
                         Build the front end of the web app using javascript framework which are less opinionated which will 
                         enable a more creative approach to the looks of the app and a better user experience.

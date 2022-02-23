@@ -79,26 +79,11 @@
   pointer-events: none;
   background-color: $inner_cursor_color;
   border: 0.25rem solid $inner_cursor_color;
-  // &::before{
-  //   display: inline-block;
-  //   content: 'Click';
-  //   width: 100%;
-  //   position: absolute;
-  //   font-size: 2.25vw;
-  //   font-weight: 600;
-  //   color: $inner_cursor_color;
-  //   opacity: 0;
-  // }
   @include sm_screen{
     display: none;
   }
-}
-.focus{
-  transition: all 0.8s ease-in-out;
-  transform-origin: center center;
-  
-  &:hover{
-    color: $highlight_color;
+  @include xl_screen{
+    width: 3.5rem;
   }
 }
 .click{

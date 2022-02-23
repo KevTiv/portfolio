@@ -9,7 +9,7 @@ import { projectProps } from '../hero/portfolio'
 const IMS = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
     const [expandProject, setExpand] = useState<boolean>(true);
     const projectEntryRef = useRef<HTMLDivElement>(null);
-    const Arrow = <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3vw" height="3vw" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#e55812"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></g></svg>;
+    const Arrow = <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.85em" height="1.85em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#e55812"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></g></svg>;
 
     const [imgOuterSpan, setOuterSpan] = useState<Element | null>();
     const [imgInnerSpan, setInnerSpan] = useState<Element | null>();
@@ -64,7 +64,7 @@ const IMS = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                             </b>
                         </p>
                     </div>
-                    <p><b>Description</b></p>
+                    <h3><b>Description</b></h3>
                     <p>
                         The is web application project was created with the aim to produce an 
                         easy online solution for small businesses inventory management needs. 
@@ -75,12 +75,12 @@ const IMS = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                         The back end was built with NodeJs, and PrismaJs as the ORM (Object-relational 
                         mapping) tool use to communicate with the PostgreSQL database.
                     </p>
-                    <p><b>Goal</b></p>
+                    <h3><b>Goal</b></h3>
                     <p>
                         - Create a product that can meet the inventory management needs of a small business.
                         - MVP: Keep track of an inventory (product quantity, product details and brand).
                     </p>
-                    <p><b>Challenges</b></p>
+                    <h3><b>Challenges</b></h3>
                     <p>
                         - Find an ORM tool that will minimize SQL error and abstract the different queries inside the codebase. The ORM has to work with typescript preferably.
                         - Implement an authentification schema that is secure and reliable.
@@ -90,7 +90,7 @@ const IMS = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                         - Change the software theme according the user computer theme.
                         - Create an application with technologies not used before like typescript, Firebase and PrismaJS.
                     </p>
-                    <p><b>Solution Implemented</b></p>
+                    <h3><b>Solution Implemented</b></h3>
                     <p>
                         - Through my research for an ORM that works with typescript I found PrismaJS.
                         Prisma works especially well due to it’s fairly minimal initial setup, and the process 
@@ -103,7 +103,7 @@ const IMS = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                         researching for ways to make my forms work, I opted to use the react-hook-form library which fixed my 
                         issues of inconsistent data input with my forms.
                     </p>
-                    <p><b>Future Improvement</b></p>
+                    <h3><b>Future Improvement</b></h3>
                     <p>
                         - Add an order table to manage incoming and outgoing orders.
                         - Add an order interface for the end user to visualize incoming and 
@@ -116,7 +116,7 @@ const IMS = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                         - implement error handling for wrong form submissions and updating 
                         the state of any form error to the end user.
                     </p>
-                    <p><b>Known Issues</b></p>
+                    <h3><b>Known Issues</b></h3>
                     <p>
                         - When the end user input a new product, brand, inventory or update a product, brand or 
                         update inventory. He/she has to manually refresh the page for the affected table to reflect 

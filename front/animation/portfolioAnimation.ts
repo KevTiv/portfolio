@@ -7,22 +7,32 @@ export const revealProjectContent = (projectEntryRef: RefObject<HTMLDivElement>,
 
     {expandProject?
         tl
-        .to(projectEntryRef.current!.querySelectorAll('div:nth-child(2) p'),{
+        .to(projectEntryRef.current!.querySelectorAll('div:nth-child(2) h3'),{
             display: 'block',
             duration: 0.5,
             ease: 'power3.in'
         })
+        .to(projectEntryRef.current!.querySelectorAll('div:nth-child(2) p'),{
+            display: 'block',
+            duration: 0.5,
+            ease: 'power3.in'
+        },'-=0.4')
         .to(projectEntryRef.current!.querySelector('svg'),{
             rotate: '-135deg',
             duration: 0.3
         },'-=0.4')  
     :
         tl
-        .to(projectEntryRef.current!.querySelectorAll('div:nth-child(2) p'),{
+        .to(projectEntryRef.current!.querySelectorAll('div:nth-child(2) h3'),{
             display: 'none',
             duration: 0.2,
             ease: 'power3.out'
         }) 
+        .to(projectEntryRef.current!.querySelectorAll('div:nth-child(2) p'),{
+            display: 'none',
+            duration: 0.2,
+            ease: 'power3.out'
+        },'-=0.2') 
         .to(projectEntryRef.current!.querySelector('svg'),{
             rotate: '-45deg',
             duration: 0.3

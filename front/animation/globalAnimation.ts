@@ -71,6 +71,11 @@ export const contentSectionAppear = (ref:RefObject<HTMLDivElement>)=>{
         duration: 0.5,
         ease: 'power2.inOut'
     },'-=0.8')
+    .from(triggerTarget.current!.querySelectorAll('div:nth-child(1) h3'),{
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.inOut'
+    },'-=0.8')
     .from(triggerTarget.current!.querySelectorAll('p'),{
         // 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
         opacity: 0,
