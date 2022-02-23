@@ -28,7 +28,7 @@ const About = () => {
                 </p>
                 <p>
                     Since graduating in 2021 with a B.Sc. in Computer Science, I have focus on learning the ropes of being a fullstack web developper.
-                    I especially like front end development because it is a nice mix of arts and engineering. The creative freedom and technical challenges it offers talks is really fascinating.
+                    I especially like front end development because it is a nice mix of arts and engineering. The creative freedom and technical challenges present in front end development is really fascinating.
                 </p>
                 <p>
                     I'm currently working on improving my design skills, by taking inspiration from awwwards site of the day/ month/ year, and developpers such as Aristide Benoist, Benjamin Code, Wrong Akram, and Kevin Powell just cite a few.
