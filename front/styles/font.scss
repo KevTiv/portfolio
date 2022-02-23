@@ -1,31 +1,29 @@
 
 @use './mixins/mediaQuery.scss' as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;600;700&display=swap');
-
 h1, span{
     font-family: 'Bebas Neue',
     serif;
     font-style: bold;
     font-weight: 700;
     // font-size: 3.5vw;
-    font-size: 3.5em;
-    letter-spacing: 0.05em;
-    word-spacing: 0.02em;
+    font-size: 3.5vw;
+    letter-spacing: 0.05vw;
+    word-spacing: 0.02vw;
     width: fit-content;
     overflow: hidden;
 
     @include sm_screen{
-        font-size: 2em;
+        font-size: 2vw;
     }
     @include md_screen {
-        font-size: 2em;
+        font-size: 2vw;
     }
     @include lg_screen{
-        font-size: 3em;
+        font-size: 3vw;
     }
     @include xl_screen{
-        font-size: 5em;
+        font-size: 5vw;
     }
 }
 
@@ -35,41 +33,41 @@ h2{
     font-style: bold;
     font-weight: 700;
 
-    font-size: 2em;
+    font-size: 2vw;
 
     @include sm_screen{
-        font-size: 1.65em;
+        font-size: 1.65vw;
     }
     @include md_screen {
-        font-size: 1.5em;
+        font-size: 1.5vw;
     }
     @include lg_screen {
-        font-size: 1.85em;
+        font-size: 1.85vw;
     }
     @include xl_screen{
-        font-size: 3.5em;
+        font-size: 3.5vw;
     }
 }
 
 h3{
     font-family: 'Montserrat',
     sans-serif;
-    font-style: semi-bold;
+    font-style: svwi-bold;
     font-weight: 600;
 
-    font-size: 2em;
+    font-size: 2vw;
 
     @include sm_screen {
-        font-size: 1em;
+        font-size: 1vw;
     }
     @include md_screen {
-        font-size: 1.5em;
+        font-size: 1.5vw;
     }
     @include lg_screen {
-        font-size: 1.85em;
+        font-size: 1.85vw;
     }
     @include xl_screen{
-        font-size: 3.5em;
+        font-size: 3.5vw;
     }
 }
 
@@ -78,16 +76,16 @@ p{
     sans-serif;
     font-style: light;
     font-weight: 300;
-    font-size: 1.35em;
+    font-size: 1.35vw;
 
     @include sm_screen{
-        font-size: 0.85em;
+        font-size: 0.85vw;
     }
     @include lg_screen {
-        font-size: 1.5em;
+        font-size: 1.5vw;
     }
     @include xl_screen {
-        font-size: 2.5em;
+        font-size: 2.5vw;
     }
 }
 
@@ -96,13 +94,13 @@ li, a{
     sans-serif;
     font-style: light;
     font-weight: 300;
-    font-size: 1em;
+    font-size: 1vw;
 
     @include sm_screen {
-        font-size: 0.85em;
+        font-size: 0.85vw;
     }
      @include xl_screen {
-         font-size: 1.25em;
+         font-size: 1.25vw;
      }
 }
 

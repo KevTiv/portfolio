@@ -40,41 +40,30 @@
     position: absolute;
     top: 0;
     left: 0;
-    // top: 31.25%;
-    // left: 10%;
     transform: translate(5vw,30vh);
     z-index: 10;
     opacity: 1;
     cursor: default;
-    
-    // @include sm_screen{
-    //     transform: translate(5vw, 70vh);
-    // }
-    // @include lg_screen{
-    //     transform: translate(15vw, 80vh);
-    // }
-    // @include xl_screen{
-    //     transform: translate(15vw, 50vh);
-    // }
     div {
-        width: fit-content;
+        width: 100%;
         height: fit-content;
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         justify-content: center;
         align-items: center;
 
         span{
             color: $highlight_color;
+            font-size: 18vw;
         }
         h2{
-            font-size: 3.5em;
+            font-size: 3.5vw;
 
             @include md_screen {
-                font-size: 2.75em;
+                font-size: 2.75vw;
             }
             @include sm_screen {
-                font-size: 2em;
+                font-size: 2vw;
             }
         }
     }

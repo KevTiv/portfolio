@@ -35,10 +35,10 @@ const Intro = () => {
                     
                     <div className={introStyles.presentation}>
                         <div>
-                            <h1 className={`${introStyles.hello_world} ${introStyles.hello_hover_first_part}`}>
+                            <h1 className={`${introStyles.hello_world}`}>
                                 Hello World! I'm{' '}
                             <br/>    
-                            <span className={`${introStyles.hello_world} ${introStyles.hello_hover_second_part} ${styles.click}`} 
+                            <span className={`${introStyles.hello_world} ${styles.click}`} 
                                 onClick={()=>scrollToSection('#about')}
                                 onMouseEnter={()=>{isClickable()}}   
                                 onMouseLeave={()=>{isNotClickable()}}
