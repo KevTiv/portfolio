@@ -17,16 +17,16 @@ const Navbar = () => {
         setMediaMobile(window.innerWidth <= 640 ? true : false);
     });
     
-    window.onscroll = () => {
-        let currentScrollPosition: number = window.pageYOffset;
+    // window.onscroll = () => {
+    //     let currentScrollPosition: number = window.pageYOffset;
 
-        if(previousScrollPosition >= currentScrollPosition){
-            showNav(navRef);
-        }else{
-            hideNav(navRef);
-        }
-        previousScrollPosition = currentScrollPosition;
-    }
+    //     if(previousScrollPosition >= currentScrollPosition){
+    //         showNav(navRef);
+    //     }else{
+    //         hideNav(navRef);
+    //     }
+    //     previousScrollPosition = currentScrollPosition;
+    // }
     return()=>{
         window.removeEventListener('resize',()=>{
             setMediaMobile(window.innerWidth <= 640 ? true : false);
