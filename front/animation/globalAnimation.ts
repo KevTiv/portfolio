@@ -76,9 +76,9 @@ export const contentSectionAppear = (ref:RefObject<HTMLDivElement>)=>{
         duration: 0.5,
         ease: 'power2.inOut'
     },'-=0.8')
-    .to(triggerTarget.current!.querySelectorAll('p'),{
+    .from(triggerTarget.current!.querySelectorAll('p'),{
         // 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
-        opacity: 1,
+        opacity: 0,
         duration: 2,
         ease: 'power2.inOut'
     },'-=1.4')
