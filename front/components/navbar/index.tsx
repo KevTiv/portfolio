@@ -20,7 +20,7 @@ const Navbar = () => {
     window.onscroll = () => {
         let currentScrollPosition: number = window.pageYOffset;
 
-        if(previousScrollPosition > currentScrollPosition){
+        if(previousScrollPosition >= currentScrollPosition){
             showNav(navRef);
         }else{
             hideNav(navRef);
