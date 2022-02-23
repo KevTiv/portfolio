@@ -72,6 +72,7 @@
             }
             @include sm_screen {
                 font-size: 4vw;
+                color: $intro_title_color;
             }
         }
     }
