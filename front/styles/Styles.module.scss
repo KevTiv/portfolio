@@ -27,12 +27,12 @@
     align-items: center;
 
     h1{
-      font-size: 11rem;
+      font-size: 12vw;
 
-      @include sm_screen {
-        font-size: 3rem;
-        // transform: rotate(90deg);
-      }
+      // @include sm_screen {
+      //   font-size: ;
+      //   // transform: rotate(90deg);
+      // }
     }
     span{
       color: $highlight_color;
@@ -68,7 +68,7 @@
   align-items: justify-start;
 }
 .inner_cursor {
-  width: 1.65rem;
+  width: 1.65vw;
   aspect-ratio: 1;
   position: fixed;
   display: inline-block;

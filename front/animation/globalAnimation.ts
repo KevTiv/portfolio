@@ -94,9 +94,9 @@ export const cursorAnimation = (posX: number, posY:number)=>{
     const innerCursorTarget = document.querySelector('#innerCursor');
     gsap.to(innerCursorTarget,{
         x: posX,
-        left: '-0.875rem',
+        left: '-0.875vw',
         y: posY,
-        top: '-0.875rem',
+        top: '-0.875vw',
         duration: 1,
         ease: "power2.out"
     })
@@ -105,7 +105,7 @@ export const isClickable = (cursorBefore?:any)=>{
     gsap.to(document.querySelector('#innerCursor'),{
         backgroundColor: 'transparent',
         border: '0.1rem solid #e55812',
-        width: '2.5rem',
+        width: '2.5vw',
         duration: 0.1
     })
 }
@@ -114,7 +114,7 @@ export const isNotClickable = ()=>{
     gsap.to(document.querySelector('#innerCursor'),{
         backgroundColor: '#403d39',
         border: '0.25rem solid #403d39',
-        width: '1.65rem',
+        width: '1.65vw',
         cursor: 'default',
         duration: 0.1
     })
