@@ -42,20 +42,20 @@
     left: 0;
     // top: 31.25%;
     // left: 10%;
-    transform: translate(5%,50%);
+    transform: translate(5vw,30vh);
     z-index: 10;
     opacity: 1;
     cursor: default;
     
-    @include sm_screen{
-        transform: translate(5%, 70%);
-    }
-    @include lg_screen{
-        transform: translate(15%, 80%);
-    }
-    @include xl_screen{
-        transform: translate(15%, 100%);
-    }
+    // @include sm_screen{
+    //     transform: translate(5vw, 70vh);
+    // }
+    // @include lg_screen{
+    //     transform: translate(15vw, 80vh);
+    // }
+    // @include xl_screen{
+    //     transform: translate(15vw, 50vh);
+    // }
     div {
         width: fit-content;
         height: fit-content;
