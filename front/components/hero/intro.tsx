@@ -46,6 +46,9 @@ const Intro = () => {
                                 Kevin C. Tivert
                             </span>
                             </h1>
+                            <div className={introStyles.img_me}>
+                                <Image src={'/img/hero_img_3.webp'} alt='Me and my dog' width='256' height='256' layout='responsive' priority/> 
+                            </div>
                         </div>
                         <div> 
                             <h2 className={`${introStyles.job_title} ${styles.click}`} 
