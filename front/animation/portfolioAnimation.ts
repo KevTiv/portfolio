@@ -100,6 +100,7 @@ export const hideProjectImg = (imgOuterSpan:Element)=>{
         display: 'none',
         opacity: 0,
         duration: 0.5,
+        top: '-40%',
         right: '-15%',
         ease: 'power3.inOut'
     })
