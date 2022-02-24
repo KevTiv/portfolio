@@ -11,6 +11,7 @@ import { isClickable, isNotClickable } from '../../animation/globalAnimation'
 const Intro = () => {
     const introSectionRef = useRef<HTMLDivElement>(null);
     const [isMediaMobile, setMediaMobile] = useState<boolean>(false);
+    const [isBrowserSafari, setIsBrowserSafari] = useState<boolean>(false);
 
     useEffect(() =>{
         setMediaMobile(window.innerWidth <= 640 ? true : false);
@@ -20,6 +21,10 @@ const Intro = () => {
         });
         scrollThroughIntro(introSectionRef);
 
+        //Check if browser is safari
+        // If yes do not show profile pic animation because it doesn't render correctly on safari browser
+        // TODO adjust safari animation for profile picture
+        setIsBrowserSafari(navigator.userAgent.indexOf("Safari") !== -1 ? true : false);
     },[]);
 
     return (
@@ -42,7 +47,7 @@ const Intro = () => {
                                 onClick={()=>scrollToSection('#about')}
                                 onMouseEnter={()=>{
                                     isClickable();
-                                    isMediaMobile ? null : hoverOnName(introSectionRef);
+                                    isMediaMobile || isBrowserSafari ? null : hoverOnName(introSectionRef);
                                 }}   
                                 onMouseLeave={()=>{
                                     isNotClickable();
