@@ -63,7 +63,7 @@ const Intro = () => {
                             </h2>
                         </div>
                         <div className={`${introStyles.profile_img_container} profile_animation`}>
-                            <Image src={'/img/hero_img_3.webp'} alt='A dev with his dog' width='512' height='512' layout='fill' priority/> 
+                            <Image src={'/img/hero_img_3.webp'} alt='A dev with his dog' layout='fill' priority/> 
                         </div>
                     </div>
                 </div>
