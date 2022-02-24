@@ -19,6 +19,7 @@
 
         span{
             color: $navbar_text_color;
+            letter-spacing: 0.5vw;
             font-size: 2.5vw;
         }
     }
@@ -64,7 +65,8 @@
         margin: 0 5vw;
         
         span{
-            font-size: 5vw;
+            font-size: 10vw;
+            letter-spacing: 0.5vw;
         }
     }
 
@@ -75,15 +77,15 @@
         margin: 0 5vw;
         span:nth-child(1){
             display: inline-block;
-            width: 1.75rem;
-            height: 0.15rem;
+            width: 6.15vw;
+            height: 0.8vw;
             margin: 0.1rem;
             background-color: $navbar_text_color;
         }
         span:nth-child(2){
             display: inline-block;
-            width: 1.15rem;
-            height: 0.15rem;
+            width: 4.85vw;
+            height: 0.6vw;
             margin: 0.1rem;
             background-color: $navbar_text_color;
         }

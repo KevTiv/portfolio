@@ -43,13 +43,14 @@ export const animateBurgerMenu = (isOpen:boolean, burgerRef:RefObject<HTMLDivEle
         tl
         .to(burgerRef.current!.querySelector('span:nth-child(1'),{
             rotate: '0deg',
-            height: '0.15rem',
+            height: '0.65vw',
             duration: 0.3
         })
         .to(burgerRef.current!.querySelector('span:nth-child(2'),{
-            width: '1.15rem',
-            height: '0.15rem',
+            width: '4.85vw',
+            height: '0.55vw',
             rotate: '0deg',
+            x: '-0.2vw',
             duration: 0.3
         })
 
@@ -57,13 +58,14 @@ export const animateBurgerMenu = (isOpen:boolean, burgerRef:RefObject<HTMLDivEle
         tl
         .to(burgerRef.current!.querySelector('span:nth-child(1'),{
             rotate: '45deg',
-            height: '0.18rem',
+            height: '0.8vw',
             duration: 0.3
         })
         .to(burgerRef.current!.querySelector('span:nth-child(2'),{
-            width: '2.25rem',
-            height: '0.14rem',
+            width: '6.15vw',
+            height: '0.6vw',
             rotate: '-50deg',
+            x: '0.2vw',
             duration: 0.3
         })
     }

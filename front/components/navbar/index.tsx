@@ -50,7 +50,8 @@ const SmScreenNavbar = ()=>{
             <nav className={navStyles.mobNav} >
                 <div onClick={()=>scrollToSection('#intro')}>
                     <span className={`${styles.permanent_focus}`}>
-                        &#60;&#47;&#62;
+                        {/* &#60;&#47;&#62; */}
+                        KT
                     </span>
                 </div>
 
@@ -102,7 +103,8 @@ const LgScreenNavbar = () => {
                             menuOptionHoverOff(e);
                             isNotClickable();
                         }}>
-                        &#60;&#47;&#62;
+                        {/* &#60;&#47;&#62; */}
+                        Kevin Tivert
                     </span>
                 </div>
                 <div>
