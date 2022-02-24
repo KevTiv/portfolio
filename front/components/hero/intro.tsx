@@ -40,15 +40,18 @@ const Intro = () => {
                             <br/>    
                             <span className={`${introStyles.hello_world} ${styles.click}`} 
                                 onClick={()=>scrollToSection('#about')}
-                                onMouseEnter={()=>{isClickable()}}   
-                                onMouseLeave={()=>{isNotClickable()}}
+                                onMouseEnter={()=>{
+                                    isClickable();
+                                    isMediaMobile ? null : hoverOnName(introSectionRef);
+                                }}   
+                                onMouseLeave={()=>{
+                                    isNotClickable();
+                                    hoverOffName(introSectionRef);
+                                }}
                             > 
                                 Kevin C. Tivert
                             </span>
                             </h1>
-                            <div className={introStyles.img_me}>
-                                <Image src={'/img/hero_img_3.webp'} alt='Me and my dog' width='256' height='256' layout='responsive' priority/> 
-                            </div>
                         </div>
                         <div> 
                             <h2 className={`${introStyles.job_title} ${styles.click}`} 
@@ -59,7 +62,9 @@ const Intro = () => {
                                 Web developper
                             </h2>
                         </div>
-                        
+                        <div className={`${introStyles.profile_img_container} profile_animation`}>
+                            <Image src={'/img/hero_img_3.webp'} alt='A dev with his dog' width='512' height='512' layout='fill' priority/> 
+                        </div>
                     </div>
                 </div>
             </div>

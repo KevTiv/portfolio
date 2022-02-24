@@ -87,7 +87,7 @@ export const contentSectionAppear = (ref:RefObject<HTMLDivElement>)=>{
         stagger: 0.2,
         duration: 0.5,
         ease: 'power3.inOut'
-    },'-=0.5');
+    },'-=1.25');
 }
 
 export const cursorAnimation = (posX: number, posY:number)=>{
@@ -104,8 +104,8 @@ export const cursorAnimation = (posX: number, posY:number)=>{
 export const isClickable = (cursorBefore?:any)=>{
     gsap.to(document.querySelector('#innerCursor'),{
         backgroundColor: 'transparent',
-        border: '0.1rem solid #e55812',
-        width: '2.5vw',
+        border: '0.3vw solid #e55812',
+        width: '3.5vw',
         duration: 0.1
     })
 }
@@ -113,7 +113,7 @@ export const isClickable = (cursorBefore?:any)=>{
 export const isNotClickable = ()=>{
     gsap.to(document.querySelector('#innerCursor'),{
         backgroundColor: '#403d39',
-        border: '0.25rem solid #403d39',
+        border: '0.25vw solid #403d39',
         width: '1.65vw',
         cursor: 'default',
         duration: 0.1

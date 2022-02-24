@@ -21,7 +21,6 @@ const Déesse = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
         setOuterSpan(document.querySelector("#portfolio > div > div.Portfolio_projectPanel__R83gc > div:nth-child(2) > div.Portfolio_project_title__YF_fV > span"));
         setInnerSpan(document.querySelector("#portfolio > div > div.Portfolio_projectPanel__R83gc > div:nth-child(2) > div.Portfolio_project_title__YF_fV > span > span"));
         setImg(document.querySelector("#portfolio > div > div.Portfolio_projectPanel__R83gc > div:nth-child(2) > div.Portfolio_project_title__YF_fV > span > img"));
-
     },[])
 
     return(

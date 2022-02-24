@@ -35,12 +35,13 @@ const IMS = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                 >
                     <h2>IMS - Inventory Management System</h2>
                     <button className={styles.click}
-                            onClick={()=>{
-                            setExpand(!expandProject);
-                            revealProjectContent(projectEntryRef, expandProject)
-                            }} 
-                            onMouseEnter={isClickable} 
-                            onMouseLeave={isNotClickable}>
+                        onClick={()=>{
+                        setExpand(!expandProject);
+                        revealProjectContent(projectEntryRef, expandProject)
+                        }} 
+                        onMouseEnter={isClickable} 
+                        onMouseLeave={isNotClickable}
+                    >
                         {Arrow}
                     </button>
                     <Image className={"projectImg"} src={'/img/ims/ims_1.webp'} alt='inventory management system landing page image' width='256' height='256' layout='responsive'/> 
