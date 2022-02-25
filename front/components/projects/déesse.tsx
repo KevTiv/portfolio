@@ -89,6 +89,7 @@ const Déesse = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     <h3>Known Issues</h3>
                     <p>
                         Background image takes a while to load on slow connectivity such as 3G.
+                        
                     </p>
                 </div>
             </div>
