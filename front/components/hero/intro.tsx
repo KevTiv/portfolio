@@ -48,7 +48,7 @@ const Intro = () => {
                                 onMouseEnter={()=>{
                                     isClickable();
                                     (!isMediaMobile || !isBrowserSafari) ? 
-                                        hoverOnName(introSectionRef) 
+                                        hoverOnName(introSectionRef)
                                     : null ;
                                 }}   
                                 onMouseLeave={()=>{

@@ -53,29 +53,29 @@ const PersonalPortfolio = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                             onMouseEnter={isClickable} 
                             onMouseLeave={isNotClickable}
                         >
-                            <b>
+                            
                                 <a href="https://github.com/KevTiv/portfolio" target="_blank" rel="noopener noreferrer">Repository</a>
-                            </b>
+                            
                         </p>
                     </div>
 
-                    <h3><b>Description</b></h3>
+                    <h3>Description</h3>
                     <p>
                         Personal portfolio to showcase myself as a developer and journal my growth as a developer. 
                     </p>
-                    <h3><b>Goal</b></h3>
+                    <h3>Goal</h3>
                     <p>
                         Create a website that will showcase the latest project I worked on.
                     </p>
-                    <h3><b>Challenges</b></h3>
+                    <h3>Challenges</h3>
                     <p>
                         Make a website that has a modern look inspired from website such as awwwards, or CSS design awards.
                     </p>
-                    <h3><b>Solution Implemented</b></h3>
+                    <h3>Solution Implemented</h3>
                     <p>
                         Site built with NextJs, styled with SCSS, and the animation are built with the GSAP library.
                     </p>
-                    <h3><b>Future Improvement</b></h3>
+                    <h3>Future Improvement</h3>
                     <p>
                         Add a content management system (CMS) to manage projects, and image resources. 
                         Implementing a CMS will also simplify future updates in either the projects list or 
