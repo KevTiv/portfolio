@@ -91,7 +91,7 @@ const WeatherTracker = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     </p>
                     <h3>Future Improvement</h3>
                     <p>
-                        Differentiate the different weather marker for a better visual experience.
+                        Differentiate the different weather marker with different color coding for a better visual experience.
                     </p>
                 </div>
             </div>
