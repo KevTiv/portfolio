@@ -73,7 +73,7 @@ const Déesse = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     <div>
                         <h3><b>Goal</b></h3>
                         <p>
-                        Create a landing page that could entice potential customer to rent a Citroën Ds while on vacation.
+                            Create a landing page that could entice potential customer to rent a Citroën Ds while on vacation.
                         </p>
                         <h3><b>Challenges</b></h3>
                         <p>

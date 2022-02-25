@@ -47,7 +47,9 @@ const Intro = () => {
                                 onClick={()=>scrollToSection('#about')}
                                 onMouseEnter={()=>{
                                     isClickable();
-                                    isMediaMobile || isBrowserSafari ? null : hoverOnName(introSectionRef);
+                                    (!isMediaMobile || !isBrowserSafari) ? 
+                                        hoverOnName(introSectionRef) 
+                                    : null ;
                                 }}   
                                 onMouseLeave={()=>{
                                     isNotClickable();
