@@ -14,6 +14,8 @@ const Intro = () => {
     const [isBrowserSafari, setIsBrowserSafari] = useState<boolean>(false);
 
     useEffect(() =>{
+        const nameHoverAnimationElement = document.querySelector('span.name_animation');
+
         setMediaMobile(window.innerWidth <= 640 ? true : false);
         
         window.addEventListener('resize',()=>{
@@ -43,7 +45,7 @@ const Intro = () => {
                             <h1 className={`${introStyles.hello_world}`}>
                                 Hello World! I'm{' '}
                             <br/>    
-                            <span className={`${introStyles.hello_world} ${styles.click}`} 
+                            <span className={`${introStyles.hello_world} ${styles.click} name_animation`} 
                                 onClick={()=>scrollToSection('#about')}
                                 onMouseEnter={()=>{
                                     isClickable();
@@ -69,7 +71,7 @@ const Intro = () => {
                                 Web developper
                             </h2>
                         </div>
-                        <div className={`${introStyles.profile_img_container} profile_animation`}>
+                        <div className={`${introStyles.profile_img_container} profile_animation`} onClick={()=>scrollToSection('#about')}>
                             <Image src={'/img/hero_img_3.webp'} alt='A dev with his dog' layout='fill' priority/> 
                         </div>
                     </div>

@@ -99,7 +99,7 @@ export const scrollToSection = (id:string)=>{
     gsap.to(window, {
         scrollTo: {
             y: id,
-            offsetY: 10
+            offsetY: 260
         },
         ease: "power2",
         duration: 1

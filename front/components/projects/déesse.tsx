@@ -53,45 +53,43 @@ const Déesse = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                             onMouseEnter={isClickable} 
                             onMouseLeave={isNotClickable}
                         >
-                            <b>
+                            
                                 <a href="https://kevtiv.github.io/deesse/" target="_blank" rel="noopener noreferrer">Go to site</a>
-                            </b>
+                            
                         </p>
                         <p
                             onMouseEnter={isClickable} 
                             onMouseLeave={isNotClickable}
                         >
-                            <b>
+                            
                                 <a href="https://github.com/KevTiv/deesse" target="_blank" rel="noopener noreferrer">Repository</a>
-                            </b>
+                            
                         </p>
                     </div>
-                    <h3><b>Description</b></h3>
+                    <h3>Description</h3>
                     <p>
                         Landing page for fictitious car renting  company that specialize in renting Citroën Ds cars in a Mediterranean location.
                     </p>
-                    <div>
-                        <h3><b>Goal</b></h3>
-                        <p>
-                            Create a landing page that could entice potential customer to rent a Citroën Ds while on vacation.
-                        </p>
-                        <h3><b>Challenges</b></h3>
-                        <p>
-                            Create a beautiful layout with beautiful animation that are responsive according to the device screen size at load time. 
-                        </p>
-                        <h3><b>Solution Implemented</b></h3>
-                        <p>
-                            The landing page is built using ReactJs, styled with SCSS and the animations are made with the GSAP library.
-                        </p>
-                        <h3><b>Future Improvement</b></h3>
-                        <p>
-                            Use images that of smaller size to improve the render time.
-                        </p>
-                        <h3><b>Known Issues</b></h3>
-                        <p>
-                            Background image takes a while to load on slow connectivity such as 3G
-                        </p>
-                    </div>
+                    <h3>Goal</h3>
+                    <p>
+                        Create a landing page that could entice potential customer to rent a Citroën Ds while on vacation.
+                    </p>
+                    <h3>Challenges</h3>
+                    <p>
+                        Create a beautiful responsive layout with beautiful animations. 
+                    </p>
+                    <h3>Solution Implemented</h3>
+                    <p>
+                        The landing page is built using ReactJs, styled with SCSS and the animations are made with the GSAP library.
+                    </p>
+                    <h3>Future Improvement</h3>
+                    <p>
+                        Build this project with framework such as NextJs to take advantage of features such as their image components and image optimization api for a better user experience on low connectivity.
+                    </p>
+                    <h3>Known Issues</h3>
+                    <p>
+                        Background image takes a while to load on slow connectivity such as 3G.
+                    </p>
                 </div>
             </div>
         </>

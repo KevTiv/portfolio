@@ -51,45 +51,45 @@ const WeatherTracker = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                             onMouseEnter={isClickable} 
                             onMouseLeave={isNotClickable}
                         >
-                            <b>
+                            
                                 <a href=" https://kevtiv.github.io/weather_events_tracker/" target="_blank" rel="noopener noreferrer">Go to site</a>
-                            </b>
+                            
                         </p>
                         <p
                             onMouseEnter={isClickable} 
                             onMouseLeave={isNotClickable}
                         >
-                            <b>
+                            
                                 <a href="https://github.com/KevTiv/weather_events_tracker" target="_blank" rel="noopener noreferrer">Repository</a>
-                            </b>
+                            
                         </p>
                     </div>
-                    <h3><b>Description</b></h3>
+                    <h3>Description</h3>
                     <p>
-                        Web app built to take advantage of the public nasa API that tracks weather 
+                        Web app built to take advantage of the public Nasa API that tracks weather 
                         events such as wildfire, marine storms and active volcanoes across the globe.
                     </p>
-                    <h3><b>Goal</b></h3>
+                    <h3>Goal</h3>
                     <p>
                         Create an application that could update an end user with locations of severe 
                         weather events such as wildfire, maritime storms and active volcanoes.
                     </p>
-                    <h3><b>Challenges</b></h3>
+                    <h3>Challenges</h3>
                     <p>
-                        Converts the response result form the nasa API into useful data markers that will
+                        Converts the response result form the Nasa API into useful data markers that will
                         be used to populate our map API.
                     </p>
-                    <h3><b>Solution Implemented</b></h3>
+                    <h3>Solution Implemented</h3>
                     <p>
-                        I used the location informations and weather events informations from each 
-                        weather events returned by the nasa API to create markers using the leaflet map 
+                        I used the locations information and weather events information from each 
+                        weather events returned by the Nasa API to create markers using the leaflet map 
                         library marker functions. The markers are then displayed on a map also derived 
                         from the leaflet library. I also implemented a control panel where the user can 
                         choose which type of weather events are being displayed on the map. A modal panel 
-                        also appears when a user click on a individual marker to reveal more info on the weather 
+                        also appears when a user click on an individual marker to reveal more info on the weather 
                         event occurring at that marker location.
                     </p>
-                    <h3><b>Future Improvement</b></h3>
+                    <h3>Future Improvement</h3>
                     <p>
                         Differentiate the different weather marker for a better visual experience.
                     </p>
