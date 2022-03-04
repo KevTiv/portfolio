@@ -72,7 +72,7 @@ const Railway = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     </p>
                     <h3>Goal</h3>
                     <p>
-                        Recreate the railway website layout and animation within 2 days.
+                        Try to recreate the railway website layout and animation within a day.
                     </p>
                     {/* <h3>Challenges</h3>
                     <p>
