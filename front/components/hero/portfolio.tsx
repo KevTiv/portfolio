@@ -8,7 +8,7 @@ import IMS from '../projects/ims'
 import WeatherTracker from '../projects/nasaWeatherTracker'
 import Déesse from '../projects/déesse'
 import WineGrader from '../projects/wineGrader'
-import SchedulerApp from '../projects/schedulerApp'
+import Railway from '../projects/railway'
 import PersonalPortfolio from '../projects/persoPortfolio'
 
 export type projectProps={
@@ -53,6 +53,7 @@ const Portfolio = () => {
                     I listed below a list of the last project I have worked on in the last year.
                 </p>
                 <div className={portfolioStyles.projectPanel}>
+                    <Railway portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <PersonalPortfolio portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <Déesse portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <WeatherTracker portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
