@@ -9,7 +9,7 @@ const Navbar = () => {
     const navRef = useRef<HTMLDivElement>(null);
   
   useEffect(()=>{
-    let previousScrollPosition: number = window.pageYOffset;
+    let previousScrollPosition: number = window.scrollY;
     
     setMediaMobile(window.innerWidth <= 640 ? true : false);
 
@@ -17,24 +17,24 @@ const Navbar = () => {
         setMediaMobile(window.innerWidth <= 640 ? true : false);
     });
     
-    !isMediaMobile ? 
-        window.onscroll = () => {
-            let currentScrollPosition: number = window.pageYOffset;
+        
+    const handleNavAnimation = ()=>{
+        
+        if(isMediaMobile){
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+            scrollTop > previousScrollPosition ? showNav(navRef) : hideNav(navRef);
 
-            if(previousScrollPosition >= currentScrollPosition){
-                showNav(navRef);
-            }else{
-                hideNav(navRef);
-            }
-            previousScrollPosition = currentScrollPosition;
-        } 
-        : null;
+            previousScrollPosition = scrollTop;
+        }
+    }
+    console.log(isMediaMobile);
+    handleNavAnimation();
+    window.addEventListener('scroll',()=>handleNavAnimation());
 
     return()=>{
-        window.removeEventListener('resize',()=>{
-            setMediaMobile(window.innerWidth <= 640 ? true : false);
-        });
+        window.removeEventListener('scroll',()=>handleNavAnimation());
     }
+
   },[])
   return (
     <>
@@ -99,11 +99,9 @@ const LgScreenNavbar = () => {
                 <div onClick={()=>scrollToSection('#intro')}>
                     <span className={`${styles.click}`} 
                         onMouseEnter={(e)=>{
-                            menuOptionHoverOn(e);
                             isClickable();
                         }} 
                         onMouseLeave={(e)=>{
-                            menuOptionHoverOff(e);
                             isNotClickable();
                         }}>
                         {/* &#60;&#47;&#62; */}

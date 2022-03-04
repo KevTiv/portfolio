@@ -1,5 +1,6 @@
 @use './color'as *;
-@use './mixins/mediaQuery.scss' as *;
+@use './mixins/mediaQuery' as *;
+@use './mixins/animation' as *;
 .portfolioContent {
     background-color: $container_bg_color;
 
@@ -38,13 +39,7 @@
         }
 
         &:hover {
-            &::before {
-                animation: 0.75s ease-in-out infinite titleAnimationBeforeElem;
-            }
-
-            &::after {
-                animation: 0.75s ease-in-out infinite titleAnimationAfterElem;
-            }
+            @include animation;
         }
     }
     p {
@@ -124,49 +119,5 @@
     P{
         margin: 0 0.5rem;
         color: $highlight_color;
-    }
-}
-@keyframes titleAnimationBeforeElem {
-    0% {
-        opacity: 0;
-    }
-
-    35% {
-        opacity: 0.75;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    70% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes titleAnimationAfterElem {
-
-    0% {
-        opacity: 1;
-    }
-
-    25% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.75;
-    }
-
-    75% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
     }
 }

@@ -45,7 +45,7 @@ const SchedulerApp = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                             </b>
                         </p>
                     </div>
-                    <p><b>Description</b></p>
+                    <h3>Description</h3>
                     <p>
                         This application was created in the aim to provide the user with a scheduling app. This app is capable
                         of connecting to the cloud ("wgudb.ucertify.com") and manage user appointments across multiple
@@ -53,21 +53,21 @@ const SchedulerApp = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                         he/she desire to add or update, a report feature for customers and appointments information.
                         And lastly for security purposes this app also provide a log screen to protect user information privacy.
                     </p>
-                    <p><b>Goal</b></p>
+                    <h3>Goal</h3>
                     <p>
                     - Create an application that enable a user to easily create, modify, or delete meetings.
                     - The application data needs to be stored on a cloud based sql server.
                     </p>
-                    <p><b>Challenges</b></p>
+                    {/* <h3>Challenges</h3>
                     <p>
                     - Build an application within the java ecosystem with cloud sql server capabilities.
                     - The app should also have more than 1 language enable.
                     </p>
-                    <p><b>Solution Implemented</b></p>
+                    <h3>Solution Implemented</h3>
                     <p>
                         Since the app was design to be hosted on a computer and within the java ecosystem, the app is built with javafx 
                         for the user interface and using the java sql library to connect to a cloud sql server.
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </>

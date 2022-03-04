@@ -81,7 +81,7 @@ const IMS = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                         - Create a product that can meet the inventory management needs of a small business.<br/>
                         - MVP: Keep track of an inventory (product quantity, product details and brand).
                     </p>
-                    <h3>Challenges</h3>
+                    {/* <h3>Challenges</h3>
                     <p>
                         - Find an ORM tool that will minimize SQL error and abstract the different queries inside the codebase. The ORM has to work with typescript preferably.<br/>
                         - Implement an authentication schema that is secure and reliable.<br/>
@@ -125,7 +125,7 @@ const IMS = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                         update inventory. He/she has to manually refresh the page for the affected table to reflect 
                         the change.<br/>
                         - A cloud-based PostgreSQL database is not yet set online.<br/>
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </>

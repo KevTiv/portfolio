@@ -1,0 +1,55 @@
+@mixin animation{
+
+    &::before {
+        animation: 0.75s ease-in-out infinite titleAnimationBeforeElem;
+    }
+
+    &::after {
+        animation: 0.75s ease-in-out infinite titleAnimationAfterElem;
+    }
+
+    @keyframes titleAnimationBeforeElem {
+        0% {
+            opacity: 0.15;
+        }
+
+        35% {
+            opacity: 0.25;
+        }
+
+        50% {
+            opacity: 0.15;
+        }
+
+        70% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 0.15;
+        }
+    }
+
+    @keyframes titleAnimationAfterElem {
+
+        0% {
+            opacity: 0.5;
+        }
+
+        25% {
+            opacity: 0.15;
+        }
+
+        50% {
+            opacity: 0.25;
+        }
+
+        75% {
+            opacity: 0.15;
+        }
+
+        100% {
+            opacity: 0.5;
+        }
+    }
+}

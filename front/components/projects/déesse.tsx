@@ -74,7 +74,7 @@ const Déesse = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     <p>
                         Create a landing page that could entice potential customer to rent a Citroën Ds while on vacation.
                     </p>
-                    <h3>Challenges</h3>
+                    {/* <h3>Challenges</h3>
                     <p>
                         Create a beautiful responsive layout with beautiful animations. 
                     </p>
@@ -90,7 +90,7 @@ const Déesse = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     <p>
                         Background image takes a while to load on slow connectivity such as 3G.
                         
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </>

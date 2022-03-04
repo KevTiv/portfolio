@@ -1,6 +1,6 @@
 @use './color' as *;
-@use './mixins/mediaQuery.scss' as *;
-
+@use './mixins/mediaQuery' as *;
+@use './mixins/animation'as *;
 .intro{
     width: 100vw;
     height: 100vh;
