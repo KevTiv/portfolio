@@ -19,19 +19,22 @@ const Navbar = () => {
     
         
     const handleNavAnimation = ()=>{
-        
-        if(isMediaMobile){
+        console.log(isMediaMobile);
+        // if(isMediaMobile){
             let scrollTop = window.scrollY || document.documentElement.scrollTop;
             scrollTop > previousScrollPosition ? showNav(navRef) : hideNav(navRef);
 
             previousScrollPosition = scrollTop;
-        }
+        // }
     }
     console.log(isMediaMobile);
     handleNavAnimation();
     window.addEventListener('scroll',()=>handleNavAnimation());
 
     return()=>{
+        window.removeEventListener('resize',()=>{
+        setMediaMobile(window.innerWidth <= 640 ? true : false);
+    });
         window.removeEventListener('scroll',()=>handleNavAnimation());
     }
 

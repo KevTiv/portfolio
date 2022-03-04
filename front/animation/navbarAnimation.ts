@@ -26,13 +26,13 @@ export const menuOptionHoverOff=(e:MouseEvent) =>{
 export const showNav =(navRef:RefObject<HTMLDivElement>)=>{
     gsap.to(navRef.current!.querySelector('nav'),{
         top: 0,
-        duration: 0.3,
+        duration: 1,
     });
 };
 export const hideNav =(navRef:RefObject<HTMLDivElement>)=>{
     gsap.to(navRef.current!.querySelector('nav'),{
-        top: '-10%',
-        duration: 0.3,
+        top: '-20%',
+        duration: 1,
     });
 };
 
