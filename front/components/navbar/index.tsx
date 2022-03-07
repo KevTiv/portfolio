@@ -19,13 +19,10 @@ const Navbar = () => {
     
         
     const handleNavAnimation = ()=>{
-        console.log(isMediaMobile);
-        // if(isMediaMobile){
-            let scrollTop = window.scrollY || document.documentElement.scrollTop;
-            scrollTop > previousScrollPosition ? showNav(navRef) : hideNav(navRef);
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+        scrollTop > previousScrollPosition ? showNav(navRef) : hideNav(navRef);
 
-            previousScrollPosition = scrollTop;
-        // }
+        previousScrollPosition = scrollTop;
     }
     console.log(isMediaMobile);
     handleNavAnimation();

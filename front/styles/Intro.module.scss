@@ -7,6 +7,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: $container_bg_color;
     h1, h2{
         color: $secondary_color;
@@ -40,7 +42,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(5vw,25vh);
+    transform: translate(5%,35%);
     z-index: 10;
     opacity: 1;
     cursor: default;
