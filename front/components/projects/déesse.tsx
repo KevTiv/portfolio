@@ -68,11 +68,11 @@ const Déesse = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     </div>
                     <h3>Description</h3>
                     <p>
-                        Landing page for fictitious car renting  company that specialize in renting Citroën Ds cars in a Mediterranean location.
+                        Landing page for fictitious car renting company that specializes in renting Citroën Ds cars in a Mediterranean location.
                     </p>
                     <h3>Goal</h3>
                     <p>
-                        Create a landing page that could entice potential customer to rent a Citroën Ds while on vacation.
+                        Create a landing page that could entice a potential customer to rent a Citroën Ds while on vacation.
                     </p>
                     {/* <h3>Challenges</h3>
                     <p>

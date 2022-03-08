@@ -67,12 +67,12 @@ const WeatherTracker = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     <h3>Description</h3>
                     <p>
                         Web app built to take advantage of the public Nasa API that tracks weather 
-                        events such as wildfire, marine storms and active volcanoes across the globe.
+                        events such as wildfire, marine storms, and active volcanoes across the globe.
                     </p>
                     <h3>Goal</h3>
                     <p>
-                        Create an application that could update an end user with locations of severe 
-                        weather events such as wildfire, maritime storms and active volcanoes.
+                        Create an application that could update an end-user with locations of severe 
+                        weather events such as wildfire, maritime storms, and active volcanoes.
                     </p>
                     {/* <h3>Challenges</h3>
                     <p>

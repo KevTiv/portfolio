@@ -2,14 +2,14 @@
 import styles from '../../styles/Styles.module.scss'
 import portfolioStyles from '../../styles/Portfolio.module.scss'
 import { useRef, useEffect, useState, RefObject } from 'react'
-import { contentSectionAppear, isClickable, isNotClickable } from '../../animation/globalAnimation'
-import { projectEntryAppear, revealProjectContent } from '../../animation/portfolioAnimation'
+import { contentSectionAppear } from '../../animation/globalAnimation'
 import IMS from '../projects/ims'
 import WeatherTracker from '../projects/nasaWeatherTracker'
 import Déesse from '../projects/déesse'
 import WineGrader from '../projects/wineGrader'
 import Railway from '../projects/railway'
 import PersonalPortfolio from '../projects/persoPortfolio'
+import SchedulerApp from '../projects/schedulerApp'
 
 export type projectProps={
     portfolioSectionRef :RefObject<HTMLDivElement>,

@@ -47,16 +47,16 @@ const SchedulerApp = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     </div>
                     <h3>Description</h3>
                     <p>
-                        This application was created in the aim to provide the user with a scheduling app. This app is capable
-                        of connecting to the cloud ("wgudb.ucertify.com") and manage user appointments across multiple
-                        locations and timezones and reminding the user of any upcomming rendez-vous within the upcomming 30min. This app also offers an appointment screen where a user will be able to fill information
-                        he/she desire to add or update, a report feature for customers and appointments information.
-                        And lastly for security purposes this app also provide a log screen to protect user information privacy.
+                        This application was created to provide the user with a scheduling app. This app is capable
+                        of connecting to the cloud ("wgudb.ucertify.com") and managing user appointments across multiple
+                        locations and timezones and reminding the user of any upcoming Rendez-vous within the upcoming 30min. This app also offers an appointment screen where a user will be able to fill in information
+                        he/she desires to add or update, a report feature for customers, and appointments information.
+                        And lastly, for security purposes, this app also provides a log screen to protect user-information privacy.
                     </p>
                     <h3>Goal</h3>
                     <p>
-                    - Create an application that enable a user to easily create, modify, or delete meetings.
-                    - The application data needs to be stored on a cloud based sql server.
+                    - Create an application that enables a user to easily create, modify, or delete meetings.
+                    - The application data needs to be stored on a cloud-based SQL server.
                     </p>
                     {/* <h3>Challenges</h3>
                     <p>

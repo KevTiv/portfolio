@@ -70,11 +70,11 @@ const WineGrader = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     <p>
                         Web app project built to offer the possibility to grade wine quality according to the chemical 
                         composition of a wine sample. A user can adjust those chemical factors from a slider panel in the web application. 
-                        The app grader model is built using machine learning techniques on a dataset that is consist of of 1600 different wines.
+                        The app grader model is built using machine learning techniques on a dataset that is consist of 1600 different wines.
                     </p>
                     <h3>Goal</h3>
                     <p>
-                        Build a web application That offers the end user with the possibility to grade the wine quality 
+                        Build a web application That offers the end-user the possibility to grade the wine quality 
                         depending on the chemical content of the user’s wine.
                     </p>
                     {/* <h3>Challenges</h3>

@@ -67,19 +67,19 @@ const IMS = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     </div>
                     <h3>Description</h3>
                     <p>
-                        The is web application project was created with the aim to produce an 
-                        easy online solution for small businesses inventory management needs. 
+                        This web application project was created to produce an 
+                        easy online solution for small businesses' inventory management needs. 
                         The project has reached its MVP (minimum viable product) goal of producing 
                         a product that can store products information, brands information, and 
                         inventory details in a PostgreSQL database. The project was built using 
                         Typescript. The front end was built using ReactJs, Sass, and TailwindCSS. 
-                        The back end was built with NodeJs, and PrismaJs as the ORM (Object-relational 
+                        The back end was built with NodeJs and PrismaJs as the ORM (Object-relational 
                         mapping) tool use to communicate with the PostgreSQL database.
                     </p>
                     <h3>Goal</h3>
                     <p>
                         - Create a product that can meet the inventory management needs of a small business.<br/>
-                        - MVP: Keep track of an inventory (product quantity, product details and brand).
+                        - MVP: Keep track of an inventory (product quantity, product details, and brand).
                     </p>
                     {/* <h3>Challenges</h3>
                     <p>

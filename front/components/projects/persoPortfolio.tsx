@@ -61,7 +61,7 @@ const PersonalPortfolio = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
 
                     <h3>Description</h3>
                     <p>
-                        Personal portfolio to showcase myself as a developer and journal my growth as a developer. 
+                        Personal portfolio to showcase me as a developer and journal my growth as a developer. 
                     </p>
                     <h3>Goal</h3>
                     <p>
