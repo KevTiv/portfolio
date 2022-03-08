@@ -23,16 +23,19 @@ const About = () => {
                     <h1 className="titleAnimation">About</h1>
                 </div>
                 <p>
-                    Hi! I'm a junior web developer that loves to create cool staff for the internet.
-                    It all started with a Hello World program in a command line and grew in a passion for creating unique experience. 
+                    Hi! I'm a junior web developer that loves to create cool stuff for the internet.
+                    It all started with a Hello World program in a command line and morphed into the objective 
+                    of understanding and being able to create unique experiences for the web.
                 </p>
                 <p>
-                    Since graduating in 2021 with a B.Sc. in Computer Science, I have focus on learning the ropes of being a fullstack web developper.
-                    I especially like front end development because it is a nice mix of arts and engineering. The creative freedom and technical challenges present in front end development is really fascinating.
+                    Since graduating in 2021 with a B.Sc. in Computer Science, I have focused on learning the ropes of being a full-stack web developer.
+                    I especially like front-end development because it is a nice mix of arts and engineering. The creative freedom and technical challenges 
+                    present in front-end development are fascinating.
                 </p>
                 <p>
-                    I'm currently working on improving my design skills, by taking inspiration from awwwards site of the day/ month/ year, and developpers such as Aristide Benoist, Benjamin Code, Wrong Akram, and Kevin Powell just cite a few.
-                    And improving my back end development skills and knowledge throught building fullstack projects and completing courses such as the Odin Project.
+                    I'm always working on improving my understanding of web development. Currently, I have been fascinated by the design 
+                    aspect of projects shown on websites such as Awwwards or CSS Design Awards. As well as projects by talented developers like Aristide Benoist 
+                    or Benjamin Code which I have been copying as practice material.
                 </p>
             </div>
         </div>
