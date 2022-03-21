@@ -1,6 +1,9 @@
 # Portfolio
 
 ![website screenshot](https://github.com/KevTiv/portfolio/tree/main/img_src/img1.png)
+
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+
 # LIVE DEMO
 https://kevin-tivert-portfolio.vercel.app/
 # DESCRIPTION
