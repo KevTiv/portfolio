@@ -1,6 +1,6 @@
 # Portfolio
 
-![website screenshot](../img_src/img1.png)
+![website screenshot](https://github.com/KevTiv/portfolio/tree/main/img_src/img1.png)
 # LIVE DEMO
 https://kevin-tivert-portfolio.vercel.app/
 # DESCRIPTION
