@@ -23,7 +23,7 @@ const About = () => {
                     <h1 className="titleAnimation">About</h1>
                 </div>
                 <p>
-                    Hi! I'm a junior web developer that loves to create cool stuff for the internet.
+                    Hi! I'm a web developer that loves to create cool stuff for the internet.
                     It all started with a Hello World program in a command line and morphed into the objective 
                     of understanding and being able to create unique experiences for the web.
                 </p>
@@ -35,7 +35,7 @@ const About = () => {
                 <p>
                     I'm always working on improving my understanding of web development. Currently, I have been fascinated by the design 
                     aspect of projects shown on websites such as Awwwards or CSS Design Awards. As well as projects by talented developers like Aristide Benoist 
-                    or Benjamin Code which I have been copying as practice material.
+                    or Benjamin Code which I have been copying some of their projects as practice material.
                 </p>
             </div>
         </div>
