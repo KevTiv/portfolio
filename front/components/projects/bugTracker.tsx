@@ -17,9 +17,9 @@ const BugTracker = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
 
     useEffect(() => {
         projectEntryAppear(portfolioSectionRef, projectEntryRef);
-        setOuterSpan(document.querySelector("#portfolio > div > div.Portfolio_projectPanel__R83gc > div:nth-child(5) > div.Portfolio_project_title__YF_fV > span"));
-        setInnerSpan(document.querySelector("#portfolio > div > div.Portfolio_projectPanel__R83gc > div:nth-child(5) > div.Portfolio_project_title__YF_fV > span > span"));
-        setImg(document.querySelector("#portfolio > div > div.Portfolio_projectPanel__R83gc > div:nth-child(5) > div.Portfolio_project_title__YF_fV > span > img"));
+        setOuterSpan(document.querySelector("#portfolio > div > div.Portfolio_projectPanel__R83gc > div:nth-child(1) > div.Portfolio_project_title__YF_fV > span"));
+        setInnerSpan(document.querySelector("#portfolio > div > div.Portfolio_projectPanel__R83gc > div:nth-child(1) > div.Portfolio_project_title__YF_fV > span > span"));
+        setImg(document.querySelector("#portfolio > div > div.Portfolio_projectPanel__R83gc > div:nth-child(1) > div.Portfolio_project_title__YF_fV > span > img"));
     },[])
 
     return(

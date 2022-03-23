@@ -17,9 +17,9 @@ const PersonalPortfolio = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
 
     useEffect(() => {
         projectEntryAppear(portfolioSectionRef, projectEntryRef);
-        setOuterSpan(document.querySelector("div.Portfolio_projectEntry__YZUfm:nth-child(2) > div:nth-child(1) > span:nth-child(3)"));
-        setInnerSpan(document.querySelector("div.Portfolio_projectEntry__YZUfm:nth-child(2) > div:nth-child(1) > span:nth-child(3) > span:nth-child(1)"));
-        setImg(document.querySelector("div.Portfolio_projectEntry__YZUfm:nth-child(2) > div:nth-child(1) > span:nth-child(3) > img:nth-child(2)"));
+        setOuterSpan(document.querySelector("div.Portfolio_projectEntry__YZUfm:nth-child(3) > div:nth-child(1) > span:nth-child(3)"));
+        setInnerSpan(document.querySelector("div.Portfolio_projectEntry__YZUfm:nth-child(3) > div:nth-child(1) > span:nth-child(3) > span:nth-child(1)"));
+        setImg(document.querySelector("div.Portfolio_projectEntry__YZUfm:nth-child(3) > div:nth-child(1) > span:nth-child(3) > img:nth-child(2)"));
     },[])
 
     return(

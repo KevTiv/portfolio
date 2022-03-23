@@ -53,11 +53,11 @@ const Portfolio = () => {
                     I listed below a list of the last project I have worked on in the last year.
                 </p>
                 <div className={portfolioStyles.projectPanel}>
+                    <BugTracker portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <Railway portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <PersonalPortfolio portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <Déesse portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <WeatherTracker portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
-                    <BugTracker portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <WineGrader portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     {/* <SchedulerApp portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/> */}
                 </div>
