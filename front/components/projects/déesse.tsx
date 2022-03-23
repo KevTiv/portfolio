@@ -74,23 +74,6 @@ const Déesse = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     <p>
                         Create a landing page that could entice a potential customer to rent a Citroën Ds while on vacation.
                     </p>
-                    {/* <h3>Challenges</h3>
-                    <p>
-                        Create a beautiful responsive layout with beautiful animations. 
-                    </p>
-                    <h3>Solution Implemented</h3>
-                    <p>
-                        The landing page is built using ReactJs, styled with SCSS and the animations are made with the GSAP library.
-                    </p>
-                    <h3>Future Improvement</h3>
-                    <p>
-                        Build this project with framework such as NextJs to take advantage of features such as their image components and image optimization api for a better user experience on low connectivity.
-                    </p>
-                    <h3>Known Issues</h3>
-                    <p>
-                        Background image takes a while to load on slow connectivity such as 3G.
-                        
-                    </p> */}
                 </div>
             </div>
         </>

@@ -74,21 +74,6 @@ const Railway = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     <p>
                         Try to recreate the railway website layout and animation within a day.
                     </p>
-                    {/* <h3>Challenges</h3>
-                    <p>
-                        Create the railway website landing page within a short time period.
-                        Create the railway website landing page animations within a short time period.
-                    </p>
-                    <h3>Solution Implemented</h3>
-                    <p>
-                       The website is built using NextJs, TailwindCSS, and GSAP.
-                       The website is built using a mobile first approach, which made building the website easier.
-                    </p>
-                    <h3>Future Improvement</h3>
-                    <p>
-                        Adjust landing page arrows dimension ratios to their respective container.
-                        Find the correct arrow clip path.       
-                    </p> */}
                 </div>
             </div>
         </>

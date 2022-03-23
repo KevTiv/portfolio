@@ -67,16 +67,6 @@ const PersonalPortfolio = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     <p>
                         Create a website that will showcase the latest project I worked on.
                     </p>
-                    {/* <h3>Solution Implemented</h3>
-                    <p>
-                        Site built with NextJs, styled with SCSS, and the animation are built with the GSAP library.
-                    </p>
-                    <h3>Future Improvement</h3>
-                    <p>
-                        Add a content management system (CMS) to manage projects, and image resources. 
-                        Implementing a CMS will also simplify future updates in either the projects list or 
-                        updating images that are in use on the website.
-                    </p> */}
                 </div>
             </div>
         </>

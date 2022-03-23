@@ -58,16 +58,6 @@ const SchedulerApp = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                     - Create an application that enables a user to easily create, modify, or delete meetings.
                     - The application data needs to be stored on a cloud-based SQL server.
                     </p>
-                    {/* <h3>Challenges</h3>
-                    <p>
-                    - Build an application within the java ecosystem with cloud sql server capabilities.
-                    - The app should also have more than 1 language enable.
-                    </p>
-                    <h3>Solution Implemented</h3>
-                    <p>
-                        Since the app was design to be hosted on a computer and within the java ecosystem, the app is built with javafx 
-                        for the user interface and using the java sql library to connect to a cloud sql server.
-                    </p> */}
                 </div>
             </div>
         </>

@@ -77,22 +77,6 @@ const WineGrader = ({portfolioSectionRef, isMediaMobile}:projectProps)=>{
                         Build a web application That offers the end-user the possibility to grade the wine quality 
                         depending on the chemical content of the user’s wine.
                     </p>
-                    {/* <h3>Challenges</h3>
-                    <p>
-                        Build an accurate grading model that will offer the user with highly accurate predictions.
-                    </p>
-                    <h3>Solution Implemented</h3>
-                    <p>
-                       The grading model is built in python (Jupyter Notebook). The model is trained using AutoML using 
-                       the TPOT Library on the vinho verde dataset, available on Kaggle.com under the MIT library. The 
-                       front end is built with the streamlit library because it simplified the process of building a front end 
-                       for the app and, this python library is focused on offering components design and built around easy data visualization.
-                    </p>
-                    <h3>Future Improvement</h3>
-                    <p>
-                        Build the front end of the web app using JavaScript framework which are less opinionated which will 
-                        enable a more creative approach to the looks of the app and a better user experience.
-                    </p> */}
                 </div>
             </div>
         </>
