@@ -3,7 +3,7 @@ import styles from '../../styles/Styles.module.scss'
 import portfolioStyles from '../../styles/Portfolio.module.scss'
 import { useRef, useEffect, useState, RefObject } from 'react'
 import { contentSectionAppear } from '../../animation/globalAnimation'
-import IMS from '../projects/ims'
+import BugTracker from '../projects/bugTracker'
 import WeatherTracker from '../projects/nasaWeatherTracker'
 import Déesse from '../projects/déesse'
 import WineGrader from '../projects/wineGrader'
@@ -57,7 +57,7 @@ const Portfolio = () => {
                     <PersonalPortfolio portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <Déesse portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <WeatherTracker portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
-                    <IMS portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
+                    <BugTracker portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     <WineGrader portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/>
                     {/* <SchedulerApp portfolioSectionRef={portfolioSectionRef} isMediaMobile={isMediaMobile}/> */}
                 </div>
