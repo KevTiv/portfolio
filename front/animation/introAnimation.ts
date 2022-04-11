@@ -5,17 +5,28 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import { RefObject } from 'react'
 
 export const hoverOnName = (introSectionRef:RefObject<HTMLDivElement>) =>{
-    gsap.to(introSectionRef.current!.querySelector('div.Intro_profile_img_container__jKdMv'),{
-        'clip-path': 'circle(50% at 50% 50%)',
+    const fNameLetters = introSectionRef.current!.querySelectorAll('.Intro_name_animation__PnR0X span')
+    
+    gsap.to(fNameLetters,{
+        translateZ: '0.5rem',
+        scaleY: 1.25,
+        scaleX: 1.15,
+        stagger: 0.1,
         // opacity: 1,
         ease: 'power3.inOut',
-        duration: 1
+        duration: 0.5
     })
 }
 export const hoverOffName = (introSectionRef:RefObject<HTMLDivElement>) =>{
-    gsap.to(introSectionRef.current!.querySelector('div.Intro_profile_img_container__jKdMv'),{
+    const fNameLetters = introSectionRef.current!.querySelectorAll('.Intro_name_animation__PnR0X span')
+
+    gsap.to(fNameLetters,{
+        translateZ: 0,
+        scaleY: 1,
+        scaleX: 1,
+        stagger: 0.1,
         // opacity: 0,
-        'clip-path': 'circle(0% at 50% 50%)',
+        // 'clip-path': 'circle(0% at 50% 50%)',
         ease: 'power3.inOut',
         duration: 0.6
     })

@@ -16,6 +16,10 @@
 
     
 }
+.middle_name{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
 .img_container{
     position: absolute;
     top: 0;
@@ -62,7 +66,7 @@
         }
         span{
             color: $highlight_color;
-            font-size: 18vw;
+            font-size: 8rem;
             @include sm_screen{
                 font-size: 16vw;
             }
@@ -104,5 +108,11 @@
         position: relative;
         display: flex;
         flex-direction: row;
+    }
+}
+.name_animation{
+    
+    span{
+        display:inline-block;
     }
 }

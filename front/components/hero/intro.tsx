@@ -42,10 +42,10 @@ const Intro = () => {
                     
                     <div className={introStyles.presentation}>
                         <div>
-                            <h1 className={`${introStyles.hello_world}`}>
-                                Hello World! I'm{' '}
+                            <h1>
+                                Hello World! I'm
                             <br/>    
-                            <span className={`${introStyles.hello_world} ${styles.click} name_animation`} 
+                            <span className={`${styles.click} ${introStyles.name_animation}`} 
                                 onClick={()=>scrollToSection('#about')}
                                 onMouseEnter={()=>{
                                     isClickable();
@@ -58,7 +58,19 @@ const Intro = () => {
                                     hoverOffName(introSectionRef);
                                 }}
                             > 
-                                Kevin C. Tivert
+                            <span>K</span>
+                            <span>e</span>
+                            <span>v</span>
+                            <span>i</span>
+                            <span>n</span>
+                            <span className={`${introStyles.middle_name}`}>C.</span>
+                            <span>T</span>
+                            <span>i</span>
+                            <span>v</span>
+                            <span>e</span>
+                            <span>r</span>
+                            <span>t</span>
+                                {/* Kevin C. Tivert */}
                             </span>
                             </h1>
                         </div>
@@ -71,9 +83,9 @@ const Intro = () => {
                                 Web developper
                             </h2>
                         </div>
-                        <div className={`${introStyles.profile_img_container} profile_animation`} onClick={()=>scrollToSection('#about')}>
+                        {/* <div className={`${introStyles.profile_img_container} profile_animation`} onClick={()=>scrollToSection('#about')}>
                             <Image src={'/img/hero_img_3.webp'} alt='A dev with his dog' layout='fill' priority/> 
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
