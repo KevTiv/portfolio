@@ -47,16 +47,17 @@ const Intro = () => {
                             <br/>    
                             <span className={`${styles.click} ${introStyles.name_animation}`} 
                                 onClick={()=>scrollToSection('#about')}
-                                onMouseEnter={()=>{
-                                    isClickable();
-                                    (!isMediaMobile || !isBrowserSafari) ? 
-                                        hoverOnName(introSectionRef)
-                                    : null ;
-                                }}   
-                                onMouseLeave={()=>{
-                                    isNotClickable();
-                                    hoverOffName(introSectionRef);
-                                }}
+                                //TODO Animation on name needs to be change to something more slick.
+                                // onMouseEnter={()=>{
+                                //     isClickable();
+                                //     (!isMediaMobile || !isBrowserSafari) ? 
+                                //         hoverOnName(introSectionRef)
+                                //     : null ;
+                                // }}   
+                                // onMouseLeave={()=>{
+                                //     isNotClickable();
+                                //     hoverOffName(introSectionRef);
+                                // }}
                             > 
                             <span>K</span>
                             <span>e</span>
